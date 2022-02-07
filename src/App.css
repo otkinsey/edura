@@ -1,0 +1,105 @@
+.about_us > div {
+  flex-basis: 50%;
+}
+.about > div:first-child {
+  padding: 40px 0;
+}
+.about_us button {
+  width: 30%;
+  padding: 10px;
+}
+.about_us button:nth-child(2) {
+  margin: 20px 0px;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.carousel {
+  flex-basis: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+section {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  padding: 40px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+section .main {
+  width: 75%;
+  justify-content: space-around;
+}
+section > h1 {
+  flex-basis: 100%;
+}
+section#footer {
+  background: lightgray;
+}
+section#header {
+  background: #071e4a;
+}
+section#header,
+section#header a,
+section#footer,
+section#footer a {
+  color: white;
+}
+section#header > ul,
+section#footer > ul {
+  display: flex;
+  margin: 0;
+}
+section#header > ul > li,
+section#footer > ul > li {
+  padding: 0px 10px;
+  list-style-type: none;
+  align-items: center;
+  align-content: center;
+  display: flex;
+}
+section#header > ul.social_media_links svg,
+section#footer > ul.social_media_links svg {
+  height: 21px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
