@@ -1,0 +1,13 @@
+.slideText {
+  text-align: left;
+  width: 30%;
+}
+.slide {
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+}
+.slide-container {
+  height: 40vh;
+  overflow: hidden;
+}

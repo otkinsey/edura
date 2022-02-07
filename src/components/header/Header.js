@@ -1,6 +1,4 @@
 import React from "react";
-import { Link, Outlet } from "react-router-dom";
-import { ReactComponent as EduraLogo } from "../../images/Edura_logo.svg";
 import { ReactComponent as Facebook } from "../../images/social_media_logos/SVGs/facebook.svg";
 import { ReactComponent as Youtube } from "../../images/social_media_logos/SVGs/youtube.svg";
 import { ReactComponent as Linkedin } from "../../images/social_media_logos/SVGs/linkedin.svg";
@@ -10,64 +8,46 @@ const Header = () => {
   return (
     <>
       <section id="header">
-        <Link to="/" id="logo">
-          <EduraLogo />
-        </Link>
+        <a href="/">
+          <img src={require("../../images/logo.png")} alt="Edura Logo" />
+        </a>
         <ul>
-          <li id="assessment_main_nav">
-            <Link to="assessment">assessment</Link>
-          </li>
-          <li id="training_main_nav">
-            <Link to="/training">training</Link>
-            <ul className="submenu">
-              <li>
-                <Link to="/public_assessments">Public</Link>
-              </li>
-              <li>
-                <Link to="/corporate">Corporate</Link>
-              </li>
-              <li>
-                <Link to="upcoming_courses">Upcoming Courses</Link>
-              </li>
-            </ul>
-          </li>
-          <li id="resources_main_nav">
-            <Link to="/resources">resources</Link>
-          </li>
+          <li>assessment</li>
+          <li>training</li>
+          <li>coaching</li>
+          <li>resources</li>
         </ul>
         <ul>
           <li>
-            <Link to="/">sign up</Link> | <Link to="/">sign in</Link>
+            <a href="/">sign up</a>
+          </li>
+          <li>|</li>
+          <li>
+            <a href="/">sign in</a>
           </li>
         </ul>
         <ul className="social_media_links">
           <li>
-            <Link to="/">
+            <a href="/">
               <Twitter />
-            </Link>
+            </a>
           </li>
           <li>
-            <Link to="/">
+            <a href="/">
               <Youtube />
-            </Link>
+            </a>
           </li>
           <li>
-            <Link to="/">
+            <a href="/">
               <Linkedin />
-            </Link>
+            </a>
           </li>
           <li>
-            <Link to="/">
+            <a href="/">
               <Facebook />
-            </Link>
+            </a>
           </li>
         </ul>
-        <ul>
-          <li>
-            <Link to="view_courses">View Courses</Link>
-          </li>
-        </ul>
-        <Outlet />
       </section>
     </>
   );
