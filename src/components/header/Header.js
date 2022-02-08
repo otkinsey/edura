@@ -12,7 +12,20 @@ const Header = () => {
           <img src={require("../../images/logo.png")} alt="Edura Logo" />
         </a>
         <ul>
-          <li>assessment</li>
+          <li>
+            assessment
+            <ul>
+              <li>
+                <a href="/">Public</a>
+              </li>
+              <li>
+                <a href="/">Corporate</a>
+              </li>
+              <li>
+                <a href="/">Upcoming Courses</a>
+              </li>
+            </ul>
+          </li>
           <li>training</li>
           <li>coaching</li>
           <li>resources</li>
