@@ -27,7 +27,28 @@
 .flex {
   display: flex;
 }
-
+form button {
+  height: 80px;
+  border-radius: 8px;
+  width: 200px;
+}
+form input {
+  height: 80px;
+  border-radius: 8px;
+}
+form label {
+  font-weight: bold;
+  font-size: 0.9rem;
+  display: block;
+  text-align: left;
+}
+#logo {
+  height: 40px;
+  width: auto;
+}
+.not_flex {
+  display: block;
+}
 section {
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
@@ -41,6 +62,9 @@ section .main {
   width: 75%;
   justify-content: space-around;
 }
+section > div {
+  width: 100%;
+}
 section > h1 {
   flex-basis: 100%;
 }
@@ -53,6 +77,9 @@ section#footer a {
 }
 section#header {
   background: #071e4a;
+  height: 80px;
+  padding: 0;
+  align-items: center;
 }
 section#header,
 section#header a,
@@ -63,14 +90,18 @@ section#footer > ul {
   position: relative;
 }
 section#header > ul > li,
-section#footer > ul > li {
+section#footer > ul > li,
+section#header > ul > li a,
+section#footer > ul > li a {
   padding: 0px 10px;
   list-style-type: none;
   align-items: center;
   align-content: center;
   display: flex;
+  color: white;
+  cursor: pointer;
 }
-section#header li > a {
+section#header li.submenu > a {
   color: black;
   text-decoration: none;
 }
@@ -78,14 +109,42 @@ section#header > ul.social_media_links svg,
 section#footer > ul.social_media_links svg {
   height: 21px;
 }
-section#header li > ul {
+section#header li .submenu {
   display: block;
   background: white;
+  color: black;
   position: absolute;
   top: 80px;
   list-style-type: none;
+  box-shadow: 0px 0px 4px black;
+  color: black;
+  opacity: 0;
+  transition: opacity 0.6s;
+  padding: 10px;
+  z-index: 4;
+}
+section#header li .submenu a {
+  text-decoration: none;
+  color: black;
+}
+section#header #assessment_main_nav:hover .submenu {
+  opacity: 1;
+}
+#stay_connected .row1 div,
+#stay_connected .row2 {
+  padding: 10px;
+}
+#stay_connected input {
+  width: 100%;
+  border: 1px solid #777;
+}
+#stay_connected .row1 {
+  display: flex;
 }
 
+#stay_connected .row1 > div {
+  flex-basis: 50%;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

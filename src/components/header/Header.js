@@ -8,13 +8,13 @@ const Header = () => {
   return (
     <>
       <section id="header">
-        <a href="/">
+        <a href="/" id="logo">
           <img src={require("../../images/logo.png")} alt="Edura Logo" />
         </a>
         <ul>
-          <li>
+          <li id="assessment_main_nav">
             assessment
-            <ul>
+            <ul class="submenu">
               <li>
                 <a href="/">Public</a>
               </li>
@@ -26,9 +26,9 @@ const Header = () => {
               </li>
             </ul>
           </li>
-          <li>training</li>
-          <li>coaching</li>
-          <li>resources</li>
+          <li id="training_main_nav">training</li>
+          <li id="coaching_main_nav">coaching</li>
+          <li id="resources_main_nav">resources</li>
         </ul>
         <ul>
           <li>
