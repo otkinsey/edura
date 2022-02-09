@@ -29,7 +29,7 @@ function App() {
       <section>
         <GetInspired />
       </section>
-      <section>
+      <section id="stay_connected">
         <StayConnected />
       </section>
       <Footer />
