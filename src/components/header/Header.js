@@ -14,7 +14,7 @@ const Header = () => {
         <ul>
           <li id="assessment_main_nav">
             assessment
-            <ul class="submenu">
+            <ul className="submenu">
               <li>
                 <a href="/">Public</a>
               </li>

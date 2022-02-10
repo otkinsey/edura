@@ -47,7 +47,7 @@ const Slider = () => {
         <img
           className="d-block w-100"
           src=""
-          alt={`${slide.name} sample text`}
+          alt={`${slide.name} sample text from images alt property`}
         />
         <Carousel.Caption>
           <h2>{slide.name}</h2>
