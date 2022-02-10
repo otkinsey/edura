@@ -6,11 +6,11 @@ const StayConnected = () => {
       <div className="main">
         <form className="">
           <div className="flex row1">
-            <div style={{ "flex-basis": "50%" }}>
+            <div style={{ flexBasis: "50%" }}>
               <label>first name:</label>
               <input type="text" spaceholder="test"></input>
             </div>
-            <div style={{ "flex-basis": "50%" }}>
+            <div style={{ flexBasis: "50%" }}>
               <label>last name:</label>
               <input type="text" spaceholder="test"></input>
             </div>

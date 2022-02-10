@@ -42,6 +42,37 @@ form label {
   display: block;
   text-align: left;
 }
+#get-inspired .slider-nav {
+  font-size: 65px;
+  fill: rgb(189, 189, 189);
+}
+#get-inspired div#view-window {
+  width: 70%;
+  overflow: hidden;
+}
+#get-inspired div#slider {
+  right: 0px;
+  transition: right 0.25s;
+}
+#get-inspired .circle-frame {
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+  overflow: hidden;
+  border: 9px solid white;
+  box-shadow: 0px 0px 4px black;
+}
+#get-inspired p.text {
+  display: -webkit-box;
+  overflow: hidden;
+  text-align: left;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+#get-inspired .testimonial {
+  width: 218px;
+  padding: 10px;
+}
 #logo {
   height: 40px;
   width: auto;
@@ -114,7 +145,7 @@ section#header li .submenu {
   background: white;
   color: black;
   position: absolute;
-  top: 80px;
+  top: 50px;
   list-style-type: none;
   box-shadow: 0px 0px 4px black;
   color: black;
@@ -129,6 +160,10 @@ section#header li .submenu a {
 }
 section#header #assessment_main_nav:hover .submenu {
   opacity: 1;
+}
+.slider-nav {
+  height: 65px;
+  fill: #777;
 }
 #stay_connected .row1 div,
 #stay_connected .row2 {
@@ -145,6 +180,7 @@ section#header #assessment_main_nav:hover .submenu {
 #stay_connected .row1 > div {
   flex-basis: 50%;
 }
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

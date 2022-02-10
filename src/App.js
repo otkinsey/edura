@@ -27,6 +27,7 @@ function App() {
         <OurPartners />
       </section>
       <section>
+        <h1>Get Inspired</h1>
         <GetInspired />
       </section>
       <section id="stay_connected">
