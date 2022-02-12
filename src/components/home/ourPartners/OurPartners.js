@@ -1,22 +1,19 @@
 const OurPartners = () => {
   return (
     <>
-      <h1>Our Partners</h1>
+      <h1>OurPartners</h1>
       <div className="main flex">
         <div>
-          <a href="https://www.scrumalliance.org/">
-            <img src="images/scrum_alliance.png" alt="partner logo" />
-          </a>
+          <h2>Scrum Alliance</h2>
+          <img src="images/scrum_alliance.png" alt="partner logo" />
         </div>
         <div>
-          <a href="https://www.scrum.org">
-            <img src="images/scrum-org-logo.png" alt="partner logo" />
-          </a>
+          <h2>SAFE</h2>
+          <img src="images/scrum-org-logo.png" alt="partner logo" />
         </div>
         <div>
-          <a href="https://www.scaledagileframework.com/">
-            <img src="images/safe-logo.png" alt="partner logo" />
-          </a>
+          <h2>Scrum.org</h2>
+          <img src="images/safe-logo.png" alt="partner logo" />
         </div>
       </div>
     </>

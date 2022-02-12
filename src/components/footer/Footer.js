@@ -9,7 +9,7 @@ const Footer = () => {
     <>
       <section id="footer" style={{ background: "light-gray" }}>
         <a href="/">
-          <img src={require("../../images/logo.png")} alt="Edura Logo" />
+          <img src="localhost:3000/images/logo.png" alt="Edura Logo" />
         </a>
         <ul>
           <li>assessment</li>

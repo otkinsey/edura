@@ -1,7 +1,7 @@
 const webpack = require("webpack");
 
 module.exports = {
-  entry: " ./src/index.js",
+  entry: " localhost:3000/images/index.js",
   module: {
     rules: [
       {
@@ -10,7 +10,7 @@ module.exports = {
           {
             loader: "file-loader",
             options: {
-              name: "images/[hash]-[name].[ext]",
+              name: "localhost:3000/images/[hash]-[name].[ext]",
             },
           },
         ],

@@ -5,29 +5,18 @@ import "react-multi-carousel/lib/styles.css";
 
 const setViewWindowPosition = (elem, index) => {
   const position = elem ? elem.getBoundingClientRect().width : false;
-  console.log("GetInspired.js setViewWindowPosition: ", position);
-  return position ? (position + 20) * index : 0;
+  return position ? position * index : "auto";
 };
 
 const importAll = (r) => {
   let images = {};
 
   r.keys().map((item, index) => {
-    return (images[item.replace("./", "")] = r(item));
+    images[item.replace("./", "")] = r(item);
   });
 
   return images;
 };
-
-const reviews = [
-  "Great course; I learned everything I needed and more! I am excited to implement these skills into my role in my organization.",
-  "Fantastic experience! Highly recommended! I am looking forward to sharingwhat I’ve learned with my enterprise.",
-  "Raj is an excellent instructor, always willing to help and great at explaining concepts.",
-  "This course equipped me with the skills I needed to grow and advance in my career. Many thanks!",
-  "This content is amazing earth shattery.  My life is changed forever!!!!!!!",
-  "I am agile, mobile, and hostile. This course equipped me with the skills I needed to grow and advance in my career. Many thanks!",
-  "Three words A, may, zing!!!!!!",
-];
 
 const GetInspired = () => {
   const [slideIndex, setSlideIndex] = useState(0);
@@ -37,15 +26,18 @@ const GetInspired = () => {
   let slides = Object.keys(images).map((image, index) => {
     return (
       <div className="testimonial" key={index}>
-        <div className="circle_frame">
+        <div className="circle-frame">
           <img src={images[image]} alt={`${image} testimonial`} />
         </div>
         <p className="text">
-          {reviews[index] ? reviews[index] : "This class was great!!!"}
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi mattis
+          lobortis ante, sit amet maximus ante interdum eu. Fusce sed mauris in
+          sapien pulvinar consectetur. Fusce neque nulla, mollis at suscipit
+          nec, viverra at neque.
         </p>
         <span>
           {Object.keys(images).map((img, index) => (
-            <IoIosStar style={{ fill: "#ffab00" }} key={index} />
+            <IoIosStar key={index} />
           ))}
         </span>
       </div>
@@ -58,14 +50,14 @@ const GetInspired = () => {
         className="slider-nav"
         onClick={() => (slideIndex > 0 ? setSlideIndex(slideIndex - 1) : 0)}
       />
-      <div id="view-window" style={{ postion: "relative", width: 678 }}>
+      <div id="view-window" style={{ postion: "relative", width: 872 }}>
         <div
           className="flex"
-          id="get_inspired_slider"
+          id="slider"
           style={{
             position: "relative",
             right: setViewWindowPosition(
-              document.querySelector(".circle_frame"),
+              document.querySelector(".circle-frame"),
               slideIndex
             ),
           }}

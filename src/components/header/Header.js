@@ -9,7 +9,7 @@ const Header = () => {
     <>
       <section id="header">
         <a href="/" id="logo">
-          <img src={require("../../images/logo.png")} alt="Edura Logo" />
+          <img src="images/logo.png" alt="Edura Logo" />
         </a>
         <ul>
           <li id="assessment_main_nav">
