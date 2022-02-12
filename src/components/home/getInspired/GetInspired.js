@@ -21,7 +21,7 @@ const importAll = (r) => {
 const GetInspired = () => {
   const [slideIndex, setSlideIndex] = useState(0);
   let images = importAll(
-    require.context("../../images/testimonial_images", false, /\.(jpg|jpeg)/)
+    require.context("../../../images/testimonial_images", false, /\.(jpg|jpeg)/)
   );
   let slides = Object.keys(images).map((image, index) => {
     return (
