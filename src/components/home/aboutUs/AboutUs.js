@@ -24,8 +24,9 @@ const about_us_slides = text_array.map((slide, index) => {
     <div
       id={`slide_${slide.id}`}
       className={slide.class}
-      style={{ width: "500px", display: "inline-block" }}
+      style={{ width: "500px" }}
     >
+      <h2 style={{ "text-transform": "capitalize" }}>{slide.title}</h2>
       {slide.text}
     </div>
   );
@@ -35,7 +36,7 @@ const setPrev = (slide) => (slide.className = "slide prev");
 
 const resetSlides = (slides) => {
   return slides.map((s) => {
-    return (slides.className = "slide");
+    return (s.className = "slide");
   });
 };
 
@@ -43,11 +44,15 @@ const animateSlider = (e) => {
   const id = e.target.id;
   const currentSlide = document.getElementById(id.replace("button", "slide"));
 
-  const prevSlide = document.getElementsByClassName("active");
-  console.log("AboutUs animateSlider: ", prevSlide);
-  setPrev(prevSlide[0]);
+  const prevSlide = document.querySelector(".about_us .slide.active");
+
+  if (id === prevSlide.id.replace("slide", "button")) {
+    console.log("current slide exiting...");
+    return;
+  }
+  setPrev(prevSlide);
   currentSlide.className = "slide active";
-  resetSlides(Array.from(prevSlide));
+  setTimeout(() => resetSlides([prevSlide]), 750);
 };
 
 const AboutUs = () => {
@@ -97,15 +102,22 @@ const AboutUsStyles = () => {
     #about_us_text{
       text-align:left;
     }
-    #about_us .slide{
-      position:absolute;
-      right:-500px;
+    #about_us .slide {
+      display: block;
+      position: absolute;
+      right: -500px;
       transition: right .3s;
+      background: #efefef;
+      min-height: 180px;
     }
     #about_us .slide.active{
+      display:block;
       right:0;
+      z-index:2
     }
     #about_us .slide.prev{
+      z-index:1;
+      display:block;
       right:500px;
   `;
   return <style>{css}</style>;

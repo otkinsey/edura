@@ -5,6 +5,7 @@
 #slider .slide {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 #slider .slide-container {
   height: 40vh;
