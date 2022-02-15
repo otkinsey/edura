@@ -4,6 +4,11 @@ const OurServices = () => {
       <h1>Our Services</h1>
       <div className="ourServices flex main">
         <div className="service">
+          <img
+            style={{ width: "100%", height: "193.6px" }}
+            src="/images/Scrolling-Assessment.jpg"
+            alt=""
+          />
           <h2>Maturity Assessment</h2>
           <p>
             Apex agile experts can perform an Agile Maturity Assessment for your
@@ -15,6 +20,11 @@ const OurServices = () => {
           </p>
         </div>
         <div className="service">
+          <img
+            style={{ width: "100%", height: "auto" }}
+            src="/images/Scrolling-Coaching.jpg"
+            alt=""
+          />
           <h2>Coaching</h2>
           <p>
             Working one on one with your own technology leaders, Apex experts
@@ -23,6 +33,11 @@ const OurServices = () => {
           </p>
         </div>
         <div className="service">
+          <img
+            style={{ width: "100%", height: "auto" }}
+            src="/images/Scrolling-Courses.jpg"
+            alt=""
+          />
           <h2>Courses</h2>
           <p>
             Apex coursework will thoroughly prepare you for Agile certification.

@@ -13,10 +13,6 @@ const text_array = [
     title: "what we do",
     text: "Text 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
   },
-  // {
-  //   title: "contact us",
-  //   text: "Text 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-  // },
 ];
 
 const about_us_slides = text_array.map((about_us_slide, index) => {
@@ -80,7 +76,12 @@ const AboutUs = () => {
           >
             what we do
           </Button>
-          <Button style={{ display: "block" }} variant="outline-secondary">
+          <Button
+            className="button"
+            href="contact"
+            style={{ display: "block" }}
+            variant="outline-secondary"
+          >
             contact us
           </Button>
         </div>
