@@ -8,20 +8,7 @@
   width: 200px;
   padding: 10px;
 }
-.about_us .slide {
-  width: 500px;
-}
-.about_us .slider {
-  width: 500px;
-  position: relative;
-  display: flex;
-  height: 178px;
-}
-.about_us .view-window {
-  position: relative;
-  overflow: hidden;
-  height: 178px;
-}
+
 .about_us button:nth-child(2) {
   margin: 20px 0px;
 }

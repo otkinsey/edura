@@ -3,8 +3,6 @@
   width: 30%;
 }
 #slider .slide {
-  display: flex;
-  flex-direction: column;
   overflow: hidden;
 }
 #slider .slide-container {
