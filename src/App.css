@@ -5,13 +5,30 @@
   padding: 40px 0;
 }
 .about_us button {
-  width: 30%;
+  width: 200px;
   padding: 10px;
+}
+.about_us .slide {
+  width: 500px;
+}
+.about_us .slider {
+  width: 500px;
+  position: relative;
+  display: flex;
+  height: 178px;
+}
+.about_us .view-window {
+  position: relative;
+  overflow: hidden;
+  height: 178px;
 }
 .about_us button:nth-child(2) {
   margin: 20px 0px;
 }
-
+button.btn.btn-primary {
+  height: 50px;
+  border-radius: 23px;
+}
 .App {
   text-align: center;
 }
@@ -23,7 +40,22 @@
 .carousel {
   flex-basis: 100%;
 }
-
+.carousel button {
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid white;
+}
+.carousel h1 {
+  text-align: left;
+  padding-bottom: 0;
+}
+.carousel,
+.courousel * {
+  height: 100%;
+}
+.carousel-inner,
+.carousel-inner .carousel-item {
+  height: 100%;
+}
 .flex {
   display: flex;
 }
@@ -55,12 +87,13 @@ form label {
   transition: right 0.25s;
 }
 #get-inspired .circle-frame {
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
   border-radius: 100px;
   overflow: hidden;
   border: 9px solid white;
   box-shadow: 0px 0px 4px black;
+  display: flex;
 }
 #get-inspired p.text {
   display: -webkit-box;
@@ -73,31 +106,86 @@ form label {
   width: 218px;
   padding: 10px;
 }
-#logo {
+h1 {
+  font-size: 4rem;
+  font-family: sans-serif;
+  font-weight: 800;
+  text-transform: capitalize;
+  margin: 0;
+  padding-bottom: 4rem;
+}
+h2 {
+  font-size: 1.75rem;
+}
+#header #logo {
   height: 40px;
   width: auto;
+  fill: white;
+  stroke: white;
+}
+#header #logo .edura1,
+#header #logo .edura0 {
+  fill: none;
+  stroke: white;
 }
 .not_flex {
   display: block;
 }
+.ourServices p {
+  text-align: justify;
+}
+.ourServices .service:first-child {
+  padding-right: 20px;
+}
+.ourServices .service:nth-child(2) {
+  padding: 0 20px;
+}
+.ourServices .service:nth-child(3) {
+  padding-left: 20px;
+}
 section {
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
   width: 100%;
-  padding: 40px 0;
+  padding: 6rem 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 section .main {
-  width: 75%;
+  width: 60%;
   justify-content: space-around;
+  padding: 20px;
+}
+section#about_us,
+section#get_inspired {
+  background: #efefef;
 }
 section > div {
   width: 100%;
 }
 section > h1 {
   flex-basis: 100%;
+}
+section#header {
+  border: 0;
+}
+section#slider {
+  padding: 0;
+  height: 60vh;
+}
+section#slider .slideText {
+  padding-bottom: 4rem;
+}
+section#slider .slide::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  left: 0;
+  opacity: 0.55;
+}
+section#slider button {
+  margin-top: 2rem;
 }
 section#footer {
   background: lightgray;
@@ -131,6 +219,11 @@ section#footer > ul > li a {
   display: flex;
   color: white;
   cursor: pointer;
+  text-decoration: none;
+}
+section#header > ul > li,
+section#header > ul {
+  height: 100%;
 }
 section#header li.submenu > a {
   color: black;
@@ -160,6 +253,14 @@ section#header li .submenu a {
 }
 section#header #assessment_main_nav:hover .submenu {
   opacity: 1;
+}
+#slider.carousel-inner .carousel-item {
+  color: white;
+}
+.slideText > div {
+  opacity: 0.75;
+  font-size: 1.5rem;
+  line-height: 1.65rem;
 }
 .slider-nav {
   height: 65px;

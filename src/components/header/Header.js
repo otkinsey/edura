@@ -1,4 +1,6 @@
 import React from "react";
+import { Link, Outlet } from "react-router-dom";
+import { ReactComponent as EduraLogo } from "../../images/Edura_logo.svg";
 import { ReactComponent as Facebook } from "../../images/social_media_logos/SVGs/facebook.svg";
 import { ReactComponent as Youtube } from "../../images/social_media_logos/SVGs/youtube.svg";
 import { ReactComponent as Linkedin } from "../../images/social_media_logos/SVGs/linkedin.svg";
@@ -8,59 +10,67 @@ const Header = () => {
   return (
     <>
       <section id="header">
-        <a href="/" id="logo">
-          <img src="images/logo.png" alt="Edura Logo" />
-        </a>
+        <Link to="/" id="logo">
+          {/* <img src="images/logo.png" alt="Edura Logo" /> */}
+          <EduraLogo />
+        </Link>
         <ul>
           <li id="assessment_main_nav">
             assessment
             <ul className="submenu">
               <li>
-                <a href="/">Public</a>
+                <Link to="/public_assessments">Public</Link>
               </li>
               <li>
-                <a href="/">Corporate</a>
+                <Link to="/corporate">Corporate</Link>
               </li>
               <li>
-                <a href="/">Upcoming Courses</a>
+                <Link to="/">Upcoming Courses</Link>
               </li>
             </ul>
           </li>
-          <li id="training_main_nav">training</li>
-          <li id="coaching_main_nav">coaching</li>
-          <li id="resources_main_nav">resources</li>
+          <li id="training_main_nav">
+            <Link to="/training">training</Link>
+          </li>
+          <li id="coaching_main_nav">
+            <Link to="/coaching">coaching</Link>
+          </li>
+          <li id="resources_main_nav">
+            <Link to="/resources">resources</Link>
+          </li>
         </ul>
         <ul>
           <li>
-            <a href="/">sign up</a>
+            <Link to="/">sign up</Link>
           </li>
           <li>|</li>
           <li>
-            <a href="/">sign in</a>
+            <Link to="/">sign in</Link>
           </li>
         </ul>
         <ul className="social_media_links">
           <li>
-            <a href="/">
+            <Link to="/">
               <Twitter />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/">
+            <Link to="/">
               <Youtube />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/">
+            <Link to="/">
               <Linkedin />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/">
+            <Link to="/">
               <Facebook />
-            </a>
+            </Link>
           </li>
         </ul>
+        <Outlet />
       </section>
     </>
   );

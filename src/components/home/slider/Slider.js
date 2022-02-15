@@ -55,35 +55,32 @@ const Slider = () => {
   };
 
   const slides = slideData.map((slide, index) => {
+    const regex = new RegExp("_", "g");
+    const imgUrl = `http://localhost:3000/images/slider-images/${slide.name
+      .replace(/\s/g, "_")
+      .toLowerCase()}.jpeg`;
     return (
       <Carousel.Item
         key={index}
         className="slide"
         style={{
-          background: `no-repeat url(${`http://localhost:3000/images/slider-images/${slide.name
-            .replace(" ", "-")
-            .toLowerCase()}.png`})`,
+          background: `center / cover no-repeat url(${`http://localhost:3000/images/slider-images/${slide.name
+            .replace(/\s/g, "_")
+            .toLowerCase()}.jpeg`}) `,
         }}
       >
-        {/* <img
-          className="d-block w-100"
-          src={`http://localhost:3000/images/slider-images/${slide.name
-            .replace(" ", "-")
-            .toLowerCase()}.png`}
-          alt=" "
-        /> */}
         <Carousel.Caption>
-          <h2>{slide.name}</h2>
+          <h1>{slide.name}</h1>
           <div className="slideText">
             <SlideText slideName={slide.name} slide={slide} />
-            <Button variant="primary">Primary</Button>
+            <Button variant="primary">learn more</Button>
           </div>
         </Carousel.Caption>
       </Carousel.Item>
     );
   });
   return (
-    <Carousel variant="dark" interval="10000000">
+    <Carousel variant="light" interval="3000000">
       {slides}
     </Carousel>
   );

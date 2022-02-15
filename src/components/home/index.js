@@ -4,23 +4,24 @@ import Slider from "./slider/Slider";
 import OurPartners from "./ourPartners/OurPartners";
 import OurServices from "./ourServices/OurServices";
 import StayConnected from "./stayConnected/StayConnected";
+import { render } from "react-dom";
 
 const Home = () => {
   return (
     <>
-      <section>
+      <section id="slider">
         <Slider />
       </section>
-      <section>
+      <section id="our_services">
         <OurServices />
       </section>
-      <section>
+      <section id="about_us">
         <AboutUs />
       </section>
-      <section>
+      <section id="our_partners">
         <OurPartners />
       </section>
-      <section>
+      <section id="get_inspired">
         <h1>Get Inspired</h1>
         <GetInspired />
       </section>
