@@ -80,7 +80,7 @@ const Slider = () => {
     );
   });
   return (
-    <Carousel variant="light" interval="3000000">
+    <Carousel variant="light" interval="5000">
       {slides}
     </Carousel>
   );
