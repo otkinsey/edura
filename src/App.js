@@ -7,11 +7,11 @@ import Resources from "./components/resources";
 import AboutUs from "./components/about_us/about_us";
 import Coaching from "./components/coaching";
 import Contact from "./components/contact/constact";
-import Corporate from "./components/corporate_assessment";
+import Courses from "./components/courses";
 import Home from "./components/home";
 import OurServices from "./components/our_services/our_services";
 
-import PublicAssessment from "./components/public_assessment/publicAssessment";
+import Assessments from "./components/maturity_assessment";
 import Training from "./components/training/training";
 import WhatWeDo from "./components/what_we_do/what_we_do";
 
@@ -26,8 +26,9 @@ function App() {
         <Route path="about_us" element={<AboutUs />} />
         <Route path="coaching" element={<Coaching />} />
         <Route path="contact" element={<Contact />} />
-        <Route path="corporate" element={<Corporate />} />
-        <Route path="public_assessments" element={<PublicAssessment />} />
+
+        <Route path="courses" element={<Courses />} />
+        <Route path="assessment" element={<Assessments />} />
         <Route path="resources" element={<Resources />} />
         <Route path="training" element={<Training />} />
         <Route path="what_we_do" element={<WhatWeDo />} />
