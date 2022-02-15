@@ -73,7 +73,13 @@ const Slider = () => {
           <h1>{slide.name}</h1>
           <div className="slideText">
             <SlideText slideName={slide.name} slide={slide} />
-            <Button variant="primary">learn more</Button>
+            <Button
+              className="button"
+              href={slide.name.replace(/\s/g, "_")}
+              variant="primary"
+            >
+              learn more
+            </Button>
           </div>
         </Carousel.Caption>
       </Carousel.Item>
