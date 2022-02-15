@@ -5,7 +5,7 @@ const OurServices = () => {
       <div className="ourServices flex main">
         <div className="service">
           <img
-            style={{ width: "100%", height: "193.6px" }}
+            style={{ width: "100%" }}
             src="/images/Scrolling-Assessment.jpg"
             alt=""
           />
@@ -21,7 +21,7 @@ const OurServices = () => {
         </div>
         <div className="service">
           <img
-            style={{ width: "100%", height: "auto" }}
+            style={{ width: "100%" }}
             src="/images/Scrolling-Coaching.jpg"
             alt=""
           />
@@ -34,7 +34,7 @@ const OurServices = () => {
         </div>
         <div className="service">
           <img
-            style={{ width: "100%", height: "auto" }}
+            style={{ width: "100%" }}
             src="/images/Scrolling-Courses.jpg"
             alt=""
           />

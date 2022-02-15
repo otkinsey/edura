@@ -36,7 +36,7 @@ button.btn.btn-primary,
   border: 1px solid white;
   margin-top: 2rem;
   display: flex;
-  width: 150px;
+  /* width: 150px; */
 }
 .carousel h1 {
   text-align: left;
