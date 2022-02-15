@@ -5,14 +5,14 @@ import "react-multi-carousel/lib/styles.css";
 
 const setViewWindowPosition = (elem, index) => {
   const position = elem ? elem.getBoundingClientRect().width : false;
-  return position ? position * index : "auto";
+  return position ? position * index : 0;
 };
 
 const importAll = (r) => {
   let images = {};
 
   r.keys().map((item, index) => {
-    images[item.replace("./", "")] = r(item);
+    return (images[item.replace("./", "")] = r(item));
   });
 
   return images;
@@ -37,7 +37,7 @@ const GetInspired = () => {
         </p>
         <span>
           {Object.keys(images).map((img, index) => (
-            <IoIosStar key={index} />
+            <IoIosStar style={{ fill: "#ffab00" }} key={index} />
           ))}
         </span>
       </div>
@@ -50,7 +50,7 @@ const GetInspired = () => {
         className="slider-nav"
         onClick={() => (slideIndex > 0 ? setSlideIndex(slideIndex - 1) : 0)}
       />
-      <div id="view-window" style={{ postion: "relative", width: 872 }}>
+      <div id="view-window" style={{ postion: "relative", width: 678 }}>
         <div
           className="flex"
           id="slider"

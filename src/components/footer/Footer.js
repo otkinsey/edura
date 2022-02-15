@@ -1,56 +1,53 @@
 import React from "react";
+import { Link, Outlet } from "react-router-dom";
 import { ReactComponent as Facebook } from "../../images/social_media_logos/SVGs/facebook.svg";
 import { ReactComponent as Youtube } from "../../images/social_media_logos/SVGs/youtube.svg";
 import { ReactComponent as Linkedin } from "../../images/social_media_logos/SVGs/linkedin.svg";
 import { ReactComponent as Twitter } from "../../images/social_media_logos/SVGs/twitter.svg";
 
-const Footer = () => {
+const Header = () => {
   return (
     <>
       <section id="footer" style={{ background: "light-gray" }}>
-        <a href="/">
-          <img src="localhost:3000/images/logo.png" alt="Edura Logo" />
-        </a>
-        <ul>
-          <li>assessment</li>
-          <li>training</li>
-          <li>coaching</li>
-          <li>resources</li>
-        </ul>
+        <Link to="/" id="logo">
+          <img src="images/logo.png" alt="Edura Logo" />
+        </Link>
+
         <ul>
           <li>
-            <a href="/">sign up</a>
+            <Link to="/">sign up</Link>
           </li>
           <li>|</li>
           <li>
-            <a href="/">sign in</a>
+            <Link to="/">sign in</Link>
           </li>
         </ul>
         <ul className="social_media_links">
           <li>
-            <a href="/">
+            <Link to="/">
               <Twitter />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/">
+            <Link to="/">
               <Youtube />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/">
+            <Link to="/">
               <Linkedin />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/">
+            <Link to="/">
               <Facebook />
-            </a>
+            </Link>
           </li>
         </ul>
+        <Outlet />
       </section>
     </>
   );
 };
 
-export default Footer;
+export default Header;

@@ -1,13 +1,12 @@
-.slideText {
+#slider .slideText {
   text-align: left;
   width: 30%;
 }
-.slide {
-  height: 40vh;
+#slider .slide {
   display: flex;
   flex-direction: column;
 }
-.slide-container {
+#slider .slide-container {
   height: 40vh;
   overflow: hidden;
 }
