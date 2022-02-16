@@ -18,6 +18,7 @@ button.btn.btn-primary,
   border-radius: 23px;
   align-items: center;
   justify-content: center;
+  width: 220px;
 }
 .App {
   text-align: center;
@@ -36,11 +37,26 @@ button.btn.btn-primary,
   border: 1px solid white;
   margin-top: 2rem;
   display: flex;
-  /* width: 150px; */
+}
+.carousel-caption {
+  position: absolute;
+  right: 15%;
+  bottom: 6.25rem;
+  left: 15%;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  color: #fff;
+  text-align: center;
 }
 .carousel h1 {
   text-align: left;
   padding-bottom: 0;
+}
+.carousel h3 {
+  color: white;
+  opacity: 1;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 .carousel,
 .courousel * {
@@ -110,6 +126,9 @@ h1 {
 }
 h2 {
   font-size: 1.75rem;
+  color: #819ddd;
+  padding: 20px 0px;
+  margin: 0;
 }
 #header #logo {
   height: 40px;
@@ -163,9 +182,6 @@ section#header {
 section#slider {
   padding: 0;
   height: 60vh;
-}
-section#slider .slideText {
-  padding-bottom: 4rem;
 }
 section#slider .slide::before {
   content: "";
@@ -247,11 +263,11 @@ section#header #assessment_main_nav:hover .submenu {
 #slider.carousel-inner .carousel-item {
   color: white;
 }
-.slideText > div {
+/* .slideText > div > p {
   opacity: 0.75;
   font-size: 1.5rem;
   line-height: 1.65rem;
-}
+} */
 .slider-nav {
   height: 65px;
   fill: #777;

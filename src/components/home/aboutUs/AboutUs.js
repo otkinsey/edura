@@ -11,7 +11,7 @@ const text_array = [
     id: "what_we_do",
     class: "about_us_slide",
     title: "what we do",
-    text: "Text 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    text: "We are Agile experts providing you with our industry leading 360  Assessment, coaching and training.",
   },
 ];
 
@@ -114,6 +114,7 @@ const AboutUsStyles = () => {
       position: relative;
       display: flex;
       height: 178px;
+      overflow:scroll;
     }
     .about_us .view-window {
       position: relative;

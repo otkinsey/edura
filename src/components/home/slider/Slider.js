@@ -9,7 +9,10 @@ const Slider = () => {
     {
       name: "About Us",
       imageUrl: "about_us",
-      text: "We are your go-to Agile experts with masters degrees and decades of industry experience.",
+      text: "<h3>Who We Are</h3> <p>We are your go-to Agile experts with masters degrees and decades of industry \
+      experience.</p> \
+      <h3>What We Do</h3> <p>We are Agile experts providing you with our industry leading 360  Assessment, \
+      coaching and training.</p>",
       buttonText: "collaborate",
     },
     {
@@ -27,14 +30,17 @@ const Slider = () => {
     {
       name: "Coaching",
       imageUrl: "AdobeStock_230418597",
-      text: "Maturity Assesment, Training, Coaching",
+      text: "<ul><li>Maturity Assesment</li><li>Training</li><li>Coaching</li></ul>",
       buttonText: "our offerings",
     },
   ];
 
   const SlideText = (props) => {
     let output;
-    if (props.slideName === "Our services") {
+    if (
+      props.slideName === "Our services" ||
+      props.slideName === "Our services"
+    ) {
       output = (
         <ul>
           {props.slide.text.split(",").map((item) => (
@@ -43,7 +49,9 @@ const Slider = () => {
         </ul>
       );
     } else {
-      output = <div>{props.slide.text}</div>;
+      output = (
+        <div dangerouslySetInnerHTML={{ __html: props.slide.text }}></div>
+      );
     }
     return output;
   };
@@ -64,21 +72,25 @@ const Slider = () => {
         <Carousel.Caption>
           <h1>{slide.name}</h1>
           <div className="slideText">
-            <SlideText slideName={slide.name} slide={slide} />
-            <Button
-              className="button"
-              href={slide.name.replace(/\s/g, "_").toLowerCase()}
-              variant="primary"
-            >
-              {slide.buttonText}
-            </Button>
+            <SlideText
+              slideName={slide.name}
+              slide={slide}
+              elem={document.querySelector("slideText")}
+            />
           </div>
+          <Button
+            className="button"
+            href={slide.name.replace(/\s/g, "_").toLowerCase()}
+            variant="primary"
+          >
+            {slide.buttonText}
+          </Button>
         </Carousel.Caption>
       </Carousel.Item>
     );
   });
   return (
-    <Carousel variant="light" interval="5000">
+    <Carousel variant="light" interval="5000000">
       {slides}
     </Carousel>
   );
