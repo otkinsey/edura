@@ -5,7 +5,7 @@ const text_array = [
     id: "who_we_are",
     class: "about_us_slide active",
     title: "who we are",
-    text: "Apex is a boutique Agile consultancy with decades of software development experience. We grew up in the era of structured design methodologies, adapted our learning to the rapid development approaches, and graduated to Agile. Wherever you are in your softwareevolution, we are there to help in your journey.",
+    text: "Edura is a boutique Agile consultancy with decades of software development experience. We grew up in the era of structured design methodologies, adapted our learning to the rapid development approaches, and graduated to Agile. Wherever you are in your softwareevolution, we are there to help in your journey.",
   },
   {
     id: "what_we_do",
