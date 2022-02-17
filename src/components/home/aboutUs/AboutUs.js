@@ -114,7 +114,7 @@ const AboutUsStyles = () => {
       position: relative;
       display: flex;
       height: 178px;
-      overflow:scroll;
+      overflow:hidden;
     }
     .about_us .view-window {
       position: relative;

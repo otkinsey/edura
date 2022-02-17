@@ -1,3 +1,11 @@
+a {
+  text-decoration: none;
+  color: rgb(255, 151, 82);
+  transition: color 0.3s;
+}
+a:hover {
+  color: rgb(143, 253, 40);
+}
 .about_us > div {
   flex-basis: 50%;
 }
@@ -34,9 +42,16 @@ button.btn.btn-primary,
 .carousel button,
 .carousel .button {
   background: rgba(0, 0, 0, 0.25);
-  border: 1px solid white;
+  border: 1px solid;
   margin-top: 2rem;
   display: flex;
+  transition: color 0.3s, border-color 0.3s;
+  border-color: #fff;
+}
+.carousel button:hover,
+.carousel .button:hover {
+  color: rgb(143, 253, 40);
+  border-color: rgb(143, 253, 40);
 }
 .carousel-caption {
   position: absolute;
@@ -165,6 +180,7 @@ section {
 }
 section .main {
   width: 60%;
+  min-width: 920px;
   justify-content: space-around;
   padding: 20px;
 }
@@ -184,6 +200,7 @@ section#header {
 section#slider {
   padding: 0;
   height: 60vh;
+  min-height: 600px;
 }
 section#slider .slide::before {
   content: "";
@@ -265,11 +282,11 @@ section#header #assessment_main_nav:hover .submenu {
 #slider.carousel-inner .carousel-item {
   color: white;
 }
-/* .slideText > div > p {
-  opacity: 0.75;
-  font-size: 1.5rem;
-  line-height: 1.65rem;
-} */
+#slider .slideText {
+  text-align: left;
+  width: 45%;
+  font-size: 1rem;
+}
 .slider-nav {
   height: 65px;
   fill: #777;
