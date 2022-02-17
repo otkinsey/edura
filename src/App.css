@@ -40,13 +40,15 @@ button.btn.btn-primary,
 }
 .carousel-caption {
   position: absolute;
-  right: 15%;
+  right: 0;
   bottom: 6.25rem;
-  left: 15%;
+  left: 0;
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
   color: #fff;
   text-align: center;
+  width: 60%;
+  margin: auto;
 }
 .carousel h1 {
   text-align: left;
