@@ -1,4 +1,3 @@
-import "./styles.css";
 import "bootstrap/dist/js/bootstrap.bundle.js";
 import { Button } from "react-bootstrap";
 import Carousel from "react-bootstrap/Carousel";
@@ -24,7 +23,7 @@ const Slider = () => {
     {
       name: "Courses",
       imageUrl: "what_we_do",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget semper augue, vel mollis turpis. Vestibulum elementum est ante, nec finibus tortor rutrum vitae.",
+      text: "Apex coursework will thoroughly prepare you for Agile certification. Having worked side-byside with the three elite certification agencies, we know just what you will need to gain certification from the three important certification organizations <a href='https://scaledagile.com'>SAFe</a>, <a href='https://Scrum.org'>Scrum.org</a>, and Scrum Alliance.",
       buttonText: "view courses",
     },
     {
@@ -37,22 +36,7 @@ const Slider = () => {
 
   const SlideText = (props) => {
     let output;
-    if (
-      props.slideName === "Our services" ||
-      props.slideName === "Our services"
-    ) {
-      output = (
-        <ul>
-          {props.slide.text.split(",").map((item) => (
-            <li>{item}</li>
-          ))}
-        </ul>
-      );
-    } else {
-      output = (
-        <div dangerouslySetInnerHTML={{ __html: props.slide.text }}></div>
-      );
-    }
+    output = <div dangerouslySetInnerHTML={{ __html: props.slide.text }}></div>;
     return output;
   };
 
