@@ -158,6 +158,10 @@ h2 {
   fill: none;
   stroke: white;
 }
+#header #logo svg {
+  height: 40px;
+  width: auto;
+}
 .not_flex {
   display: block;
 }
@@ -211,9 +215,29 @@ section#slider .slide::before {
   left: 0;
   opacity: 0.55;
 }
-
+/* section#footer > * {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+} */
 section#footer {
   background: lightgray;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: start;
+}
+section#footer > * {
+  flex-basis: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section#footer .social_media_links {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  padding: 0;
 }
 section#footer,
 section#footer a {
@@ -228,7 +252,8 @@ section#header {
 section#header,
 section#header a,
 section#header > ul,
-section#footer > ul {
+section#header .social_media_links,
+section#footer .social_media_links {
   display: flex;
   margin: 0;
   position: relative;
@@ -246,6 +271,9 @@ section#footer > ul > li a {
   cursor: pointer;
   text-decoration: none;
 }
+section#footer ul {
+  padding: 0;
+}
 section#header > ul > li,
 section#header > ul {
   height: 100%;
@@ -254,8 +282,8 @@ section#header li.submenu > a {
   color: black;
   text-decoration: none;
 }
-section#header > ul.social_media_links svg,
-section#footer > ul.social_media_links svg {
+section#header ul.social_media_links svg,
+section#footer ul.social_media_links svg {
   height: 21px;
 }
 section#header li .submenu {
@@ -305,6 +333,10 @@ section#header #assessment_main_nav:hover .submenu {
 
 #stay_connected .row1 > div {
   flex-basis: 50%;
+}
+
+ul {
+  list-style-type: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
