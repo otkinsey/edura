@@ -5,7 +5,8 @@ import "react-multi-carousel/lib/styles.css";
 
 const setViewWindowPosition = (elem, index) => {
   const position = elem ? elem.getBoundingClientRect().width : false;
-  return position ? position * index : 0;
+  console.log("GetInspired.js setViewWindowPosition: ", position);
+  return position ? (position + 20) * index : 0;
 };
 
 const importAll = (r) => {
