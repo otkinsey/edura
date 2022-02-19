@@ -4,11 +4,11 @@ const servicesData = [
     image: "/images/Scrolling-Assessment.jpg",
     text: 'Edura agile experts can perform an Agile Maturity Assessment for your company. We thoroughly study your business organization and measure how the software development practices you follow conform to the <a href="https://agilemanifesto.org/"> Agile Manifesto\'s 12 Agile Principles. </a>',
   },
-  {
-    name: "coaching",
-    image: "/images/Scrolling-Coaching.jpg",
-    text: "Working one on one with your own technology leaders, Edura experts share our decades of Agile expertise, with just the right level of sensitivity and suitability for your business needs.",
-  },
+  // {
+  //   name: "coaching",
+  //   image: "/images/Scrolling-Coaching.jpg",
+  //   text: "Working one on one with your own technology leaders, Edura experts share our decades of Agile expertise, with just the right level of sensitivity and suitability for your business needs.",
+  // },
   {
     name: "courses",
     image: "/images/Scrolling-Courses.jpg",

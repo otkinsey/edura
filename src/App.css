@@ -179,7 +179,10 @@ h2 {
   text-align: justify;
 }
 .ourServices.flex.main .service {
-  flex-basis: 30%;
+  flex-basis: 300px;
+}
+.ourServices.flex.main {
+  width: 43%;
 }
 .ourServices .service img {
   height: 193.6px;
