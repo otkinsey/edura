@@ -214,12 +214,12 @@ section > h1 {
 section#header {
   border: 0;
 }
-section#slider {
+#slider {
   padding: 0;
   height: 60vh;
   min-height: 600px;
 }
-section#slider .slide::before {
+#slider .slide::before {
   content: "";
   position: absolute;
   height: 100%;
@@ -228,7 +228,10 @@ section#slider .slide::before {
   left: 0;
   opacity: 0.55;
 }
-section#slider ul {
+#slider .carousel-caption {
+  height: 375px;
+}
+#slider ul {
   list-style-type: disc;
 }
 section#footer {
