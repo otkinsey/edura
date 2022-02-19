@@ -176,10 +176,10 @@ h2 {
   display: block;
 }
 .ourServices p {
-  text-align: justify;
+  text-align: left;
 }
 .ourServices.flex.main .service {
-  flex-basis: 300px;
+  flex-basis: 303px;
 }
 .ourServices.flex.main {
   width: 43%;
@@ -246,12 +246,20 @@ section#footer > * {
   flex-direction: column;
   align-items: center;
 }
+section#footer .social_media_links,
+section#header .social_media_links {
+  padding: 0;
+  width: 280px;
+}
 section#footer .social_media_links {
   width: 100%;
   display: flex;
   justify-content: space-around;
   align-content: center;
-  padding: 0;
+}
+section#footer div:nth-child(3) {
+  width: 280px;
+  padding: 0 56px;
 }
 section#footer,
 section#footer a {
@@ -287,6 +295,7 @@ section#footer > ul > li a {
 }
 section#footer ul {
   padding: 0;
+  text-align: left;
 }
 section#header > ul > li,
 section#header > ul {
