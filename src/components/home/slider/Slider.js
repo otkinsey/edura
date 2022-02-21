@@ -18,7 +18,7 @@ const Slider = () => {
       name: "Assessment",
       imageUrl: "our_services",
       text: "We are Agile experts providing you with our industry leading 360  Assessment, coaching and training.",
-      buttonText: "schedule an assessment",
+      buttonText: "schedule assessment",
     },
     {
       name: "Courses",
