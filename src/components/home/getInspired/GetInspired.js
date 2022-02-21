@@ -54,7 +54,7 @@ const GetInspired = () => {
       <div id="view-window" style={{ postion: "relative", width: 678 }}>
         <div
           className="flex"
-          id="slider"
+          id="get_inspired_slider"
           style={{
             position: "relative",
             right: setViewWindowPosition(

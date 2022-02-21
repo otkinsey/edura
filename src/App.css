@@ -15,13 +15,22 @@ a:hover {
 .about_us .button,
 .about_us button {
   width: 200px;
-  padding: 10px;
+  padding: 11px;
+  text-transform: capitalize;
+}
+.about_us .btn-outline-secondary {
+  color: #6c757d;
+  border-color: #6c757d;
+  transform: border 0.3s, color 0.3s;
 }
 .about_us button:nth-child(2) {
   margin: 20px 0px;
 }
 .about_us_slider h2 {
   padding-top: 0;
+}
+.about_us .btn-outline-secondary {
+  background: transparent;
 }
 button.btn.btn-primary,
 .button.btn.btn-primary {
@@ -30,6 +39,7 @@ button.btn.btn-primary,
   align-items: center;
   justify-content: center;
   width: 220px;
+  text-transform: capitalize;
 }
 .App {
   text-align: center;
@@ -52,7 +62,8 @@ button.btn.btn-primary,
   border-color: #fff;
 }
 .carousel button:hover,
-.carousel .button:hover {
+.carousel .button:hover,
+.about_us .btn-outline-secondary:hover {
   color: rgb(143, 253, 40);
   border-color: rgb(143, 253, 40);
 }
@@ -174,6 +185,8 @@ h2 {
 }
 #our_partners img {
   display: block;
+  padding: 0 28px;
+  width: 90%;
 }
 .ourServices p {
   text-align: left;
@@ -292,6 +305,9 @@ section#footer > ul > li a {
   color: white;
   cursor: pointer;
   text-decoration: none;
+  text-transform: capitalize;
+  font-size: 0.85rem;
+  font-weight: bold;
 }
 section#footer ul {
   padding: 0;
@@ -309,8 +325,11 @@ section#header ul.social_media_links svg,
 section#footer ul.social_media_links svg {
   height: 21px;
 }
+section#header > li {
+  position: header;
+}
 section#header li .submenu {
-  display: block;
+  display: none;
   background: white;
   color: black;
   position: absolute;
@@ -327,7 +346,8 @@ section#header li .submenu a {
   text-decoration: none;
   color: black;
 }
-section#header #assessment_main_nav:hover .submenu {
+section#header li:hover .submenu {
+  display: block;
   opacity: 1;
 }
 #slider.carousel-inner .carousel-item {
