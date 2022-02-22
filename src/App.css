@@ -213,10 +213,14 @@ section .main {
   min-width: 920px;
   justify-content: space-around;
   padding: 20px;
+  align-items: center;
 }
 section#about_us,
 section#get_inspired {
   background: #efefef;
+}
+section#get_inspired .main {
+  align-items: center;
 }
 section > div {
   width: 100%;
