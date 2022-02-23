@@ -28,12 +28,12 @@ const ServiceText = (props) => {
   );
 };
 
-const services = servicesData.map((service) => {
+const services = servicesData.map((service, idx) => {
   return (
-    <div className="service">
+    <div className="service" key={idx}>
       <img style={{ width: "100%" }} src={service.image} alt="" />
       <h2>{service.name}</h2>
-      <ServiceText service={service} />
+      <ServiceText service={service} key={idx} />
     </div>
   );
 });
