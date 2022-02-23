@@ -7,7 +7,7 @@ import Resources from "./components/resources";
 import AboutUs from "./components/about_us/about_us";
 import Coaching from "./components/coaching";
 import Contact from "./components/contact/constact";
-import Courses from "./components/courses";
+import Courses from "./components/upcoming_courses";
 import Home from "./components/home";
 import OurServices from "./components/our_services/our_services";
 
@@ -26,8 +26,7 @@ function App() {
         <Route path="about_us" element={<AboutUs />} />
         <Route path="coaching" element={<Coaching />} />
         <Route path="contact" element={<Contact />} />
-
-        <Route path="courses" element={<Courses />} />
+        <Route path="upcoming_courses" element={<Courses />} />
         <Route path="assessment" element={<Assessments />} />
         <Route path="resources" element={<Resources />} />
         <Route path="training" element={<Training />} />
