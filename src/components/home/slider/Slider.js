@@ -22,7 +22,7 @@ const Slider = () => {
     },
     {
       name: "Courses",
-      imageUrl: "what_we_do",
+      imageUrl: "Scrolling-Courses",
       text: "Apex coursework will thoroughly prepare you for Agile certification. Having worked side-byside with the three elite certification agencies, we know just what you will need to gain certification from the three important certification organizations <a href='https://scaledagile.com'>SAFe</a>, <a href='https://Scrum.org'>Scrum.org</a>, and <a href='https://www.scrumalliance.org/'>Scrum Alliance.",
       buttonText: "view courses",
     },

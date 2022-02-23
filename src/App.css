@@ -3,6 +3,11 @@ a {
   color: rgb(255, 151, 82);
   transition: color 0.3s;
 }
+a[href="/view_courses"] {
+  border: 1px solid white;
+  height: 40px;
+  border-radius: 7px;
+}
 a:hover {
   color: rgb(143, 253, 40);
 }
@@ -123,9 +128,9 @@ form label {
   width: 70%;
   overflow: hidden;
 }
-#get-inspired div#slider {
+#get-inspired div#get_inspired_slider {
   right: 0px;
-  transition: right 0.25s;
+  transition: right 0.3s;
 }
 #get-inspired .circle-frame {
   height: 150px;
@@ -135,9 +140,12 @@ form label {
   border: 9px solid white;
   box-shadow: 0px 0px 4px black;
   display: flex;
+  position: relative;
 }
 #get-inspired p.text {
   display: -webkit-box;
+  padding-left: 8px;
+  font-size: 0.85rem;
   overflow: hidden;
   text-align: left;
   -webkit-line-clamp: 3;
@@ -146,6 +154,10 @@ form label {
 #get-inspired .testimonial {
   width: 218px;
   padding: 10px;
+}
+#get-inspired .testimonial:nth-child(2) .circle-frame img {
+  right: -45px;
+  left: auto;
 }
 h1 {
   font-size: 4rem;
@@ -327,7 +339,7 @@ section#header li.submenu > a {
 }
 section#header ul.social_media_links svg,
 section#footer ul.social_media_links svg {
-  height: 21px;
+  height: 18px;
 }
 section#header > li {
   position: header;
