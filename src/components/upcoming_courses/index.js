@@ -1,4 +1,5 @@
 import { Carousel } from "react-bootstrap";
+import { ReactComponent as CalendarIcon } from "../../images/general_icons/calendar.svg";
 
 const courseData = [
   {
@@ -114,17 +115,23 @@ const courseData = [
 const CoursesList = () => {
   const courses = courseData.map((obj, index) => {
     return (
-      <div className="course_row" key={index}>
-        <ul>
-          <li id="instructor_image">{obj.instructorImage}</li>
-          <li id="instuctor_name">{obj.instructorName}</li>
-          <li id="course_name">{obj.courseName}</li>
-          <li id="decription">{obj.description}</li>
-          <li id="date">{obj.date}</li>
-          <li id="time">{obj.time}</li>
-          <li id="partner_name">{obj.partnerName}</li>
-        </ul>
-      </div>
+      <tr style={{ fontSize: ".9rem", fontColor: "#aaa" }}>
+        <td id="instructor_image">
+          <div className="circle_frame">
+            <img
+              src={obj.instructorImage}
+              alt={`${obj.instructorName}'simage`}
+            />
+          </div>
+          <div style={{ marginTop: "8px" }}>{obj.instructorName}</div>
+        </td>
+        <td id="course_name">
+          {obj.courseName.split(" ").slice(0, 4).join(" ")}
+        </td>
+        <td id="description">{obj.description}</td>
+        <td id="date">{obj.date}</td>
+        <td id="time">{obj.time}</td>
+      </tr>
     );
   });
   return courses;
@@ -148,21 +155,30 @@ const Courses = () => {
   return (
     <>
       <div className="jumbotron">
-        <h1>Up Coming Courses</h1>
+        <h1>Upcoming Courses</h1>
       </div>
-      <div>
-        <div id="course_filters">{<FilterButtons />}</div>
+      <div id="upcoming_courses">
+        <div id="course_filters">
+          <h3>Course Filters</h3>
+          {<FilterButtons />}
+        </div>
         <div id="course_calendar">
-          <ul class="table_headings">
-            <li id="instructor_image">instructor image</li>
-            <li id="instuctor_name">instuctor name</li>
-            <li id="course_name">course name</li>
-            <li id="decription">decription</li>
-            <li id="date">date</li>
-            <li id="time">time</li>
-            <li id="partner_name">partner name</li>
-          </ul>
-          <div>{<CoursesList />}</div>
+          <h2>
+            <CalendarIcon /> February
+          </h2>
+          <table className="table">
+            <thead>
+              <tr className="table_headings">
+                <th id="instructor_image">instructor</th>
+                <th id="course_name">course name</th>
+                <th id="description">decription</th>
+                <th id="date">date</th>
+                <th id="time">time</th>
+              </tr>
+            </thead>
+
+            <tbody>{<CoursesList />}</tbody>
+          </table>
         </div>
       </div>
     </>
