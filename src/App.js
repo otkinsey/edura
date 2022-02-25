@@ -6,7 +6,7 @@ import Resources from "./components/resources";
 
 import AboutUs from "./components/about_us/about_us";
 import Coaching from "./components/coaching";
-import Contact from "./components/contact/contact";
+import Contact from "./components/contact/constact";
 import Courses from "./components/upcoming_courses";
 import Home from "./components/home";
 import OurServices from "./components/our_services/our_services";

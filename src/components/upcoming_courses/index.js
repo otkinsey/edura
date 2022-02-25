@@ -1,31 +1,5 @@
 import { Carousel } from "react-bootstrap";
-import { useState } from "react";
 import { ReactComponent as CalendarIcon } from "../../images/general_icons/calendar.svg";
-
-const filterOptions = [
-  { courseType: ["type 1", "type 2", "type 3", ""] },
-  {
-    month: [
-      "january",
-      "february",
-      "march",
-      "april",
-      "may",
-      "june",
-      "july",
-      "august",
-      "september",
-      "october",
-      "november",
-      "december",
-    ],
-  },
-  { date: [] },
-  { country: ["United States of America, England, India"] },
-  { city: ["boston", "london", "johannesburg"] },
-  { trainer: ["Raj Heda", "Person 2", "Person 3"] },
-  { partner: ["Partern 1", "Partern 2", "", "Partern 3"] },
-];
 
 const courseData = [
   {
@@ -34,7 +8,7 @@ const courseData = [
     instructorName: "Alys Coryndon",
     courseName:
       "Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
-    location:
+    description:
       "Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.",
     date: "10/8/2021",
     time: "9:14 PM",
@@ -43,10 +17,10 @@ const courseData = [
   {
     instructorImage:
       "https://robohash.org/pariaturnecessitatibuset.jpg?size=80x80&set=set1",
-    instructorName: "Raj Heda",
+    instructorName: "Moishe Dollin",
     courseName:
       "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus. Curabitur at ipsum ac tellus semper interdum.",
-    location:
+    description:
       "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
     date: "9/21/2021",
     time: "2:20 PM",
@@ -55,10 +29,10 @@ const courseData = [
   {
     instructorImage:
       "https://robohash.org/etametmolestiae.jpg?size=80x80&set=set1",
-    instructorName: "Raj Heda",
+    instructorName: "Sigismund Kinkaid",
     courseName:
       "Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum. Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo.",
-    location:
+    description:
       "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
     date: "6/7/2021",
     time: "2:59 PM",
@@ -67,10 +41,10 @@ const courseData = [
   {
     instructorImage:
       "https://robohash.org/sedomnisfugit.jpg?size=80x80&set=set1",
-    instructorName: "Raj Heda",
+    instructorName: "Gorden Germann",
     courseName:
       "Donec vitae nisi. Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus. Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
-    location:
+    description:
       "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.\n\nQuisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.\n\nPhasellus in felis. Donec semper sapien a libero. Nam dui.",
     date: "4/22/2021",
     time: "5:45 AM",
@@ -79,10 +53,10 @@ const courseData = [
   {
     instructorImage:
       "https://robohash.org/laborevoluptatibusaut.jpg?size=80x80&set=set1",
-    instructorName: "Alys Coryndon",
+    instructorName: "Giacomo Ducastel",
     courseName:
       "In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat. Praesent blandit.",
-    location:
+    description:
       "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.\n\nVestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",
     date: "10/9/2021",
     time: "9:55 AM",
@@ -91,10 +65,10 @@ const courseData = [
   {
     instructorImage:
       "https://robohash.org/omnisametnobis.jpg?size=80x80&set=set1",
-    instructorName: "Alys Coryndon",
+    instructorName: "Terese Heggman",
     courseName:
       "Vivamus in felis eu sapien cursus vestibulum. Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
-    location:
+    description:
       "Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.\n\nProin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
     date: "5/8/2021",
     time: "4:23 PM",
@@ -103,10 +77,10 @@ const courseData = [
   {
     instructorImage:
       "https://robohash.org/rerumdoloret.jpg?size=80x80&set=set1",
-    instructorName: "Alys Coryndon",
+    instructorName: "Igor Fearn",
     courseName:
       "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
-    location:
+    description:
       "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
     date: "11/20/2021",
     time: "12:51 PM",
@@ -118,7 +92,7 @@ const courseData = [
     instructorName: "Claribel Drewell",
     courseName:
       "Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl. Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum. Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
-    location:
+    description:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.",
     date: "10/1/2021",
     time: "3:23 PM",
@@ -127,10 +101,10 @@ const courseData = [
   {
     instructorImage:
       "https://robohash.org/nulladucimusmagni.jpg?size=80x80&set=set1",
-    instructorName: "Claribel Drewell",
+    instructorName: "Clive Robjohns",
     courseName:
       "Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl. Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
-    location:
+    description:
       "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.\n\nVestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.\n\nIn congue. Etiam justo. Etiam pretium iaculis justo.",
     date: "11/19/2021",
     time: "6:47 AM",
@@ -154,7 +128,7 @@ const CoursesList = () => {
         <td id="course_name">
           {obj.courseName.split(" ").slice(0, 4).join(" ")}
         </td>
-        <td id="location">{obj.location}</td>
+        <td id="description">{obj.description}</td>
         <td id="date">{obj.date}</td>
         <td id="time">{obj.time}</td>
       </tr>
@@ -165,69 +139,14 @@ const CoursesList = () => {
 
 const courseDataKeys = Object.keys(courseData[0]);
 
-const showDropDown = (event, display) => {
-  const optionListId = event.target.id.replace("filter_button", "option_list");
-  const optionLists = Array.from(
-    document.getElementsByClassName("filterOptions")
-  );
-  console.log(optionLists);
-  optionLists.forEach((list) => {
-    list.style["display"] = "none";
-  });
-  const target = document.getElementById(optionListId);
-  console.log(target.style["display"]);
-  target.style["display"] = display;
-};
-
 const FilterButtons = () => {
-  const [display, setDisplay] = useState("none");
   const regexp = /([A-Z])/g;
-  const filterKeys = filterOptions.map((k) => Object.keys(k)[0]);
-
-  const setDisplayState = (event) => {
-    if (display === "none") {
-      setDisplay("block");
-    } else {
-      setDisplay("none");
-    }
-
-    showDropDown(event, display);
-  };
-
-  const buttons = filterKeys.map((key, idx) => {
-    if (key !== "instructorImage" && key !== "location") {
-      const formattedKey = key
-        .replace(/([A-Z])/g, " $1")
-        .replace(/^./g, (str) => str.toUpperCase());
-      return (
-        <div style={{ position: "relative" }}>
-          <button
-            className="filter_button"
-            id={`filter_button_${key}`}
-            key={idx}
-            onClick={(e) => setDisplayState(e)}
-            style={{ position: "relative", zIndex: "1" }}
-          >
-            {formattedKey}
-          </button>
-          <ul
-            className="filterOptions submenu"
-            style={{
-              display: "none",
-              position: "absolute",
-              zIndex: "2",
-            }}
-            id={`option_list_${key}`}
-          >
-            {filterOptions[idx][key].map((option, idx) => {
-              return <li key={`option_${idx}`}>{option}</li>;
-            })}
-          </ul>
-        </div>
-      );
-    } else {
-      return <></>;
-    }
+  const buttons = courseDataKeys.map((key, idx) => {
+    return (
+      <button className="filter_button" key={idx}>
+        {key.replace(regexp, " $1").replace(/^./g, (str) => str.toUpperCase())}
+      </button>
+    );
   });
   return buttons;
 };
@@ -252,7 +171,7 @@ const Courses = () => {
               <tr className="table_headings">
                 <th id="instructor_image">instructor</th>
                 <th id="course_name">course name</th>
-                <th id="location">decription</th>
+                <th id="description">decription</th>
                 <th id="date">date</th>
                 <th id="time">time</th>
               </tr>

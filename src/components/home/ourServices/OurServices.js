@@ -2,7 +2,7 @@ const servicesData = [
   {
     name: "Assessment",
     image: "/images/Scrolling-Assessment.jpeg",
-    text: "Edura agile experts can perform an Agile Maturity Assessment for your company. We thoroughly study your business organization and measure how the software development practices you follow conform to the Agile Manifesto's 12 Agile Principles.",
+    text: 'Edura agile experts can perform an Agile Maturity Assessment for your company. We thoroughly study your business organization and measure how the software development practices you follow conform to the <a href="https://agilemanifesto.org/"> Agile Manifesto\'s 12 Agile Principles. </a>',
   },
   // {
   //   name: "coaching",
@@ -12,7 +12,7 @@ const servicesData = [
   {
     name: "Courses",
     image: "/images/Scrolling-Courses.jpeg",
-    text: "Edura coursework will thoroughly prepare you for Agile certification. Having worked side-byside with the three elite certification agencies, we know just what you will need to gain certification from the three important certification  SAFe, Scrum.org, and Scrum Alliance.",
+    text: 'Edura coursework will thoroughly prepare you for Agile certification. Having worked side-byside with the three elite certification agencies, we know just what you will need to gain certification from the three important certification  <a href="https://www.scaledagileframework.com/">SAFe</a>, <a href="https://www.scrum.org/">Scrum.org</a>, and <a href="https://www.scrumalliance.org/">Scrum Alliance.</a>',
   },
 ];
 
@@ -22,10 +22,7 @@ const ServiceText = (props) => {
       dangerouslySetInnerHTML={{
         __html: `${props.service.text.substring(
           0
-        )}<br /><a href='${props.service.name.replace(
-          /\s/g,
-          "_"
-        )}'> Learn More ></a>`,
+        )}<a href='${props.service.name.replace(/\s/g, "_")}'> Learn More</a>`,
       }}
     ></p>
   );

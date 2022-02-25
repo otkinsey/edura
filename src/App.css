@@ -37,6 +37,15 @@ a:hover {
 .about_us .btn-outline-secondary {
   background: transparent;
 }
+button.btn.btn-primary,
+.button.btn.btn-primary {
+  height: 50px;
+  border-radius: 23px;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  text-transform: capitalize;
+}
 .App {
   text-align: center;
 }
@@ -72,6 +81,21 @@ button.btn:hover,
 }
 .carousel {
   flex-basis: 100%;
+}
+.carousel button,
+.carousel .button {
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid;
+  margin-top: 2rem;
+  display: flex;
+  transition: color 0.3s, border-color 0.3s;
+  border-color: #fff;
+}
+.carousel button:hover,
+.carousel .button:hover,
+.about_us .btn-outline-secondary:hover {
+  color: rgb(143, 253, 40);
+  border-color: rgb(143, 253, 40);
 }
 .carousel-caption {
   position: absolute;
@@ -140,7 +164,29 @@ form label {
   text-align: left;
   text-transform: capitalize;
 }
-
+.jumbotron {
+  position: relative;
+  height: 500px;
+  color: white;
+  text-align: left;
+  background: center/cover no-repeat
+    url(http://localhost:3000/images/slider-images/Scrolling-Assessment.jpeg);
+}
+.jumbotron::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.jumbotron h1 {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  left: 20px;
+  z-index: 2;
+}
 #get-inspired .slider-nav {
   font-size: 65px;
   fill: rgb(189, 189, 189);
@@ -445,26 +491,16 @@ section#header li:hover .submenu {
 #stay_connected .row1 > div {
   flex-basis: 50%;
 }
-.display_block {
-  display: block;
-}
-.hide {
-  display: none;
-}
-.submenu {
-  background: white;
-  box-shadow: 0 0 3px #999;
-  display: flex;
-  align-items: start;
-  padding: 20px;
-  width: 100%;
-}
 #upcoming_courses {
   display: grid;
   grid: 1fr / 24% 75%;
   gap: 20px;
   padding: 20px;
   background: #dedede;
+}
+#upcoming_courses h2,
+#upcoming_courses h3 {
+  color: #cecece;
 }
 #upcoming_courses > div {
   background: white;
@@ -489,6 +525,15 @@ section#header li:hover .submenu {
 }
 #upcoming_courses table {
   text-align: left;
+}
+#upcoming_courses #course_filters button {
+  height: 48px;
+  border: 2px solid #ddd;
+  border-radius: 24px;
+  font-weight: bold;
+  color: #aaa;
+  background-color: white;
+  /* text-shadow: 0 0 2px #777; */
 }
 #upcoming_courses #course_calendar > h2 {
   text-align: left;
@@ -519,13 +564,12 @@ section#header li:hover .submenu {
 #upcoming_courses tbody tr:nth-child(even) {
   background-color: #f5f5f5;
 }
-#upcoming_courses th#location {
+#upcoming_courses th#description {
   width: 30%;
 }
 #upcoming_courses #course_filters {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 #upcoming_courses #course_filters button {
   /* border: ; */
