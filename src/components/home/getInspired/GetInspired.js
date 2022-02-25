@@ -37,7 +37,7 @@ const GetInspired = () => {
   let slides = Object.keys(images).map((image, index) => {
     return (
       <div className="testimonial" key={index}>
-        <div className="circle-frame">
+        <div className="circle_frame">
           <img src={images[image]} alt={`${image} testimonial`} />
         </div>
         <p className="text">
