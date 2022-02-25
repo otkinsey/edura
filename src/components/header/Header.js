@@ -16,7 +16,10 @@ const Header = () => {
         </Link>
         <ul>
           <li id="assessment_main_nav">
-            assessment
+            <Link to="assessment">assessment</Link>
+          </li>
+          <li id="training_main_nav">
+            <Link to="/training">training</Link>
             <ul className="submenu">
               <li>
                 <Link to="/public_assessments">Public</Link>
@@ -25,15 +28,9 @@ const Header = () => {
                 <Link to="/corporate">Corporate</Link>
               </li>
               <li>
-                <Link to="/">Upcoming Courses</Link>
+                <Link to="upcoming_courses">Upcoming Courses</Link>
               </li>
             </ul>
-          </li>
-          <li id="training_main_nav">
-            <Link to="/training">training</Link>
-          </li>
-          <li id="coaching_main_nav">
-            <Link to="/coaching">coaching</Link>
           </li>
           <li id="resources_main_nav">
             <Link to="/resources">resources</Link>
@@ -41,11 +38,7 @@ const Header = () => {
         </ul>
         <ul>
           <li>
-            <Link to="/">sign up</Link>
-          </li>
-          <li>|</li>
-          <li>
-            <Link to="/">sign in</Link>
+            <Link to="/">sign up</Link> | <Link to="/">sign in</Link>
           </li>
         </ul>
         <ul className="social_media_links">
@@ -68,6 +61,11 @@ const Header = () => {
             <Link to="/">
               <Facebook />
             </Link>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <Link to="view_courses">View Courses</Link>
           </li>
         </ul>
         <Outlet />

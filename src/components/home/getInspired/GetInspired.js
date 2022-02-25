@@ -19,6 +19,16 @@ const importAll = (r) => {
   return images;
 };
 
+const reviews = [
+  "Great course; I learned everything I needed and more! I am excited to implement these skills into my role in my organization.",
+  "Fantastic experience! Highly recommended! I am looking forward to sharingwhat I’ve learned with my enterprise.",
+  "Raj is an excellent instructor, always willing to help and great at explaining concepts.",
+  "This course equipped me with the skills I needed to grow and advance in my career. Many thanks!",
+  "This content is amazing earth shattery.  My life is changed forever!!!!!!!",
+  "I am agile, mobile, and hostile. This course equipped me with the skills I needed to grow and advance in my career. Many thanks!",
+  "Three words A, may, zing!!!!!!",
+];
+
 const GetInspired = () => {
   const [slideIndex, setSlideIndex] = useState(0);
   let images = importAll(
@@ -27,14 +37,11 @@ const GetInspired = () => {
   let slides = Object.keys(images).map((image, index) => {
     return (
       <div className="testimonial" key={index}>
-        <div className="circle-frame">
+        <div className="circle_frame">
           <img src={images[image]} alt={`${image} testimonial`} />
         </div>
         <p className="text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi mattis
-          lobortis ante, sit amet maximus ante interdum eu. Fusce sed mauris in
-          sapien pulvinar consectetur. Fusce neque nulla, mollis at suscipit
-          nec, viverra at neque.
+          {reviews[index] ? reviews[index] : "This class was great!!!"}
         </p>
         <span>
           {Object.keys(images).map((img, index) => (
@@ -54,7 +61,7 @@ const GetInspired = () => {
       <div id="view-window" style={{ postion: "relative", width: 678 }}>
         <div
           className="flex"
-          id="slider"
+          id="get_inspired_slider"
           style={{
             position: "relative",
             right: setViewWindowPosition(
