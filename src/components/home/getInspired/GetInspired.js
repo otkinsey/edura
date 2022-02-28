@@ -65,7 +65,7 @@ const GetInspired = () => {
           style={{
             position: "relative",
             right: setViewWindowPosition(
-              document.querySelector(".circle-frame"),
+              document.querySelector(".circle_frame"),
               slideIndex
             ),
           }}

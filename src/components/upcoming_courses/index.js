@@ -8,7 +8,7 @@ const courseData = [
     instructorName: "Alys Coryndon",
     courseName:
       "Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
-    description:
+    location:
       "Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.",
     date: "10/8/2021",
     time: "9:14 PM",
@@ -20,7 +20,7 @@ const courseData = [
     instructorName: "Moishe Dollin",
     courseName:
       "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus. Curabitur at ipsum ac tellus semper interdum.",
-    description:
+    location:
       "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
     date: "9/21/2021",
     time: "2:20 PM",
@@ -32,7 +32,7 @@ const courseData = [
     instructorName: "Sigismund Kinkaid",
     courseName:
       "Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum. Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo.",
-    description:
+    location:
       "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
     date: "6/7/2021",
     time: "2:59 PM",
@@ -44,7 +44,7 @@ const courseData = [
     instructorName: "Gorden Germann",
     courseName:
       "Donec vitae nisi. Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus. Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
-    description:
+    location:
       "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.\n\nQuisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.\n\nPhasellus in felis. Donec semper sapien a libero. Nam dui.",
     date: "4/22/2021",
     time: "5:45 AM",
@@ -56,7 +56,7 @@ const courseData = [
     instructorName: "Giacomo Ducastel",
     courseName:
       "In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat. Praesent blandit.",
-    description:
+    location:
       "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.\n\nVestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",
     date: "10/9/2021",
     time: "9:55 AM",
@@ -68,7 +68,7 @@ const courseData = [
     instructorName: "Terese Heggman",
     courseName:
       "Vivamus in felis eu sapien cursus vestibulum. Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
-    description:
+    location:
       "Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.\n\nProin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
     date: "5/8/2021",
     time: "4:23 PM",
@@ -80,7 +80,7 @@ const courseData = [
     instructorName: "Igor Fearn",
     courseName:
       "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
-    description:
+    location:
       "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
     date: "11/20/2021",
     time: "12:51 PM",
@@ -92,7 +92,7 @@ const courseData = [
     instructorName: "Claribel Drewell",
     courseName:
       "Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl. Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum. Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
-    description:
+    location:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.",
     date: "10/1/2021",
     time: "3:23 PM",
@@ -104,7 +104,7 @@ const courseData = [
     instructorName: "Clive Robjohns",
     courseName:
       "Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl. Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
-    description:
+    location:
       "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.\n\nVestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.\n\nIn congue. Etiam justo. Etiam pretium iaculis justo.",
     date: "11/19/2021",
     time: "6:47 AM",
@@ -128,7 +128,7 @@ const CoursesList = () => {
         <td id="course_name">
           {obj.courseName.split(" ").slice(0, 4).join(" ")}
         </td>
-        <td id="description">{obj.description}</td>
+        <td id="location">{obj.location}</td>
         <td id="date">{obj.date}</td>
         <td id="time">{obj.time}</td>
       </tr>
@@ -142,7 +142,7 @@ const courseDataKeys = Object.keys(courseData[0]);
 const FilterButtons = () => {
   const regexp = /([A-Z])/g;
   const buttons = courseDataKeys.map((key, idx) => {
-    if (key !== "instructorImage" && key !== "description") {
+    if (key !== "instructorImage" && key !== "location") {
       return (
         <button className="filter_button" key={idx}>
           {key
@@ -177,7 +177,7 @@ const Courses = () => {
               <tr className="table_headings">
                 <th id="instructor_image">instructor</th>
                 <th id="course_name">course name</th>
-                <th id="description">decription</th>
+                <th id="location">decription</th>
                 <th id="date">date</th>
                 <th id="time">time</th>
               </tr>
