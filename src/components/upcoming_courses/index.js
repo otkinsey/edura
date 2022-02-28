@@ -142,11 +142,17 @@ const courseDataKeys = Object.keys(courseData[0]);
 const FilterButtons = () => {
   const regexp = /([A-Z])/g;
   const buttons = courseDataKeys.map((key, idx) => {
-    return (
-      <button className="filter_button" key={idx}>
-        {key.replace(regexp, " $1").replace(/^./g, (str) => str.toUpperCase())}
-      </button>
-    );
+    if (key !== "instructorImage" && key !== "description") {
+      return (
+        <button className="filter_button" key={idx}>
+          {key
+            .replace(regexp, " $1")
+            .replace(/^./g, (str) => str.toUpperCase())}
+        </button>
+      );
+    } else {
+      return <></>;
+    }
   });
   return buttons;
 };

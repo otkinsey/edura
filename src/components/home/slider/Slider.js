@@ -74,7 +74,7 @@ const Slider = () => {
     );
   });
   return (
-    <Carousel variant="light" interval="5000">
+    <Carousel variant="light" interval="500000" className="dark_background">
       {slides}
     </Carousel>
   );
