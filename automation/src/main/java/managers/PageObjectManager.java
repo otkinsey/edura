@@ -3,11 +3,9 @@ package managers;
 import org.openqa.selenium.WebDriver;
 
 import pageObjects.AssessmentPage;
-import pageObjects.ContactUsPage;
 import pageObjects.GooglePage;
 import pageObjects.Homepage;
 import pageObjects.LoginPage;
-import pageObjects.TrainingPage;
 import pageObjects.UrlLaunchPage;
 
 
@@ -18,8 +16,6 @@ public class PageObjectManager {
 	private UrlLaunchPage urlLaunchPage;
 	private LoginPage loginPage;
 	private AssessmentPage assessmentPage;
-	private TrainingPage trainingPage;
-	private ContactUsPage contactUsPage;
 	
 	public PageObjectManager(WebDriver driver) {
 		this.driver = driver;
@@ -41,16 +37,8 @@ public class PageObjectManager {
 		return (loginPage == null) ? loginPage = new LoginPage(driver) : loginPage;
 	}
 	
-	public AssessmentPage getAssessmentPage() {
+	public AssessmentPage geAssessmentPage() {
 		return (assessmentPage == null) ? assessmentPage = new AssessmentPage(driver) : assessmentPage;
-	}
-	
-	public TrainingPage getTrainingPage() {
-		return (trainingPage == null) ? trainingPage = new TrainingPage(driver) : trainingPage;
-	}
-	
-	public ContactUsPage getContactUsPage() {
-		return (contactUsPage == null) ? contactUsPage = new ContactUsPage(driver) : contactUsPage;
 	}
 	
 //	public Wait getWebdriverWait() {
