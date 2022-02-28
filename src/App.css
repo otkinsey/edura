@@ -64,6 +64,12 @@ button.btn:hover,
 .button.btn:hover {
   background-color: #f8d123;
 }
+/* .carousel-indicators button:hover {
+  border: transparent;
+} */
+.dark_background .carousel-indicators button:hover {
+  border-color: transparent;
+}
 .carousel {
   flex-basis: 100%;
 }
@@ -132,6 +138,7 @@ form label {
   font-size: 0.9rem;
   display: block;
   text-align: left;
+  text-transform: capitalize;
 }
 
 #get-inspired .slider-nav {
@@ -309,7 +316,7 @@ section#header {
   list-style-type: disc;
 }
 section#footer {
-  background: lightgray;
+  background: #071e4a;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: start;
@@ -498,7 +505,7 @@ section#header li:hover .submenu {
 #upcoming_courses tbody tr:nth-child(even) {
   background-color: #f5f5f5;
 }
-#upcoming_courses th#description {
+#upcoming_courses th#location {
   width: 30%;
 }
 #upcoming_courses #course_filters {
