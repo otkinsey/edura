@@ -14,7 +14,7 @@ const Header = () => {
           <img src="images/logo.png" alt="Edura Logo" />
         </Link>
         <div>
-          <h3>Related Links</h3>
+          <h3 style={{ color: "white" }}>Related Links</h3>
           <ul>
             <li>
               <Link to="contact_us">About Us</Link>
