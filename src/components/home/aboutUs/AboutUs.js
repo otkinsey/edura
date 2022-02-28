@@ -64,7 +64,6 @@ const AboutUs = () => {
             onClick={animateSlider}
             id="button_who_we_are"
             style={{ display: "block" }}
-            variant="outline-secondary"
           >
             who we are
           </Button>
@@ -72,7 +71,6 @@ const AboutUs = () => {
             onClick={animateSlider}
             id="button_what_we_do"
             style={{ display: "block" }}
-            variant="outline-secondary"
           >
             what we do
           </Button>
@@ -80,7 +78,6 @@ const AboutUs = () => {
             className="button"
             href="contact"
             style={{ display: "block" }}
-            variant="outline-secondary"
           >
             contact us
           </Button>
