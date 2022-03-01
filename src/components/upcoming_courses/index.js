@@ -1,5 +1,31 @@
 import { Carousel } from "react-bootstrap";
+import { useState } from "react";
 import { ReactComponent as CalendarIcon } from "../../images/general_icons/calendar.svg";
+
+const filterOptions = [
+  { courseType: [] },
+  {
+    month: [
+      "january",
+      "february",
+      "march",
+      "april",
+      "may",
+      "june",
+      "july",
+      "august",
+      "september",
+      "october",
+      "november",
+      "december",
+    ],
+  },
+  { date: [] },
+  { country: ["United States of America"] },
+  { city: ["boston", "london", "johannesburg"] },
+  { trainer: [] },
+  { partner: [] },
+];
 
 const courseData = [
   {
@@ -17,7 +43,7 @@ const courseData = [
   {
     instructorImage:
       "https://robohash.org/pariaturnecessitatibuset.jpg?size=80x80&set=set1",
-    instructorName: "Moishe Dollin",
+    instructorName: "Raj Heda",
     courseName:
       "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus. Curabitur at ipsum ac tellus semper interdum.",
     location:
@@ -29,7 +55,7 @@ const courseData = [
   {
     instructorImage:
       "https://robohash.org/etametmolestiae.jpg?size=80x80&set=set1",
-    instructorName: "Sigismund Kinkaid",
+    instructorName: "Raj Heda",
     courseName:
       "Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum. Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo.",
     location:
@@ -41,7 +67,7 @@ const courseData = [
   {
     instructorImage:
       "https://robohash.org/sedomnisfugit.jpg?size=80x80&set=set1",
-    instructorName: "Gorden Germann",
+    instructorName: "Raj Heda",
     courseName:
       "Donec vitae nisi. Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus. Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
     location:
@@ -53,7 +79,7 @@ const courseData = [
   {
     instructorImage:
       "https://robohash.org/laborevoluptatibusaut.jpg?size=80x80&set=set1",
-    instructorName: "Giacomo Ducastel",
+    instructorName: "Alys Coryndon",
     courseName:
       "In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat. Praesent blandit.",
     location:
@@ -65,7 +91,7 @@ const courseData = [
   {
     instructorImage:
       "https://robohash.org/omnisametnobis.jpg?size=80x80&set=set1",
-    instructorName: "Terese Heggman",
+    instructorName: "Alys Coryndon",
     courseName:
       "Vivamus in felis eu sapien cursus vestibulum. Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
     location:
@@ -77,7 +103,7 @@ const courseData = [
   {
     instructorImage:
       "https://robohash.org/rerumdoloret.jpg?size=80x80&set=set1",
-    instructorName: "Igor Fearn",
+    instructorName: "Alys Coryndon",
     courseName:
       "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
     location:
@@ -101,7 +127,7 @@ const courseData = [
   {
     instructorImage:
       "https://robohash.org/nulladucimusmagni.jpg?size=80x80&set=set1",
-    instructorName: "Clive Robjohns",
+    instructorName: "Claribel Drewell",
     courseName:
       "Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl. Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
     location:
@@ -139,16 +165,58 @@ const CoursesList = () => {
 
 const courseDataKeys = Object.keys(courseData[0]);
 
+const showDropDown = (event, display) => {
+  const optionListId = event.target.id.replace("filter_button", "option_list");
+  const target = document.getElementById(optionListId);
+  console.log(target.style["display"]);
+  target.style["display"] = display;
+};
+
 const FilterButtons = () => {
+  const [display, setDisplay] = useState("none");
   const regexp = /([A-Z])/g;
-  const buttons = courseDataKeys.map((key, idx) => {
+  const filterKeys = filterOptions.map((k) => Object.keys(k)[0]);
+
+  const setDisplayState = (event) => {
+    if (display === "none") {
+      setDisplay("block");
+    } else {
+      setDisplay("none");
+    }
+
+    showDropDown(event, display);
+  };
+
+  const buttons = filterKeys.map((key, idx) => {
     if (key !== "instructorImage" && key !== "location") {
+      const formattedKey = key
+        .replace(/([A-Z])/g, " $1")
+        .replace(/^./g, (str) => str.toUpperCase());
       return (
-        <button className="filter_button" key={idx}>
-          {key
-            .replace(regexp, " $1")
-            .replace(/^./g, (str) => str.toUpperCase())}
-        </button>
+        <div style={{ position: "relative" }}>
+          <button
+            className="filter_button"
+            id={`filter_button_${key}`}
+            key={idx}
+            onClick={(e) => setDisplayState(e)}
+            style={{ position: "relative", zIndex: "1" }}
+          >
+            {formattedKey}
+          </button>
+          <ul
+            className="filterOptions submenu"
+            style={{
+              display: "none",
+              position: "absolute",
+              zIndex: "2",
+            }}
+            id={`option_list_${key}`}
+          >
+            {filterOptions[idx][key].map((option, idx) => {
+              return <li key={`option_${idx}`}>{option}</li>;
+            })}
+          </ul>
+        </div>
       );
     } else {
       return <></>;
