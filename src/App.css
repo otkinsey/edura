@@ -445,6 +445,12 @@ section#header li:hover .submenu {
 #stay_connected .row1 > div {
   flex-basis: 50%;
 }
+.display_block {
+  display: block;
+}
+.hide {
+  display: none;
+}
 .submenu {
   background: white;
   box-shadow: 0 0 3px #999;

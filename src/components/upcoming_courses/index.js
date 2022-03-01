@@ -3,7 +3,7 @@ import { useState } from "react";
 import { ReactComponent as CalendarIcon } from "../../images/general_icons/calendar.svg";
 
 const filterOptions = [
-  { courseType: [] },
+  { courseType: ["type 1", "type 2", "type 3", ""] },
   {
     month: [
       "january",
@@ -21,10 +21,10 @@ const filterOptions = [
     ],
   },
   { date: [] },
-  { country: ["United States of America"] },
+  { country: ["United States of America, England, India"] },
   { city: ["boston", "london", "johannesburg"] },
-  { trainer: [] },
-  { partner: [] },
+  { trainer: ["Raj Heda", "Person 2", "Person 3"] },
+  { partner: ["Partern 1", "Partern 2", "", "Partern 3"] },
 ];
 
 const courseData = [
@@ -167,6 +167,13 @@ const courseDataKeys = Object.keys(courseData[0]);
 
 const showDropDown = (event, display) => {
   const optionListId = event.target.id.replace("filter_button", "option_list");
+  const optionLists = Array.from(
+    document.getElementsByClassName("filterOptions")
+  );
+  console.log(optionLists);
+  optionLists.forEach((list) => {
+    list.style["display"] = "none";
+  });
   const target = document.getElementById(optionListId);
   console.log(target.style["display"]);
   target.style["display"] = display;
