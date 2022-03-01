@@ -445,6 +445,14 @@ section#header li:hover .submenu {
 #stay_connected .row1 > div {
   flex-basis: 50%;
 }
+.submenu {
+  background: white;
+  box-shadow: 0 0 3px #999;
+  display: flex;
+  align-items: start;
+  padding: 20px;
+  width: 100%;
+}
 #upcoming_courses {
   display: grid;
   grid: 1fr / 24% 75%;
