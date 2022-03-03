@@ -1,5 +1,6 @@
 import React from "react";
 import DatePicker from "react-datepicker";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import { ReactComponent as CalendarIcon } from "../../images/general_icons/calendar.svg";
 
@@ -297,6 +298,8 @@ const Courses = () => {
     setFilteredData(courseData.filter((course) => course[key] === value));
     return filteredData;
   };
+
+  const clearFilters = () => setFilteredData(courseData);
   return (
     <>
       <div className="jumbotron">
@@ -309,8 +312,19 @@ const Courses = () => {
             <FilterButtons
               data={filteredData.length > 0 ? filteredData : courseData}
               filterCourseData={filterCourseData}
+              clearFilters={clearFilters}
             />
           }
+          <Link
+            to="/"
+            onClick={(event) => {
+              event.preventDefault();
+              clearFilters();
+            }}
+            style={{ fontWeight: "bold" }}
+          >
+            Clear Filters
+          </Link>
         </div>
         <div id="course_calendar">
           <h2>
