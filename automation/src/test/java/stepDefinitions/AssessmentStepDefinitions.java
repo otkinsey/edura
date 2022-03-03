@@ -17,11 +17,13 @@ public class AssessmentStepDefinitions {
 	
 	public AssessmentStepDefinitions(TestContext context) {
 		testContext = context;
-		assessmentPage = testContext.getPageObjectManager().geAssessmentPage();
+		assessmentPage = testContext.getPageObjectManager().getAssessmentPage();
 	}
 	
 	@Then("^I should be navigated to Assessment page$")
 	public void i_should_be_navigated_to_Assessment_Page() throws Throwable{
+		String Url = driver.getCurrentUrl();
+		Assert.assertTrue("URL does not contain assessment", Url.contains("/assessment"));
 		Assert.assertTrue("User is not navigated to Assessment Page", assessmentPage.assessmentPageTitle.isDisplayed());
 	}
 }
