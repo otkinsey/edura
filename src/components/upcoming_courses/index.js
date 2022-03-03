@@ -1,4 +1,5 @@
-import { Carousel } from "react-bootstrap";
+import React from "react";
+import DatePicker from "react-datepicker";
 import { useState } from "react";
 import { ReactComponent as CalendarIcon } from "../../images/general_icons/calendar.svg";
 
@@ -39,6 +40,7 @@ const courseData = [
     date: "10/8/2021",
     time: "9:14 PM",
     partnerName: "Photobean",
+    month: filterOptions[1].month[parseInt("10") - 1],
   },
   {
     instructorImage:
@@ -51,6 +53,7 @@ const courseData = [
     date: "9/21/2021",
     time: "2:20 PM",
     partnerName: "Kwideo",
+    month: filterOptions[1].month[parseInt("9") - 1],
   },
   {
     instructorImage:
@@ -63,6 +66,7 @@ const courseData = [
     date: "6/7/2021",
     time: "2:59 PM",
     partnerName: "Yacero",
+    month: filterOptions[1].month[parseInt("6") - 1],
   },
   {
     instructorImage:
@@ -75,6 +79,7 @@ const courseData = [
     date: "4/22/2021",
     time: "5:45 AM",
     partnerName: "Browsedrive",
+    month: filterOptions[1].month[parseInt("4") - 1],
   },
   {
     instructorImage:
@@ -87,6 +92,7 @@ const courseData = [
     date: "10/9/2021",
     time: "9:55 AM",
     partnerName: "Voomm",
+    month: filterOptions[1].month[parseInt("10") - 1],
   },
   {
     instructorImage:
@@ -99,6 +105,7 @@ const courseData = [
     date: "5/8/2021",
     time: "4:23 PM",
     partnerName: "Jetwire",
+    month: filterOptions[1].month[parseInt("5") - 1],
   },
   {
     instructorImage:
@@ -111,6 +118,7 @@ const courseData = [
     date: "11/20/2021",
     time: "12:51 PM",
     partnerName: "Leenti",
+    month: filterOptions[1].month[parseInt("11") - 1],
   },
   {
     instructorImage:
@@ -123,6 +131,7 @@ const courseData = [
     date: "10/1/2021",
     time: "3:23 PM",
     partnerName: "Zoomdog",
+    month: filterOptions[1].month[parseInt("10") - 1],
   },
   {
     instructorImage:
@@ -135,35 +144,11 @@ const courseData = [
     date: "11/19/2021",
     time: "6:47 AM",
     partnerName: "Gabcube",
+    month: filterOptions[1].month[parseInt("11") - 1],
   },
 ];
 
-const CoursesList = () => {
-  const courses = courseData.map((obj, index) => {
-    return (
-      <tr style={{ fontSize: ".9rem", fontColor: "#aaa" }}>
-        <td id="instructor_image">
-          <div className="circle_frame">
-            <img
-              src={obj.instructorImage}
-              alt={`${obj.instructorName}'simage`}
-            />
-          </div>
-          <div style={{ marginTop: "8px" }}>{obj.instructorName}</div>
-        </td>
-        <td id="course_name">
-          {obj.courseName.split(" ").slice(0, 4).join(" ")}
-        </td>
-        <td id="location">{obj.location}</td>
-        <td id="date">{obj.date}</td>
-        <td id="time">{obj.time}</td>
-      </tr>
-    );
-  });
-  return courses;
-};
-
-const courseDataKeys = Object.keys(courseData[0]);
+// const courseDataKeys = Object.keys(courseData[0]);
 
 const showDropDown = (event, display) => {
   const optionListId = event.target.id.replace("filter_button", "option_list");
@@ -179,8 +164,10 @@ const showDropDown = (event, display) => {
   target.style["display"] = display;
 };
 
-const FilterButtons = () => {
+const FilterButtons = (props) => {
+  // State variables
   const [display, setDisplay] = useState("none");
+  const [startDate, setStartDate] = useState(new Date());
   const regexp = /([A-Z])/g;
   const filterKeys = filterOptions.map((k) => Object.keys(k)[0]);
 
@@ -190,10 +177,16 @@ const FilterButtons = () => {
     } else {
       setDisplay("none");
     }
-
     showDropDown(event, display);
   };
 
+  const filterWithDatePicker = (date, key, value) => {
+    props.filterCourseData(key, value);
+    setStartDate(date);
+  };
+  /**
+   * @REFACTOR separate out as component
+   */
   const buttons = filterKeys.map((key, idx) => {
     if (key !== "instructorImage" && key !== "location") {
       const formattedKey = key
@@ -219,9 +212,37 @@ const FilterButtons = () => {
             }}
             id={`option_list_${key}`}
           >
-            {filterOptions[idx][key].map((option, idx) => {
-              return <li key={`option_${idx}`}>{option}</li>;
-            })}
+            {key === "date" ? (
+              <li>
+                <DatePicker
+                  selected={startDate}
+                  onChange={(date) => {
+                    return filterWithDatePicker(date);
+                  }}
+                />
+              </li>
+            ) : (
+              filterOptions[idx][key].map(
+                (
+                  val,
+                  index,
+                  mapData,
+                  mapKey = Object.keys(filterOptions[idx])[0]
+                ) => {
+                  return (
+                    <li
+                      key={`option_${index}`}
+                      onClick={(event, mapKey) =>
+                        props.filterCourseData(key, val)
+                      }
+                      style={{ cursor: "pointer" }}
+                    >
+                      {val}
+                    </li>
+                  );
+                }
+              )
+            )}
           </ul>
         </div>
       );
@@ -232,7 +253,50 @@ const FilterButtons = () => {
   return buttons;
 };
 
+/**
+ * @description Componnent: Uses courseData/filteredData object to display a list of courses
+ * @returns CourseList
+ */
+const CoursesList = (props) => {
+  const courses = props.data.map((obj, index) => {
+    return (
+      <tr style={{ fontSize: ".9rem", fontColor: "#aaa" }}>
+        <td id="instructor_image">
+          <div className="circle_frame">
+            <img
+              src={obj.instructorImage}
+              alt={`${obj.instructorName}'simage`}
+            />
+          </div>
+          <div style={{ marginTop: "8px" }}>{obj.instructorName}</div>
+        </td>
+        <td id="course_name">
+          {obj.courseName.split(" ").slice(0, 4).join(" ")}
+        </td>
+        <td id="location">{obj.location}</td>
+        <td id="date">{obj.date}</td>
+        <td id="time">{obj.time}</td>
+      </tr>
+    );
+  });
+  return courses;
+};
+
 const Courses = () => {
+  //  State variables:
+  const [filteredData, setFilteredData] = useState(courseData);
+
+  /**
+   * @description filters course data according to params
+   * @param {*} key
+   * @param {*} value
+   * @param {*} courseData
+   * @returns
+   */
+  const filterCourseData = (key, value) => {
+    setFilteredData(courseData.filter((course) => course[key] === value));
+    return filteredData;
+  };
   return (
     <>
       <div className="jumbotron">
@@ -241,11 +305,17 @@ const Courses = () => {
       <div id="upcoming_courses">
         <div id="course_filters">
           <h3>Course Filters</h3>
-          {<FilterButtons />}
+          {
+            <FilterButtons
+              data={filteredData.length > 0 ? filteredData : courseData}
+              filterCourseData={filterCourseData}
+            />
+          }
         </div>
         <div id="course_calendar">
           <h2>
-            <CalendarIcon /> February
+            <CalendarIcon />{" "}
+            {filteredData.length > 0 ? filteredData[0]["month"] : "January"}
           </h2>
           <table className="table">
             <thead>
@@ -258,7 +328,13 @@ const Courses = () => {
               </tr>
             </thead>
 
-            <tbody>{<CoursesList />}</tbody>
+            <tbody>
+              {
+                <CoursesList
+                  data={filteredData.length > 0 ? filteredData : courseData}
+                />
+              }
+            </tbody>
           </table>
         </div>
       </div>
