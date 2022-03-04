@@ -27,7 +27,7 @@ Feature: Homepage Feature file
 		And I click on Assessment link
 		Then I should be navigated to Assessment page
 
-	Scenario: Click on Training Link
+	Scenario: To validate clicking on Training Link
 		Given I am on edura homepage
 		When I view header section
 		And I click on training link
@@ -38,7 +38,7 @@ Feature: Homepage Feature file
 		When I view Scrolling images section
 		Then I should see background image
 		And I should see title description and button displayed
-		And scrolling carousal buttons
+		And I should see scrolling carousal buttons
 		
 	Scenario: To validate our services section
 		Given I am on edura homepage
@@ -48,5 +48,93 @@ Feature: Homepage Feature file
 		And I should see Assessment and Courses subtitles
 		And I should see Assessment and courses description
 		And I should see Assessment and courses learn more link
-
 		
+	Scenario: To validate Assessment learn more link navigation
+		Given I am on edura homepage
+		And I view Our Services section
+		When I click on assessment learn more link
+		Then I should be navigated to Assessment page
+		
+	Scenario: To validate Courses learn more link navigation
+		Given I am on edura homepage
+		And I view Our Services section
+		When I click on courses learn more link
+		Then I should be navigated to Training page
+	
+	Scenario: To validate About Us section
+		Given I am on edura homepage
+		When I view About Us section
+		Then I should see About Us title is displayed
+		And I should see Who We are button is displayed
+		And I should see What we do button is displayed
+		And I should see Contact Us button is displayed
+		And I should see description displayed to right of the buttons
+	
+	Scenario: To validate Who we are in About us section
+		Given I am on edura homepage
+		And I view About Us section
+		When I click on Who Are we button
+		Then The description should show subtitle who are we
+		And The details about who we are should be displayed
+		
+	Scenario: To validate What we do in About us section
+		Given I am on edura homepage
+		And I view About Us section
+		When I click on What we do button
+		Then The description should show subtitle what we do
+		And The details about what we do should be displayed
+	
+	Scenario: To validate What we do in About us section
+		Given I am on edura homepage
+		And I view About Us section
+		When I click on contact us button
+		Then I should be navigated to contact us page
+		
+	Scenario: To validate Our Partners Section
+		Given I am on edura homepage
+		When I view Our Partners section
+		Then I should see Our Partner title displayed
+		And I should see scrum org logo displayed
+		And I should see scrum alliance logo displayed
+		And I should see SAFE agile logo displayed
+		
+	Scenario: To click on Scrum.org logo
+		Given I am on edura homepage
+		And I view Our Partners section
+		When I click on Scrum org logo
+		Then I should be navigated to scrum org page
+		
+Scenario: To click on Scrum alliance logo
+		Given I am on edura homepage
+		And I view Our Partners section
+		When I click on Scrum alliance logo
+		Then I should be navigated to scrum alliance page
+		
+Scenario: To click on SAfe agile logo
+		Given I am on edura homepage
+		And I view Our Partners section
+		When I click on Safe agile logo
+		Then I should be navigated to safe agile page
+
+Scenario: To Validate Get Inspired Section
+		Given I am on edura homepage
+		When I view get inspired section
+		Then I should see Get inspired title
+		And I should see the reviews displayed
+		And I should see left and right carousal buttons
+
+Scenario: To Validate Stay Connected Section
+	    Given I am on edura homepage
+		When I view Stay Connected section
+		Then I should see Stay Connected title displayed
+		And I should see First name and Last name field displayed
+		And I should see email Address field displayed
+		And I should see checkbox for I am permitting to contact me
+		And I should see Sign Up button
+		
+Scenario: To validate footer section
+		Given I am on edura homepage
+		When I view footer section
+		Then I should see logo displayed
+		Then I should see Related links section displayed
+		Then I should see Follow us links displayed with social media icons
