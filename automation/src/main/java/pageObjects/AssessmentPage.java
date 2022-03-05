@@ -13,12 +13,16 @@ public class AssessmentPage {
 	WebDriver driver;
 	Wait wait;
 	public AssessmentPage(WebDriver driver) {
-		
 		this.driver = driver;
 		PageFactory.initElements(driver, this); 
 	}
 	
 	@FindBy(xpath = ".//h1[text()='Assessments']")
 	public WebElement assessmentPageTitle;
+	
+	public String getPageUrl() {
+		String Url = driver.getCurrentUrl();
+		return Url;
+	}
 
 }

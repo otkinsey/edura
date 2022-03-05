@@ -251,19 +251,21 @@ public class Homepage {
     }
     
     public void clickAssessmentLearnMoreLink() throws InterruptedException {
-    	wait.waitUntilObjectClickable(driver, ourServicesAssessmentLearnMoreLink);
+    //	wait.waitUntilObjectClickable(driver, ourServicesAssessmentLearnMoreLink);
     	System.out.println("Waited for the element");
-    	ourServicesAssessmentLearnMoreLink.click();
+    	wait.clickUsingJavaScriptExecutor(driver, ourServicesAssessmentLearnMoreLink);
+    	//ourServicesAssessmentLearnMoreLink.click();
     	System.out.println("Element clicked successfully");
     }
     
     public void clickCoursesLearnMoreLink() {
-    	ourServicesCoursesLearnMoreLink.click();
+    	System.out.println("Waited for the element");
+    	wait.clickUsingJavaScriptExecutor(driver, ourServicesAssessmentLearnMoreLink);
+    	//ourServicesCoursesLearnMoreLink.click();
+    	System.out.println("Element clicked successfully");
     }
     
     public void clickWhoWeAreButton() {
-//    	wait.clickUsingJavaScriptExecutor(driver, whoWeAreButton);
-//    	//wait.waitUntilObjectClickable(driver, whoWeAreButton);
     	System.out.println("Waited for the element");
     	wait.clickUsingJavaScriptExecutor(driver, whoWeAreButton);
 //    	whoWeAreButton.click();

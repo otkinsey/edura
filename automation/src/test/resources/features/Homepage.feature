@@ -50,13 +50,14 @@ Feature: Homepage Feature file
 		And I should see Assessment and courses description
 		And I should see Assessment and courses learn more link
 
-
+	@sample
 	Scenario: To validate Assessment learn more link navigation
 		Given I am on edura homepage
 		And I view Our Services section
 		When I click on assessment learn more link
 		Then I should be navigated to Assessment page
 
+	
 	Scenario: To validate Courses learn more link navigation
 		Given I am on edura homepage
 		And I view Our Services section
@@ -71,8 +72,7 @@ Feature: Homepage Feature file
 		And I should see What we do button is displayed
 		And I should see Contact Us button is displayed
 		And I should see description displayed to right of the buttons
-	
-	@sample
+
 	Scenario: To validate Who we are in About us section
 		Given I am on edura homepage
 		And I view About Us section

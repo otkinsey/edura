@@ -16,4 +16,8 @@ public class TrainingPage {
 	@FindBy(xpath = ".//h1[text()='Training']")
 	public WebElement trainingPageTitle;
 
+	public String getPageUrl() {
+		String Url = driver.getCurrentUrl();
+		return Url;
+	}
 }
