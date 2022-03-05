@@ -103,6 +103,14 @@ button.btn:hover,
 .carousel-inner .carousel-item {
   height: 100%;
 }
+#course_filters > div {
+  width: 100%;
+}
+#course_filters button {
+  margin: 10px 0px;
+  display: block;
+  width: 100%;
+}
 .dark_background button.btn.btn-primary,
 .dark_background .button.btn.btn-primary {
   text-transform: capitalize;
@@ -461,7 +469,7 @@ section#header li:hover .submenu {
 }
 #upcoming_courses {
   display: grid;
-  grid: 1fr / 24% 75%;
+  grid: 1fr / 15% 84%;
   gap: 20px;
   padding: 20px;
   background: #dedede;
@@ -530,7 +538,6 @@ section#header li:hover .submenu {
 #upcoming_courses #course_filters button {
   /* border: ; */
   margin: 10px 5px;
-  display: block;
 }
 #upcoming_courses ul,
 #upcoming_courses ul {

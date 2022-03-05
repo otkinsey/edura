@@ -1,31 +1,35 @@
 import React from "react";
 import DatePicker from "react-datepicker";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import { ReactComponent as CalendarIcon } from "../../images/general_icons/calendar.svg";
 
-const filterOptions = [
-  { courseType: ["type 1", "type 2", "type 3", ""] },
-  {
-    month: [
-      "january",
-      "february",
-      "march",
-      "april",
-      "may",
-      "june",
-      "july",
-      "august",
-      "september",
-      "october",
-      "november",
-      "december",
-    ],
-  },
-  { date: [] },
-  { country: ["United States of America, England, India"] },
-  { city: ["boston", "london", "johannesburg"] },
-  { trainer: ["Raj Heda", "Person 2", "Person 3"] },
-  { partner: ["Partern 1", "Partern 2", "", "Partern 3"] },
+const createFilterOptions = (data) => {
+  const dataKeys = Object.keys(data[0]);
+  const filterOptions = {};
+  data.forEach((obj, idx) => {
+    dataKeys.forEach((key, index) => {
+      filterOptions[key] = filterOptions[key]
+        ? filterOptions[key].add(obj[key])
+        : new Set();
+    });
+  });
+  return filterOptions;
+};
+
+const months = [
+  "january",
+  "february",
+  "march",
+  "april",
+  "may",
+  "june",
+  "july",
+  "august",
+  "september",
+  "october",
+  "november",
+  "december",
 ];
 
 const courseData = [
@@ -40,7 +44,7 @@ const courseData = [
     date: "10/8/2021",
     time: "9:14 PM",
     partnerName: "Photobean",
-    month: filterOptions[1].month[parseInt("10") - 1],
+    month: months[parseInt("10") - 1],
   },
   {
     instructorImage:
@@ -53,7 +57,7 @@ const courseData = [
     date: "9/21/2021",
     time: "2:20 PM",
     partnerName: "Kwideo",
-    month: filterOptions[1].month[parseInt("9") - 1],
+    month: months[parseInt("9") - 1],
   },
   {
     instructorImage:
@@ -66,7 +70,7 @@ const courseData = [
     date: "6/7/2021",
     time: "2:59 PM",
     partnerName: "Yacero",
-    month: filterOptions[1].month[parseInt("6") - 1],
+    month: months[parseInt("6") - 1],
   },
   {
     instructorImage:
@@ -79,7 +83,7 @@ const courseData = [
     date: "4/22/2021",
     time: "5:45 AM",
     partnerName: "Browsedrive",
-    month: filterOptions[1].month[parseInt("4") - 1],
+    month: months[parseInt("4") - 1],
   },
   {
     instructorImage:
@@ -92,7 +96,7 @@ const courseData = [
     date: "10/9/2021",
     time: "9:55 AM",
     partnerName: "Voomm",
-    month: filterOptions[1].month[parseInt("10") - 1],
+    month: months[parseInt("10") - 1],
   },
   {
     instructorImage:
@@ -105,7 +109,7 @@ const courseData = [
     date: "5/8/2021",
     time: "4:23 PM",
     partnerName: "Jetwire",
-    month: filterOptions[1].month[parseInt("5") - 1],
+    month: months[parseInt("5") - 1],
   },
   {
     instructorImage:
@@ -118,7 +122,7 @@ const courseData = [
     date: "11/20/2021",
     time: "12:51 PM",
     partnerName: "Leenti",
-    month: filterOptions[1].month[parseInt("11") - 1],
+    month: months[parseInt("11") - 1],
   },
   {
     instructorImage:
@@ -131,7 +135,7 @@ const courseData = [
     date: "10/1/2021",
     time: "3:23 PM",
     partnerName: "Zoomdog",
-    month: filterOptions[1].month[parseInt("10") - 1],
+    month: months[parseInt("10") - 1],
   },
   {
     instructorImage:
@@ -144,10 +148,11 @@ const courseData = [
     date: "11/19/2021",
     time: "6:47 AM",
     partnerName: "Gabcube",
-    month: filterOptions[1].month[parseInt("11") - 1],
+    month: months[parseInt("11") - 1],
   },
 ];
 
+const filterOptions = createFilterOptions(courseData);
 // const courseDataKeys = Object.keys(courseData[0]);
 
 const showDropDown = (event, display) => {
@@ -169,7 +174,7 @@ const FilterButtons = (props) => {
   const [display, setDisplay] = useState("none");
   const [startDate, setStartDate] = useState(new Date());
   const regexp = /([A-Z])/g;
-  const filterKeys = filterOptions.map((k) => Object.keys(k)[0]);
+  const filterKeys = Object.keys(filterOptions);
 
   const setDisplayState = (event) => {
     if (display === "none") {
@@ -187,16 +192,16 @@ const FilterButtons = (props) => {
   /**
    * @REFACTOR separate out as component
    */
-  const buttons = filterKeys.map((key, idx) => {
-    if (key !== "instructorImage" && key !== "location") {
-      const formattedKey = key
+  const buttons = filterKeys.map((filterKey, idx) => {
+    if (filterKey !== "instructorImage" && filterKey !== "location") {
+      const formattedKey = filterKey
         .replace(/([A-Z])/g, " $1")
         .replace(/^./g, (str) => str.toUpperCase());
       return (
         <div style={{ position: "relative" }}>
           <button
             className="filter_button"
-            id={`filter_button_${key}`}
+            id={`filter_button_${filterKey}`}
             key={idx}
             onClick={(e) => setDisplayState(e)}
             style={{ position: "relative", zIndex: "1" }}
@@ -210,9 +215,9 @@ const FilterButtons = (props) => {
               position: "absolute",
               zIndex: "2",
             }}
-            id={`option_list_${key}`}
+            id={`option_list_${filterKey}`}
           >
-            {key === "date" ? (
+            {filterKey === "date" ? (
               <li>
                 <DatePicker
                   selected={startDate}
@@ -222,18 +227,13 @@ const FilterButtons = (props) => {
                 />
               </li>
             ) : (
-              filterOptions[idx][key].map(
-                (
-                  val,
-                  index,
-                  mapData,
-                  mapKey = Object.keys(filterOptions[idx])[0]
-                ) => {
+              Array.from(filterOptions[filterKey]).map(
+                (val, index, mapData) => {
                   return (
                     <li
                       key={`option_${index}`}
                       onClick={(event, mapKey) =>
-                        props.filterCourseData(key, val)
+                        props.filterCourseData(filterKey, val)
                       }
                       style={{ cursor: "pointer" }}
                     >
@@ -297,6 +297,8 @@ const Courses = () => {
     setFilteredData(courseData.filter((course) => course[key] === value));
     return filteredData;
   };
+
+  const clearFilters = () => setFilteredData(courseData);
   return (
     <>
       <div className="jumbotron">
@@ -309,8 +311,19 @@ const Courses = () => {
             <FilterButtons
               data={filteredData.length > 0 ? filteredData : courseData}
               filterCourseData={filterCourseData}
+              clearFilters={clearFilters}
             />
           }
+          <Link
+            to="/"
+            onClick={(event) => {
+              event.preventDefault();
+              clearFilters();
+            }}
+            style={{ fontWeight: "bold" }}
+          >
+            Clear Filters
+          </Link>
         </div>
         <div id="course_calendar">
           <h2>
@@ -322,7 +335,7 @@ const Courses = () => {
               <tr className="table_headings">
                 <th id="instructor_image">instructor</th>
                 <th id="course_name">course name</th>
-                <th id="location">decription</th>
+                <th id="location">location</th>
                 <th id="date">date</th>
                 <th id="time">time</th>
               </tr>
