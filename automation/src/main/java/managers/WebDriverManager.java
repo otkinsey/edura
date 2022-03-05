@@ -1,11 +1,15 @@
 package managers;
 
+import java.util.LinkedList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 import enums.DriverType;
 import enums.EnvironmentType;
@@ -46,7 +50,19 @@ public class WebDriverManager {
 	    	break;
         case CHROME : 
         	System.setProperty(CHROME_DRIVER_PROPERTY, FileReaderManager.getInstance().getConfigReader().getDriverPath());
-        	driver = new ChromeDriver();
+        	ChromeOptions options = new ChromeOptions();
+        	options.setHeadless(true);
+        	List<String> arguments = new LinkedList<>();
+            arguments.add("--disable-extensions");
+            arguments.add("--headless");
+            arguments.add("--disable-gpu");
+            arguments.add("--no-sandbox");
+            arguments.add("--disable-dev-shm-usage");
+            arguments.add("--no-sandbox");
+            arguments.add("--incognito");
+            arguments.add("--disable-application-cache");
+            options.addArguments(arguments);
+        	driver = new ChromeDriver(options);
     		break;
         case INTERNETEXPLORER : driver = new InternetExplorerDriver();
     		break;

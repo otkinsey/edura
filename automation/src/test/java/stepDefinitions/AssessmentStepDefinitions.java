@@ -15,7 +15,8 @@ public class AssessmentStepDefinitions {
 	TestContext testContext;
 	AssessmentPage assessmentPage;
 	
-	public AssessmentStepDefinitions(TestContext context) {
+	public AssessmentStepDefinitions(TestContext context, WebDriver driver) {
+		this.driver = driver;
 		testContext = context;
 		assessmentPage = testContext.getPageObjectManager().getAssessmentPage();
 	}
@@ -23,7 +24,7 @@ public class AssessmentStepDefinitions {
 	@Then("^I should be navigated to Assessment page$")
 	public void i_should_be_navigated_to_Assessment_Page() throws Throwable{
 		String Url = driver.getCurrentUrl();
-		Assert.assertTrue("URL does not contain assessment", Url.contains("/assessment"));
+		Assert.assertTrue("URL does not contain assessment", Url.contains("/Assessment"));
 		Assert.assertTrue("User is not navigated to Assessment Page", assessmentPage.assessmentPageTitle.isDisplayed());
 	}
 }

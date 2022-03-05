@@ -5,8 +5,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import selenium.Wait;
+
 public class Homepage {
 	WebDriver driver;
+	Wait wait;
 	public Homepage(WebDriver driver) {
 		
 		this.driver = driver;
@@ -115,19 +118,19 @@ public class Homepage {
 	@FindBy(css = "#our_services>div>div:nth-child(2) a")
 	public WebElement ourServicesCoursesLearnMoreLink;
 	
-	@FindBy(css = "#our_services>div>div:nth-child(1) a")
+	@FindBy(xpath = ".//a[@href='Assessment']")
 	public WebElement ourServicesAssessmentLearnMoreLink;
 	
 	@FindBy(css = "#about_us h1")
 	public WebElement aboutUsTitle;
 	
-	@FindBy(css = "#button_who_we_are")
+	@FindBy(xpath = ".//button[text()='who we are']")
 	public WebElement whoWeAreButton;
 	
-	@FindBy(css = "#button_what_we_do")
+	@FindBy(xpath = ".//button[@id='button_what_we_do']")
 	public WebElement whatWeDoButton;
 	
-	@FindBy(css = "#about_us a")
+	@FindBy(xpath = ".//a[text()='contact us']")
 	public WebElement contactUsButton;
 	
 	@FindBy(css = "#about_us #about_us_text")
@@ -238,15 +241,20 @@ public class Homepage {
     }
     
     public void clickAssessmentLink() {
+    	wait.waitUntilObjectClickable(driver, assessmentLink);
     	assessmentLink.click();
     }
     
     public void clickTrainingLink() {
+    	wait.waitUntilObjectClickable(driver, trainingLink);
     	trainingLink.click();
     }
     
-    public void clickAssessmentLearnMoreLink() {
+    public void clickAssessmentLearnMoreLink() throws InterruptedException {
+    	wait.waitUntilObjectClickable(driver, ourServicesAssessmentLearnMoreLink);
+    	System.out.println("Waited for the element");
     	ourServicesAssessmentLearnMoreLink.click();
+    	System.out.println("Element clicked successfully");
     }
     
     public void clickCoursesLearnMoreLink() {
@@ -254,7 +262,12 @@ public class Homepage {
     }
     
     public void clickWhoWeAreButton() {
-    	whoWeAreButton.click();
+//    	wait.clickUsingJavaScriptExecutor(driver, whoWeAreButton);
+//    	//wait.waitUntilObjectClickable(driver, whoWeAreButton);
+    	System.out.println("Waited for the element");
+    	wait.clickUsingJavaScriptExecutor(driver, whoWeAreButton);
+//    	whoWeAreButton.click();
+    	System.out.println("Element clicked successfully");
     }
     
     public void clickWhatWeDoButton() {

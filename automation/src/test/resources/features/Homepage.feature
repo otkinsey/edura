@@ -1,6 +1,7 @@
 @Homepage
 Feature: Homepage Feature file
-
+	
+	
 	Scenario: To check all sections of homepage are displayed
 		Given I am on edura homepage
 		Then I should see header section
@@ -48,19 +49,20 @@ Feature: Homepage Feature file
 		And I should see Assessment and Courses subtitles
 		And I should see Assessment and courses description
 		And I should see Assessment and courses learn more link
-		
+
+
 	Scenario: To validate Assessment learn more link navigation
 		Given I am on edura homepage
 		And I view Our Services section
 		When I click on assessment learn more link
 		Then I should be navigated to Assessment page
-		
+
 	Scenario: To validate Courses learn more link navigation
 		Given I am on edura homepage
 		And I view Our Services section
 		When I click on courses learn more link
 		Then I should be navigated to Training page
-	
+
 	Scenario: To validate About Us section
 		Given I am on edura homepage
 		When I view About Us section
@@ -70,6 +72,7 @@ Feature: Homepage Feature file
 		And I should see Contact Us button is displayed
 		And I should see description displayed to right of the buttons
 	
+	@sample
 	Scenario: To validate Who we are in About us section
 		Given I am on edura homepage
 		And I view About Us section
