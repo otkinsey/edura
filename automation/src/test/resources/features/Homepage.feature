@@ -50,7 +50,7 @@ Feature: Homepage Feature file
 		And I should see Assessment and courses description
 		And I should see Assessment and courses learn more link
 
-	@sample
+	
 	Scenario: To validate Assessment learn more link navigation
 		Given I am on edura homepage
 		And I view Our Services section
@@ -73,13 +73,14 @@ Feature: Homepage Feature file
 		And I should see Contact Us button is displayed
 		And I should see description displayed to right of the buttons
 
+	
 	Scenario: To validate Who we are in About us section
 		Given I am on edura homepage
 		And I view About Us section
 		When I click on Who Are we button
 		Then The description should show subtitle who are we
 		And The details about who we are should be displayed
-		
+	
 	Scenario: To validate What we do in About us section
 		Given I am on edura homepage
 		And I view About Us section
@@ -87,7 +88,7 @@ Feature: Homepage Feature file
 		Then The description should show subtitle what we do
 		And The details about what we do should be displayed
 	
-	Scenario: To validate What we do in About us section
+	Scenario: To validate Contact us in About us section
 		Given I am on edura homepage
 		And I view About Us section
 		When I click on contact us button
@@ -100,7 +101,8 @@ Feature: Homepage Feature file
 		And I should see scrum org logo displayed
 		And I should see scrum alliance logo displayed
 		And I should see SAFE agile logo displayed
-		
+	
+	@sample	
 	Scenario: To click on Scrum.org logo
 		Given I am on edura homepage
 		And I view Our Partners section

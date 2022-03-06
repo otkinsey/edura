@@ -50,19 +50,7 @@ public class WebDriverManager {
 	    	break;
         case CHROME : 
         	System.setProperty(CHROME_DRIVER_PROPERTY, FileReaderManager.getInstance().getConfigReader().getDriverPath());
-        	ChromeOptions options = new ChromeOptions();
-        	options.setHeadless(true);
-        	List<String> arguments = new LinkedList<>();
-            arguments.add("--disable-extensions");
-            arguments.add("--headless");
-            arguments.add("--disable-gpu");
-            arguments.add("--no-sandbox");
-            arguments.add("--disable-dev-shm-usage");
-            arguments.add("--no-sandbox");
-            arguments.add("--incognito");
-            arguments.add("--disable-application-cache");
-            options.addArguments(arguments);
-        	driver = new ChromeDriver(options);
+        	driver = new ChromeDriver();
     		break;
         case INTERNETEXPLORER : driver = new InternetExplorerDriver();
     		break;

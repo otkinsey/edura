@@ -61,13 +61,17 @@ public abstract class Wait {
 		}
 	}
 
-	public static void waitUntilObjectFound(WebDriver driver, WebElement element) {
+	@SuppressWarnings("deprecation")
+	public static void waitUntilObjectFound(WebDriver driver, WebElement element) throws Exception {
 		WebDriverWait wait = new WebDriverWait(driver,60);
+		Thread.sleep(5000);
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
 
-	public static void waitUntilObjectClickable(WebDriver driver, WebElement element) {
+	@SuppressWarnings("deprecation")
+	public static void waitUntilObjectClickable(WebDriver driver, WebElement element) throws Throwable {
 		WebDriverWait wait = new WebDriverWait(driver, 60);
+		Thread.sleep(5000);
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 	}
 	
@@ -76,8 +80,9 @@ public abstract class Wait {
 		actions.moveToElement(element).click().build().perform();
 	}
 	
-	public static void clickUsingJavaScriptExecutor(WebDriver driver, WebElement element) {
+	public static void clickUsingJavaScriptExecutor(WebDriver driver, WebElement element) throws Throwable {
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		Thread.sleep(5000);
 		jse.executeScript("arguments[0].scrollIntoView()", element); 
 	}
 }
