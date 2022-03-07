@@ -99,6 +99,10 @@ button.btn:hover,
 .courousel * {
   height: 100%;
 }
+#course_details h2 {
+  font-size: 2.5rem;
+  color: black;
+}
 .carousel-inner,
 .carousel-inner .carousel-item {
   height: 100%;
