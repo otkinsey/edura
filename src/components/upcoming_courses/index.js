@@ -1,7 +1,7 @@
 import React from "react";
 
 import FilterButtons from "./filterButtons";
-import courseData from "./dummyData";
+import courseData from "../dummyData";
 import CourseList from "./courseList";
 
 import { Link } from "react-router-dom";
@@ -33,7 +33,7 @@ const showDropDown = (event, display) => {
     list.style["display"] = "none";
   });
   const target = document.getElementById(optionListId);
-  console.log(event);
+
   if (event.target.className === "filter_button") {
     target.style["display"] = display;
   }
@@ -98,8 +98,7 @@ const Courses = () => {
         </div>
         <div id="course_calendar">
           <h2>
-            <CalendarIcon />{" "}
-            {filteredData.length > 0 ? filteredData[0]["month"] : "January"}
+            <CalendarIcon /> Calendar
           </h2>
           <table className="table">
             <thead>

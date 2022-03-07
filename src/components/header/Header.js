@@ -11,7 +11,6 @@ const Header = () => {
     <>
       <section id="header">
         <Link to="/" id="logo">
-          {/* <img src="images/logo.png" alt="Edura Logo" /> */}
           <EduraLogo />
         </Link>
         <ul>
