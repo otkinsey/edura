@@ -27,7 +27,7 @@ const CourseContent = (props) => {
             ></div>
           </p>
           <p id="meet_the_instructor">
-            <h3>Meet The Instructions</h3>
+            <h3>Meet The Instructor</h3>
             <div
               style={{ display: "grid", grid: "1fr / 2fr 14fr", gap: "20px" }}
             >
