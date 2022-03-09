@@ -6,20 +6,10 @@ const CourseSidePanel = (props) => {
       return (
         <div
           className="course_review"
-          style={{ display: "grid", grid: "1fr / 4fr 10fr", gap: "20px" }}
+          style={{ display: "grid", grid: "120px / 4fr 10fr", gap: "20px" }}
         >
           <div style={{ background: "#553e1f" }}>
-            <img
-              style={{
-                height: "80px",
-                width: "100%",
-                margin: "auto",
-                objectFit: "cover",
-              }}
-              id="course_review_image"
-              src={reviewImages[idx]}
-              alt=""
-            />
+            <img id="course_review_image" src={reviewImages[idx]} alt="" />
           </div>
           <div id="course_review_text">{rev}</div>
         </div>
@@ -38,6 +28,7 @@ const CourseSidePanel = (props) => {
         <h4>Price</h4>
         <span>${props.data.price}.00</span>
       </div>
+      <h4>Reviews:</h4>
       <div
         id="course_reviews"
         style={{
@@ -46,7 +37,6 @@ const CourseSidePanel = (props) => {
           gap: "20px",
         }}
       >
-        <h4>Reviews:</h4>
         {generateCourseReviews(
           props.data.review_text,
           props.data.review_images

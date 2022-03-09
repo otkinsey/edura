@@ -48,7 +48,8 @@ a:hover {
 button.btn-primary,
 button.filter_button,
 button.btn,
-.button.btn {
+.button.btn,
+.button.btn-primary {
   color: white;
   background-color: #5d5c61;
   height: 50px;
@@ -58,7 +59,10 @@ button.btn,
   width: 220px;
   border: none;
   transition: background-color 0.3s;
+  display: flex;
+  font-weight: bold;
 }
+
 button:hover,
 button.btn:hover,
 .button.btn:hover {
@@ -102,6 +106,24 @@ button.btn:hover,
 #course_details h2 {
   font-size: 2.5rem;
   color: black;
+}
+#course_details #course_header img {
+  height: 120px;
+}
+#course_details #course_review_image {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  object-fit: cover;
+}
+#course_details #left_course_panel p {
+  margin-bottom: 40px;
+}
+#course_details h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #557a94;
+  margin-bottom: 25px;
 }
 .carousel-inner,
 .carousel-inner .carousel-item {
@@ -456,6 +478,20 @@ section#header li:hover .submenu {
 
 #stay_connected .row1 > div {
   flex-basis: 50%;
+}
+.display_block {
+  display: block;
+}
+.hide {
+  display: none;
+}
+.submenu {
+  background: white;
+  box-shadow: 0 0 3px #999;
+  display: flex;
+  align-items: start;
+  padding: 20px;
+  width: 100%;
 }
 #upcoming_courses {
   display: grid;

@@ -16,17 +16,17 @@ const courseData = [
     instructor_bio:
       "Raj Heda has been teaching software development and Agile courses for  over 20 years. He has extensive experience leading teams in Agile transformation, with  successful results. Raj currently teaches in the Boston area at Boston University and  Brandeis University.",
     effort_duration: 2,
-    location:
-      "Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.",
+    location: "Boston, MA, USA",
     instructorImage:
       "/images/course_details_images/EDA-75_attachments/Raj_Heda.png",
     start_date: "6/10/22",
     end_date: "10-Jun-22",
-    partner_image: "11-Jun-22",
+    partner_image:
+      "/images/course_details_images/EDA-75_attachments/scrum_alliance.png",
     review_images:
       "/images/course_details_images/EDA-75_attachments/CSM_Review_1.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_2.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_3.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_4.jpg",
     review_text:
-      "This class gave me the exposure to agile and the scrum process that I needed. Thanks!�,I started with very little knowledge about how agile actually works, but the class �provided more than enough to start implementing the techniques at my company.�,When I began my training I thought that a scrum master was just a project manager. The �class showed me how the roles are different and how to get a team to work toward a �common goal.�,My instructor was great. They kept the energy level high, and everyone in the class �passed the CSM certification on their first try. Highly recommended.",
+      "This class gave me the exposure to agile and the scrum process that I needed. Thanks!,I started with very little knowledge about how agile actually works, but the class provided more than enough to start implementing the techniques at my company.,When I began my training I thought that a scrum master was just a project manager. The class showed me how the roles are different and how to get a team to work toward a common goal.,My instructor was great. They kept the energy level high, and everyone in the class passed the CSM certification on their first try. Highly recommended.",
     header_background_image:
       "/images/course_details_images/EDA-75_attachments/CSM_Header.jpg",
     cert_image: "/images/course_details_images/EDA-75_attachments/CSM.png",
