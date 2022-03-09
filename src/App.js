@@ -16,7 +16,7 @@ import Training from "./components/training/training";
 import WhatWeDo from "./components/what_we_do/what_we_do";
 
 import "./App.css";
-import courseData from "./components/dummyData";
+import courseData from "./components/courseData";
 function App() {
   return (
     <div className="App">
