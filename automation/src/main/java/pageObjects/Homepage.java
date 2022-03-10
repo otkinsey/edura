@@ -251,9 +251,9 @@ public class Homepage {
     }
     
     public void clickAssessmentLearnMoreLink() throws Throwable {
+    	wait.waitUntilObjectFound(driver, ourServicesAssessmentLearnMoreLink);
     	System.out.println("Waited for the element");
     	wait.clickUsingJavaScriptExecutor(driver, ourServicesAssessmentLearnMoreLink);
-    	//ourServicesAssessmentLearnMoreLink.click();
     	System.out.println("Element clicked successfully");
     }
     

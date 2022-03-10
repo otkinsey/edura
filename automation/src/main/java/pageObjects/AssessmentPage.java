@@ -24,5 +24,10 @@ public class AssessmentPage {
 		String Url = driver.getCurrentUrl();
 		return Url;
 	}
+	
+	public void checkAssessmentTitle() throws Throwable {
+		wait.waitUntilObjectFound(driver, assessmentPageTitle);
+		assessmentPageTitle.isDisplayed();
+	}
 
 }

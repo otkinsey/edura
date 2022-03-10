@@ -1,15 +1,11 @@
 package managers;
 
-import java.util.LinkedList;
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
 
 import enums.DriverType;
 import enums.EnvironmentType;
@@ -19,6 +15,7 @@ public class WebDriverManager {
 	private static DriverType driverType;
 	private static EnvironmentType environmentType;
 	private static final String CHROME_DRIVER_PROPERTY = "webdriver.chrome.driver";
+	private static final String FIREFOX_DRIVER_PROPERTY= "webdriver.gecko.driver";
 
 	public WebDriverManager() {
 		driverType = FileReaderManager.getInstance().getConfigReader().getBrowser();
@@ -46,7 +43,9 @@ public class WebDriverManager {
 
 	private WebDriver createLocalDriver() {
         switch (driverType) {	    
-        case FIREFOX : driver = new FirefoxDriver();
+        case FIREFOX : 
+        	System.setProperty(FIREFOX_DRIVER_PROPERTY, FileReaderManager.getInstance().getConfigReader().getDriverPath());
+        	driver = new FirefoxDriver();
 	    	break;
         case CHROME : 
         	System.setProperty(CHROME_DRIVER_PROPERTY, FileReaderManager.getInstance().getConfigReader().getDriverPath());
