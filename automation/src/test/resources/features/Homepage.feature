@@ -73,8 +73,8 @@ Scenario: To validate About Us section
 	And I should see What we do button is displayed 
 	And I should see Contact Us button is displayed 
 	And I should see description displayed to right of the buttons 
-	
-@sample
+
+
 Scenario: To validate Who we are in About us section 
 	Given I am on edura homepage 
 	And I view About Us section 
@@ -103,12 +103,13 @@ Scenario: To validate Our Partners Section
 	And I should see scrum alliance logo displayed 
 	And I should see SAFE agile logo displayed 
 	
-	
+
 Scenario: To click on Scrum.org logo 
 	Given I am on edura homepage 
 	And I view Our Partners section 
 	When I click on Scrum org logo 
 	Then I should be navigated to scrum org page 
+
 	
 Scenario: To click on Scrum alliance logo 
 	Given I am on edura homepage 

@@ -282,8 +282,10 @@ public class HomepageStepDefinitions {
 	
 	@Then("^I should be navigated to scrum org page$")
 	public void i_should_be_navigated_to_scrum_org_page() throws Throwable{
-		String Url = driver.getCurrentUrl();
-		Assert.assertTrue("User not navigated to Scrum org website", Url.contains("scrum.org"));
+		System.out.println("Executing then statement after performing click operation");
+		Thread.sleep(10000);
+		String Url = home.getUrl();
+		Assert.assertTrue("User not navigated to Scrum org website", Url.contains("https://www.scrum.org"));
 	}
 	
 	@When("^I click on Scrum alliance logo$")
@@ -293,7 +295,7 @@ public class HomepageStepDefinitions {
 	
 	@Then("^I should be navigated to scrum alliance page$")
 	public void i_should_be_navigated_to_scrum_alliance_page() throws Throwable{
-		String Url = driver.getCurrentUrl();
+		String Url = home.getUrl();
 		Assert.assertTrue("User not navigated to Scrum Alliance website", Url.contains("https://www.scrumalliance.org/"));
 	}
 	
@@ -304,7 +306,7 @@ public class HomepageStepDefinitions {
 	
 	@Then("^I should be navigated to safe agile page$")
 	public void i_should_be_navigated_to_safe_agile_page() throws Throwable{
-		String Url = driver.getCurrentUrl();
+		String Url = home.getUrl();
 		Assert.assertTrue("User not navigated to Safe website", Url.contains("https://www.scaledagileframework.com/"));
 	}
 	
