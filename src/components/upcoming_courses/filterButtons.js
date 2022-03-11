@@ -22,16 +22,69 @@ const FilterButtons = (props) => {
         .replace(/([A-Z])/g, " $1")
         .replace(/^./g, (str) => str.toUpperCase());
       return (
-        <div style={{ position: "relative" }}>
-          <button
+        <div
+          style={{
+            position: "relative",
+            "text-align": "left",
+            color: "#9d9d9d",
+          }}
+        >
+          <lable
+            style={{
+              fontSize: ".85rem",
+
+              fontWeight: "bold",
+            }}
+          >
+            {filterKey}
+          </lable>
+          <select
             className="filter_button"
             id={`filter_button_${filterKey}`}
             key={idx}
             onClick={(e) => props.setDisplayState(e)}
-            style={{ position: "relative", zIndex: "1" }}
+            style={{
+              position: "relative",
+              zIndex: "1",
+              width: "100%",
+              background: "white",
+              borderTop: "1px solid #ccc",
+              borderLeft: "none",
+              borderRight: "none",
+              borderBottom: "1px solid #ccc",
+              margin: " 0 0 20px 0",
+              padding: "10px 0px",
+              fontSize: ".85rem",
+              color: "#9d9d9d",
+            }}
           >
-            {formattedKey}
-          </button>
+            {filterKey === "date" ? (
+              <option>
+                <DatePicker
+                  selected={startDate}
+                  onChange={(date) => {
+                    return filterWithDatePicker(date);
+                  }}
+                />
+              </option>
+            ) : (
+              Array.from(props.filterOptions[filterKey]).map(
+                (val, index, mapData) => {
+                  return (
+                    <option
+                      key={`option_${index}`}
+                      onClick={(event, mapKey) =>
+                        props.filterCourseData(filterKey, val)
+                      }
+                      style={{ cursor: "pointer" }}
+                    >
+                      {val}
+                    </option>
+                  );
+                }
+              )
+            )}
+          </select>
           <ul
             className="props. filterOptions submenu"
             style={{
@@ -40,34 +93,7 @@ const FilterButtons = (props) => {
               zIndex: "2",
             }}
             id={`option_list_${filterKey}`}
-          >
-            {filterKey === "date" ? (
-              <li>
-                <DatePicker
-                  selected={startDate}
-                  onChange={(date) => {
-                    return filterWithDatePicker(date);
-                  }}
-                />
-              </li>
-            ) : (
-              Array.from(props.filterOptions[filterKey]).map(
-                (val, index, mapData) => {
-                  return (
-                    <li
-                      key={`option_${index}`}
-                      onClick={(event, mapKey) =>
-                        props.filterCourseData(filterKey, val)
-                      }
-                      style={{ cursor: "pointer" }}
-                    >
-                      {val}
-                    </li>
-                  );
-                }
-              )
-            )}
-          </ul>
+          ></ul>
         </div>
       );
     } else {

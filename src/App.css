@@ -525,6 +525,7 @@ section#header li:hover .submenu {
 #upcoming_courses #course_filters {
   padding-left: 20px;
   padding-right: 20px;
+  padding-bottom: 60px;
 }
 #upcoming_courses table {
   text-align: left;

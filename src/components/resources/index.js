@@ -1,5 +1,10 @@
-const ResourcesPage = () => {
-  return <h1>Resources</h1>;
+import { Form } from "react-bootstrap";
+const RegistrationForm = () => {
+  return (
+    <>
+      <Form></Form>
+    </>
+  );
 };
 
-export default ResourcesPage;
+export default RegistrationForm;
