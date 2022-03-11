@@ -66,7 +66,7 @@ const Courses = () => {
 
   const clearFilters = () => setFilteredData(courseData);
   return (
-    <div className="component" onClick={(e) => setDisplayState(e)}>
+    <div className="component">
       <div className="jumbotron">
         <h1>Upcoming Courses</h1>
       </div>

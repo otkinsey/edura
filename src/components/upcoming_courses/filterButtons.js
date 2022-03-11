@@ -55,7 +55,6 @@ const FilterButtons = (props) => {
             onChange={(event, mapKey) =>
               props.filterCourseData(filterKey, event.target.value)
             }
-            onClick={(e) => props.setDisplayState(e)}
             style={{
               position: "relative",
               zIndex: "1",
@@ -71,31 +70,14 @@ const FilterButtons = (props) => {
               color: "#9d9d9d",
             }}
           >
-            {filterKey === "date" ? (
-              <option>
-                <DatePicker
-                  selected={startDate}
-                  onChange={(date) => {
-                    return filterWithDatePicker(date);
-                  }}
-                />
-              </option>
-            ) : (
-              Array.from(props.filterOptions[filterKey]).map(
-                (val, index, mapData) => {
-                  return (
-                    <option
-                      key={`option_${index}`}
-                      onClick={(event, mapKey) =>
-                        props.filterCourseData(filterKey, val)
-                      }
-                      style={{ cursor: "pointer" }}
-                    >
-                      {val}
-                    </option>
-                  );
-                }
-              )
+            {Array.from(props.filterOptions[filterKey]).map(
+              (val, index, mapData) => {
+                return (
+                  <option key={`option_${index}`} style={{ cursor: "pointer" }}>
+                    {val}
+                  </option>
+                );
+              }
             )}
           </select>
           <ul
