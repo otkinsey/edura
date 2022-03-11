@@ -104,7 +104,7 @@ button.btn:hover,
   height: 100%;
 }
 #course_details h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: black;
 }
 #course_details #course_header img {
@@ -518,11 +518,19 @@ section#header li:hover .submenu {
   display: flex;
   position: relative;
 }
+
+#upcoming_courses > div {
+  padding-top: 60px;
+}
 #upcoming_courses #course_filters {
-  padding: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 #upcoming_courses table {
   text-align: left;
+}
+#course_calendar h2 {
+  padding-top: 0;
 }
 #upcoming_courses #course_calendar > h2 {
   text-align: left;
@@ -554,17 +562,17 @@ section#header li:hover .submenu {
   background-color: #f5f5f5;
 }
 #upcoming_courses th#location {
-  width: 30%;
+  width: 20%;
 }
 #upcoming_courses #course_filters {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#upcoming_courses #course_filters button {
-  /* border: ; */
+/* #upcoming_courses #course_filters button {
+  border: ;
   margin: 10px 5px;
-}
+} */
 #upcoming_courses ul,
 #upcoming_courses ul {
   list-style-type: none;

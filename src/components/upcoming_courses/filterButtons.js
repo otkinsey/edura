@@ -12,11 +12,12 @@ const FilterButtons = (props) => {
     props.filterCourseData(key, value);
     setStartDate(date);
   };
+  const filtersArray = ["courseName", "instructorName", "month", "price"];
   /**
    * @REFACTOR separate out as component
    */
   const buttons = filterKeys.map((filterKey, idx) => {
-    if (filterKey !== "instructorImage" && filterKey !== "location") {
+    if (filtersArray.includes(filterKey)) {
       const formattedKey = filterKey
         .replace(/([A-Z])/g, " $1")
         .replace(/^./g, (str) => str.toUpperCase());

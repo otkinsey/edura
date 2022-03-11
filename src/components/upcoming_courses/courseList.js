@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import time from "./months";
 
 /**
  * @description Componnent: Uses courseData/filteredData object to display a list of courses
@@ -7,7 +8,8 @@ import { Link } from "react-router-dom";
 const CourseList = (props) => {
   const courses = props.data.map((obj, index) => {
     const truncatedCourseName = obj.courseName.split(" ").slice(0, 4).join(" ");
-
+    const startDate = new Date(obj.start_date);
+    const endDate = new Date(obj.end_date);
     return (
       <tr style={{ fontSize: ".9rem", fontColor: "#aaa" }}>
         <td id="instructor_image">
@@ -29,8 +31,14 @@ const CourseList = (props) => {
             {truncatedCourseName}
           </Link>
         </td>
+        <td id="location">{obj.description}</td>
         <td id="location">{obj.location}</td>
-        <td id="date">{obj.date}</td>
+        <td id="date">{`${
+          time.months[startDate.getMonth()]
+        } ${startDate.getDate()}`}</td>
+        <td id="date">{`${
+          time.months[endDate.getMonth()]
+        } ${endDate.getDate()}`}</td>
         <td id="time">{obj.time}</td>
       </tr>
     );

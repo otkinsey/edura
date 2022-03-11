@@ -40,7 +40,7 @@ const CourseContent = (props) => {
             </div>
           </p>
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <Link to="register" className="button btn-primary">
+            <Link to="/register" className="button btn-primary">
               Register
             </Link>
           </div>

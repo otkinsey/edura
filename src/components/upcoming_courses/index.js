@@ -1,7 +1,7 @@
 import React from "react";
 
 import FilterButtons from "./filterButtons";
-import courseData from "../dummyData";
+import courseData from "../courseData";
 import CourseList from "./courseList";
 
 import { Link } from "react-router-dom";
@@ -105,8 +105,10 @@ const Courses = () => {
               <tr className="table_headings">
                 <th id="instructor_image">instructor</th>
                 <th id="course_name">course name</th>
+                <th id="location">description</th>
                 <th id="location">location</th>
-                <th id="date">date</th>
+                <th id="date">start data</th>
+                <th id="date">end data</th>
                 <th id="time">time</th>
               </tr>
             </thead>

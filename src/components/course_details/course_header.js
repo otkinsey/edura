@@ -53,7 +53,7 @@ const CourseHeader = (props) => {
             ></img>
             <div style={{ position: "relative" }}>
               <Link
-                to="register"
+                to="/register"
                 className="button btn-primary"
                 style={{ position: "absolute", bottom: "20px" }}
               >
