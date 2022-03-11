@@ -42,7 +42,11 @@ const Slider = () => {
 
   const slides = slideData.map((slide, index) => {
     const regex = new RegExp("_", "g");
+<<<<<<< HEAD
     const imgUrl = `http://localhost:3000/images/slider-images/${slide.imageUrl
+=======
+    const imgUrl = `/images/slider-images/${slide.imageUrl
+>>>>>>> 1868bf6126c6e04ff005d3bbe0c9113f84ff359b
       .replace(/\s/g, "_")
       .toLowerCase()}.jpeg`;
     return (
@@ -74,7 +78,11 @@ const Slider = () => {
     );
   });
   return (
+<<<<<<< HEAD
     <Carousel variant="light" interval="500000" className="dark_background">
+=======
+    <Carousel variant="light" interval="5000" className="dark_background">
+>>>>>>> 1868bf6126c6e04ff005d3bbe0c9113f84ff359b
       {slides}
     </Carousel>
   );

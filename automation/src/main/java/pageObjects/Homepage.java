@@ -4,12 +4,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import selenium.Wait;
 
 public class Homepage {
 	WebDriver driver;
 	Wait wait;
+	
 	public Homepage(WebDriver driver) {
 		
 		this.driver = driver;
@@ -117,13 +117,13 @@ public class Homepage {
 	
 	@FindBy(css = "#our_services>div>div:nth-child(2) a")
 	public WebElement ourServicesCoursesLearnMoreLink;
-	
+
 	@FindBy(xpath = ".//a[@href='Assessment']")
 	public WebElement ourServicesAssessmentLearnMoreLink;
 	
 	@FindBy(css = "#about_us h1")
 	public WebElement aboutUsTitle;
-	
+
 	@FindBy(xpath = ".//button[text()='who we are']")
 	public WebElement whoWeAreButton;
 	
@@ -150,7 +150,7 @@ public class Homepage {
 	
 	@FindBy(css = "#our_partners h1")
 	public WebElement ourPartnersTitle;
-	
+
 	@FindBy(xpath = "//*[@id='our_partners']/div/div[1]/a")
 	public WebElement scrumAllianceLogo;
 	
@@ -207,6 +207,7 @@ public class Homepage {
     	homepageValidation.isDisplayed();
     }
     
+
     public String getUrl() {
     	String URL = driver.getCurrentUrl();
     	return URL;
@@ -239,7 +240,7 @@ public class Homepage {
     public void checkFooterSection() {
     	footerSection.isDisplayed();
     }
-    
+ 
     public void clickAssessmentLink() throws Throwable {
     	wait.waitUntilObjectClickable(driver, assessmentLink);
     	assessmentLink.click();

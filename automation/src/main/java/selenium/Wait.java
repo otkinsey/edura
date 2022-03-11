@@ -1,5 +1,6 @@
 package selenium;
 
+
 import java.util.function.Function;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -86,3 +87,4 @@ public abstract class Wait {
 		jse.executeScript("arguments[0].scrollIntoView()", element); 
 	}
 }
+

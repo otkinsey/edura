@@ -18,6 +18,7 @@ public class ContactUsStepDefinitions {
 		testContext = context;
 		contactUsPage = testContext.getPageObjectManager().getContactUsPage();
 		home = testContext.getPageObjectManager().getHomePage();
+
 	}
 	
 	@Then("^I should be navigated to contact us page$")

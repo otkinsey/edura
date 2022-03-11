@@ -1,7 +1,11 @@
 import React from "react";
 
 import FilterButtons from "./filterButtons";
+<<<<<<< HEAD
 import courseData from "./dummyData";
+=======
+import courseData from "../courseData";
+>>>>>>> 1868bf6126c6e04ff005d3bbe0c9113f84ff359b
 import CourseList from "./courseList";
 
 import { Link } from "react-router-dom";
@@ -33,7 +37,11 @@ const showDropDown = (event, display) => {
     list.style["display"] = "none";
   });
   const target = document.getElementById(optionListId);
+<<<<<<< HEAD
   console.log(event);
+=======
+
+>>>>>>> 1868bf6126c6e04ff005d3bbe0c9113f84ff359b
   if (event.target.className === "filter_button") {
     target.style["display"] = display;
   }
@@ -98,16 +106,27 @@ const Courses = () => {
         </div>
         <div id="course_calendar">
           <h2>
+<<<<<<< HEAD
             <CalendarIcon />{" "}
             {filteredData.length > 0 ? filteredData[0]["month"] : "January"}
+=======
+            <CalendarIcon /> Calendar
+>>>>>>> 1868bf6126c6e04ff005d3bbe0c9113f84ff359b
           </h2>
           <table className="table">
             <thead>
               <tr className="table_headings">
                 <th id="instructor_image">instructor</th>
                 <th id="course_name">course name</th>
+<<<<<<< HEAD
                 <th id="location">location</th>
                 <th id="date">date</th>
+=======
+                <th id="location">description</th>
+                <th id="location">location</th>
+                <th id="date">start data</th>
+                <th id="date">end data</th>
+>>>>>>> 1868bf6126c6e04ff005d3bbe0c9113f84ff359b
                 <th id="time">time</th>
               </tr>
             </thead>

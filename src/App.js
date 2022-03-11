@@ -5,6 +5,7 @@ import Header from "./components/header/Header";
 import Resources from "./components/resources";
 
 import AboutUs from "./components/about_us/about_us";
+<<<<<<< HEAD
 import Coaching from "./components/coaching";
 import Contact from "./components/contact/contact";
 import Courses from "./components/upcoming_courses";
@@ -12,11 +13,24 @@ import Home from "./components/home";
 import OurServices from "./components/our_services/our_services";
 
 import Assessments from "./components/maturity_assessment";
+=======
+import Assessments from "./components/maturity_assessment";
+import Coaching from "./components/coaching";
+import Contact from "./components/contact/contact";
+import Courses from "./components/upcoming_courses";
+import CourseDetails from "./components/course_details";
+import Home from "./components/home";
+import OurServices from "./components/our_services/our_services";
+>>>>>>> 1868bf6126c6e04ff005d3bbe0c9113f84ff359b
 import Training from "./components/training/training";
 import WhatWeDo from "./components/what_we_do/what_we_do";
 
 import "./App.css";
+<<<<<<< HEAD
 
+=======
+import courseData from "./components/courseData";
+>>>>>>> 1868bf6126c6e04ff005d3bbe0c9113f84ff359b
 function App() {
   return (
     <div className="App">
@@ -27,8 +41,15 @@ function App() {
         <Route path="coaching" element={<Coaching />} />
         <Route path="contact" element={<Contact />} />
         <Route path="upcoming_courses" element={<Courses />} />
+<<<<<<< HEAD
         <Route path="assessment" element={<Assessments />} />
         <Route path="resources" element={<Resources />} />
+=======
+        <Route path="course_details" element={<CourseDetails />} />
+        <Route path="assessment" element={<Assessments />} />
+        <Route path="resources" element={<Resources />} />
+        <Route path="register" element={<Resources />} />
+>>>>>>> 1868bf6126c6e04ff005d3bbe0c9113f84ff359b
         <Route path="training" element={<Training />} />
         <Route path="what_we_do" element={<WhatWeDo />} />
         <Route path="our_services" element={<OurServices />} />

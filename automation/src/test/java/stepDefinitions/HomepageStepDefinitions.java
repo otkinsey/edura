@@ -218,6 +218,7 @@ public class HomepageStepDefinitions {
 	@When("^I click on Who Are we button$")
 	public void i_click_on_Who_Are_we_button() throws Throwable{
 		home.clickWhoWeAreButton();
+
 	}
 	
 	@Then("^The description should show subtitle who are we$")

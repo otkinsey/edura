@@ -28,3 +28,4 @@ public class AssessmentStepDefinitions{
 		Assert.assertTrue("User is not navigated to Assessment Page", assessmentPage.assessmentPageTitle.isDisplayed());
 	}
 }
+
