@@ -52,6 +52,9 @@ const FilterButtons = (props) => {
             className="filter_button"
             id={`filter_button_${filterKey}`}
             key={idx}
+            onChange={(event, mapKey) =>
+              props.filterCourseData(filterKey, event.target.value)
+            }
             onClick={(e) => props.setDisplayState(e)}
             style={{
               position: "relative",
