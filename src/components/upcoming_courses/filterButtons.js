@@ -13,6 +13,7 @@ const FilterButtons = (props) => {
     setStartDate(date);
   };
   const filtersArray = [
+    "course_name",
     "trainer",
     "month",
     "start_date",
@@ -45,7 +46,7 @@ const FilterButtons = (props) => {
               fontWeight: "bold",
             }}
           >
-            {formattedKey}
+            {formattedKey === "Course name" ? "Course Type" : formattedKey}
           </lable>
           <select
             className="filter_button"
