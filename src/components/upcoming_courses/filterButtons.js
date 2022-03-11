@@ -12,13 +12,22 @@ const FilterButtons = (props) => {
     props.filterCourseData(key, value);
     setStartDate(date);
   };
-  const filtersArray = ["courseName", "instructorName", "month", "price"];
+  const filtersArray = [
+    "trainer",
+    "month",
+    "start_date",
+    "end_date",
+    "country",
+    "city",
+    "partner",
+  ];
   /**
    * @REFACTOR separate out as component
    */
   const buttons = filterKeys.map((filterKey, idx) => {
     if (filtersArray.includes(filterKey)) {
       const formattedKey = filterKey
+        .replace(/_/g, " ")
         .replace(/([A-Z])/g, " $1")
         .replace(/^./g, (str) => str.toUpperCase());
       return (
@@ -32,11 +41,11 @@ const FilterButtons = (props) => {
           <lable
             style={{
               fontSize: ".85rem",
-
+              textTransform: "capitalize",
               fontWeight: "bold",
             }}
           >
-            {filterKey}
+            {formattedKey}
           </lable>
           <select
             className="filter_button"
