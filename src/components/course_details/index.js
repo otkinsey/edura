@@ -7,19 +7,19 @@ import courseData from "../courseData";
 
 const CourseDetail = () => {
   let [params] = useSearchParams();
-  const courseName =
-    params.get("courseName") === "''"
+  const course_name =
+    params.get("course_name") === "''"
       ? "Default Course"
-      : params.get("courseName").replace(/'/g, "").replace(/_/g, " ");
+      : params.get("course_name").replace(/'/g, "").replace(/_/g, " ");
 
   const filteredData = courseData.filter(
-    (i) => i["courseName"] === courseName
+    (i) => i["course_name"] === course_name
   )[0];
   return (
     <div id="course_details" style={{ backgroundColor: "#ECECEC" }}>
       <CourseHeader
         style={{ backgroundColor: "white" }}
-        courseName={courseName}
+        course_name={course_name}
         data={filteredData}
       />
       <CourseContent style={{ backgroundColor: "white" }} data={filteredData} />

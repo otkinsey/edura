@@ -30,12 +30,12 @@ const CourseHeader = (props) => {
               alt={props.data.partner_name}
             ></img>
             <div>
-              <h2>{props.courseName}&reg;</h2>
+              <h2>{props.course_name}&reg;</h2>
 
               <div>
                 {props.data.start_date} - {props.data.end_date}
               </div>
-              <div>{props.data.location}</div>
+              <div>{`${props.data.city}, ${props.data.state}, ${props.data.country}`}</div>
             </div>
           </div>
           <div

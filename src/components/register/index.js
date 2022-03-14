@@ -1,5 +1,5 @@
 const ResourcesPage = () => {
-  return <h1>Resources</h1>;
+  return <h1>Register</h1>;
 };
 
 export default ResourcesPage;
