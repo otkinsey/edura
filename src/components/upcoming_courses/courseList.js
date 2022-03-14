@@ -14,7 +14,10 @@ const CourseList = (props) => {
     const startDate = new Date(obj.start_date);
     const endDate = new Date(obj.end_date);
     return (
-      <tr style={{ fontSize: ".9rem", fontColor: "#aaa" }}>
+      <tr
+        key={`course_${index}`}
+        style={{ fontSize: ".9rem", fontColor: "#aaa" }}
+      >
         <td id="instructor_image">
           <div className="circle_frame">
             <img src={obj.instructorImage} alt={`${obj.trainer}'simage`} />
@@ -23,12 +26,12 @@ const CourseList = (props) => {
         </td>
         <td id="course_name">
           <Link
-            to={`/course_details?course_name=${truncatedcourse_name.replace(
+            to={`/course_details?course_name=${obj.course_name.replace(
               /\s/g,
               "_"
             )}`}
           >
-            {truncatedcourse_name}
+            {obj.course_name}
           </Link>
         </td>
         <td id="description">{obj.description}</td>

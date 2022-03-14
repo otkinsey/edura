@@ -107,7 +107,7 @@ const Courses = () => {
                 <th id="course_name">course name</th>
                 <th id="location">description</th>
                 <th id="location">location</th>
-                <th id="date">start data</th>
+                <th id="date">Start Date</th>
                 <th id="date">end data</th>
                 <th id="time">time</th>
               </tr>

@@ -5,13 +5,8 @@ const FilterButtons = (props) => {
   // State variables
   const [startDate, setStartDate] = useState(new Date());
 
-  const regexp = /([A-Z])/g;
   const filterKeys = Object.keys(props.filterOptions);
 
-  const filterWithDatePicker = (date, key, value) => {
-    props.filterCourseData(key, value);
-    setStartDate(date);
-  };
   const filtersArray = [
     "course_name",
     "trainer",
@@ -33,13 +28,14 @@ const FilterButtons = (props) => {
         .replace(/^./g, (str) => str.toUpperCase());
       return (
         <div
+          key={`filter_${idx}`}
           style={{
             position: "relative",
-            "text-align": "left",
+            textAlign: "left",
             color: "#9d9d9d",
           }}
         >
-          <lable
+          <label
             style={{
               fontSize: ".85rem",
               textTransform: "capitalize",
@@ -47,7 +43,7 @@ const FilterButtons = (props) => {
             }}
           >
             {formattedKey === "Course name" ? "Course Type" : formattedKey}
-          </lable>
+          </label>
           <select
             className="filter_button"
             id={`filter_button_${filterKey}`}
