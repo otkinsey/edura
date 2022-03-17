@@ -12,19 +12,12 @@ const FilterButtons = (props) => {
     props.filterCourseData(key, value);
     setStartDate(date);
   };
-<<<<<<< HEAD
-=======
   const filtersArray = ["courseName", "instructorName", "month", "price"];
->>>>>>> 1868bf6126c6e04ff005d3bbe0c9113f84ff359b
   /**
    * @REFACTOR separate out as component
    */
   const buttons = filterKeys.map((filterKey, idx) => {
-<<<<<<< HEAD
-    if (filterKey !== "instructorImage" && filterKey !== "location") {
-=======
     if (filtersArray.includes(filterKey)) {
->>>>>>> 1868bf6126c6e04ff005d3bbe0c9113f84ff359b
       const formattedKey = filterKey
         .replace(/([A-Z])/g, " $1")
         .replace(/^./g, (str) => str.toUpperCase());

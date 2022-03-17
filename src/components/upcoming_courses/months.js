@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-const months = [
-  "january",
-  "february",
-  "march",
-  "april",
-  "may",
-  "june",
-  "july",
-  "august",
-  "september",
-  "october",
-  "november",
-  "december",
-];
-
-export default months;
-=======
 const time = {
   months: [
     "january",
@@ -43,4 +25,3 @@ const time = {
 };
 
 export default time;
->>>>>>> 1868bf6126c6e04ff005d3bbe0c9113f84ff359b

@@ -11,10 +11,6 @@ const Header = () => {
     <>
       <section id="header">
         <Link to="/" id="logo">
-<<<<<<< HEAD
-          {/* <img src="images/logo.png" alt="Edura Logo" /> */}
-=======
->>>>>>> 1868bf6126c6e04ff005d3bbe0c9113f84ff359b
           <EduraLogo />
         </Link>
         <ul>
