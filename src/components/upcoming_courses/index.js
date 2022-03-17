@@ -111,7 +111,7 @@ const Courses = () => {
               <tr className="table_headings">
                 <th id="instructor_image">instructor</th>
                 <th id="course_name">course name</th>
-                <th id="location">description</th>
+                {/* <th id="location">description</th> */}
                 <th id="location">location</th>
                 <th id="date">Date</th>
               </tr>

@@ -107,8 +107,11 @@ button.btn:hover,
   font-size: 2rem;
   color: black;
 }
-#course_details #course_header img {
-  height: 120px;
+#course_details #course_header #partner_image {
+  width: 250px;
+}
+#course_details #course_header #cert_image {
+  width: 120px;
 }
 #course_details #course_review_image {
   height: 100%;

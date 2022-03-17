@@ -34,7 +34,7 @@ const CourseList = (props) => {
             {obj.course_name}
           </Link>
         </td>
-        <td id="description">{obj.description}</td>
+        {/* <td id="description">{obj.description}</td> */}
         <td id="location">{`${obj.city}, ${obj.state} ${obj.country}`}</td>
         <td id="date">{`${
           time.months[startDate.getMonth()]

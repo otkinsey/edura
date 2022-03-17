@@ -18,7 +18,7 @@ const CourseHeader = (props) => {
           id="course_header"
           style={{
             display: "grid",
-            grid: "125px 125px/ 1fr",
+            grid: "165px 125px/ 1fr",
             textAlign: "left",
           }}
         >
@@ -27,7 +27,7 @@ const CourseHeader = (props) => {
             style={{ display: "grid", grid: "1fr / 3fr 7fr" }}
           >
             <img
-              src={props.data.partner_image.replace("png", "jpg")}
+              src={props.data.partner_image}
               id="partner_image"
               alt={props.data.partner_name}
             ></img>
@@ -48,11 +48,16 @@ const CourseHeader = (props) => {
               grid: "1fr / 3fr 7fr",
             }}
           >
-            <img
-              src={props.data.cert_image}
-              id="cert_image"
-              alt={props.data.description}
-            ></img>
+            {props.course_name.includes("customized offering") ? (
+              <div></div>
+            ) : (
+              <img
+                src={props.data.cert_image}
+                id="cert_image"
+                alt={props.data.description}
+              ></img>
+            )}
+
             <div style={{ position: "relative" }}>
               <Link
                 to="/register"

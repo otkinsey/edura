@@ -26,9 +26,9 @@ const courseData = [
       "images/course_details_images/EDA-75_attachments/Raj_Heda.jpg",
     partner_image: "images/Edura_logo.svg",
     review_images:
-      "/images/course_details_images/EDA-78_attachments/CSM_Review_1.jpg,/images/course_details_images/EDA-78_attachments/CSM_Review_2.jpg,/images/course_details_images/EDA-78_attachments/CSM_Review_3.jpg,/images/course_details_images/EDA-78_attachments/CSM_Review_4.jpg",
+      "/images/course_details_images/EDA-78_attachments/Review_1.jpg,/images/course_details_images/EDA-78_attachments/Review_2.jpg,/images/course_details_images/EDA-78_attachments/Review_3.jpg,/images/course_details_images/EDA-78_attachments/Review_4.jpg",
     review_text:
-      "Great course; I learned everything I needed and more! I am excited to  implement these skills into my role in my organization.,Fantastic experience! Highly recommended! I am looking forward to sharing  what I�ve learned with my enterprise. ,Raj is an excellent instructor, always willing to help and great at explaining  concepts. ,This course equipped me with the skills I needed to grow and advance in my  career. Many thanks! ",
+      "Great course; I learned everything I needed and more! I am excited to  implement these skills into my role in my organization.,Fantastic experience! Highly recommended! I am looking forward to sharing  what Ive learned with my enterprise. ,Raj is an excellent instructor, always willing to help and great at explaining  concepts. ,This course equipped me with the skills I needed to grow and advance in my  career. Many thanks! ",
     header_background_image:
       "/images/course_details_images/EDA-78_attachments/Header.jpg",
   },
@@ -57,9 +57,9 @@ const courseData = [
       "images/course_details_images/EDA-75_attachments/Raj_Heda.jpg",
     partner_image: "images/Edura_logo.svg",
     review_images:
-      "/images/course_details_images/EDA-80_attachments/CSM_Review_1.jpg,/images/course_details_images/EDA-80_attachments/CSM_Review_2.jpg,/images/course_details_images/EDA-80_attachments/CSM_Review_3.jpg,/images/course_details_images/EDA-80_attachments/CSM_Review_4.jpg",
+      "/images/course_details_images/EDA-80_attachments/Review_1.jpg,/images/course_details_images/EDA-80_attachments/Review_2.jpg,/images/course_details_images/EDA-80_attachments/Review_3.jpg,/images/course_details_images/EDA-80_attachments/Review_4.jpg",
     review_text:
-      "We didn�t know the difference between a sprint and a program increment. Now we do,  and it has really improved our value flow. Thanks! ,My company was getting stuck between sprints, so this workshop helped us to keep the  train on the track. ,Every day we learned something new. It was a great benefit to our team. ,Highly recommended � Raj showed us how to define program increments that make  sense, enabling us to succeed. ",
+      "We didnt know the difference between a sprint and a program increment. Now we do,  and it has really improved our value flow. Thanks! ,My company was getting stuck between sprints, so this workshop helped us to keep the  train on the track. ,Every day we learned something new. It was a great benefit to our team. ,Highly recommended  Raj showed us how to define program increments that make  sense, enabling us to succeed. ",
     header_background_image:
       "/images/course_details_images/EDA-80_attachments/Header.jpg",
   },
@@ -89,9 +89,9 @@ const courseData = [
       "images/course_details_images/EDA-75_attachments/Raj_Heda.jpg",
     partner_image: "images/Edura_logo.svg",
     review_images:
-      "/images/course_details_images/EDA-81_attachments/CSM_Review_1.jpg,/images/course_details_images/EDA-81_attachments/CSM_Review_2.jpg,/images/course_details_images/EDA-81_attachments/CSM_Review_3.jpg,/images/course_details_images/EDA-81_attachments/CSM_Review_4.jpg",
+      "/images/course_details_images/EDA-81_attachments/Review_1.jpg,/images/course_details_images/EDA-81_attachments/Review_2.jpg,/images/course_details_images/EDA-81_attachments/Review_3.jpg,/images/course_details_images/EDA-81_attachments/Review_4.jpg",
     review_text:
-      "Great workshop � we saw results with our next iteration!,Many groups gloss over this step. The workshop helped us to use the I&A to really make  progress with our processes.,I was amazed at how much value I got from the workshop. Our team is better at getting  better now that we have been shown how the process should be done.,I recommended this workshop to any group who is not seeing the results from their Agile  implementation.",
+      "Great workshop  we saw results with our next iteration!,Many groups gloss over this step. The workshop helped us to use the I&A to really make  progress with our processes.,I was amazed at how much value I got from the workshop. Our team is better at getting  better now that we have been shown how the process should be done.,I recommended this workshop to any group who is not seeing the results from their Agile  implementation.",
     header_background_image:
       "/images/course_details_images/EDA-81_attachments/Header.jpg",
   },
@@ -121,9 +121,9 @@ const courseData = [
       "images/course_details_images/EDA-75_attachments/Raj_Heda.jpg",
     partner_image: "images/Edura_logo.svg",
     review_images:
-      "/images/course_details_images/EDA-82_attachments/CSM_Review_1.jpg,/images/course_details_images/EDA-82_attachments/CSM_Review_2.jpg,/images/course_details_images/EDA-82_attachments/CSM_Review_3.jpg,/images/course_details_images/EDA-82_attachments/CSM_Review_4.jpg",
+      "/images/course_details_images/EDA-82_attachments/Review_1.jpg,/images/course_details_images/EDA-82_attachments/Review_2.jpg,/images/course_details_images/EDA-82_attachments/Review_3.jpg,/images/course_details_images/EDA-82_attachments/Review_4.jpg",
     review_text:
-      "This was great � I now understand how to incorporate the Agile principles with product �management. Thanks!,Well worth the time. Our product management has improved and will continue to do so �as we continue our implementation.,We got a lot out of the workshop � I was glad to have been invited to participate.,This was the best use of my time in a long while. Implement Agile requires a new way to �do our jobs, and this workshop has opened my eyes. Just great.",
+      "This was great  I now understand how to incorporate the Agile principles with product management. Thanks!,Well worth the time. Our product management has improved and will continue to do so as we continue our implementation.,We got a lot out of the workshop  I was glad to have been invited to participate.,This was the best use of my time in a long while. Implement Agile requires a new way to do our jobs, and this workshop has opened my eyes. Just great.",
     header_background_image:
       "/images/course_details_images/EDA-82_attachments/Header.jpg",
   },
@@ -153,9 +153,9 @@ const courseData = [
       "images/course_details_images/EDA-75_attachments/Raj_Heda.jpg",
     partner_image: "images/Edura_logo.svg",
     review_images:
-      "/images/course_details_images/EDA-83_attachments/CSM_Review_1.jpg,/images/course_details_images/EDA-83_attachments/CSM_Review_2.jpg,/images/course_details_images/EDA-83_attachments/CSM_Review_3.jpg,/images/course_details_images/EDA-83_attachments/CSM_Review_4.jpg",
+      "/images/course_details_images/EDA-83_attachments/Review_1.jpg,/images/course_details_images/EDA-83_attachments/Review_2.jpg,/images/course_details_images/EDA-83_attachments/Review_3.jpg,/images/course_details_images/EDA-83_attachments/Review_4.jpg",
     review_text:
-      "Great course; I learned everything I needed and more! I am excited to  implement these skills into my role in my organization.,Fantastic experience! Highly recommended! I am looking forward to sharing  what I�ve learned with my enterprise.,Raj is an excellent instructor, always willing to help and great at explaining  concepts.,This course equipped me with the skills I needed to grow and advance in my  career. Many thanks!",
+      "Great course; I learned everything I needed and more! I am excited to  implement these skills into my role in my organization.,Fantastic experience! Highly recommended! I am looking forward to sharing  what Ive learned with my enterprise.,Raj is an excellent instructor, always willing to help and great at explaining  concepts.,This course equipped me with the skills I needed to grow and advance in my  career. Many thanks!",
     header_background_image:
       "/images/course_details_images/EDA-83_attachments/Header.jpg",
   },
@@ -185,9 +185,9 @@ const courseData = [
       "images/course_details_images/EDA-75_attachments/Raj_Heda.jpg",
     partner_image: "images/Edura_logo.svg",
     review_images:
-      "/images/course_details_images/EDA-84_attachments/CSM_Review_1.jpg,/images/course_details_images/EDA-84_attachments/CSM_Review_2.jpg,/images/course_details_images/EDA-84_attachments/CSM_Review_3.jpg,/images/course_details_images/EDA-84_attachments/CSM_Review_4.jpg",
+      "/images/course_details_images/EDA-84_attachments/Review_1.jpg,/images/course_details_images/EDA-84_attachments/Review_2.jpg,/images/course_details_images/EDA-84_attachments/Review_3.jpg,/images/course_details_images/EDA-84_attachments/Review_4.jpg",
     review_text:
-      "Great course; I learned everything I needed and more! I am excited to  implement these skills into my role in my organization.,Fantastic experience! Highly recommended! I am looking forward to sharing  what I�ve learned with my enterprise.,Raj is an excellent instructor, always willing to help and great at explaining  concepts.,This course equipped me with the skills I needed to grow and advance in my  career. Many thanks!",
+      "Great course; I learned everything I needed and more! I am excited to  implement these skills into my role in my organization.,Fantastic experience! Highly recommended! I am looking forward to sharing  what Ive learned with my enterprise.,Raj is an excellent instructor, always willing to help and great at explaining  concepts.,This course equipped me with the skills I needed to grow and advance in my  career. Many thanks!",
     header_background_image:
       "/images/course_details_images/EDA-84_attachments/Header.jpg",
   },
@@ -195,7 +195,7 @@ const courseData = [
     course_name: "Certified SAFe Agilist",
     certifying_body: "SAFe",
     cert_image:
-      "/images/course_details_images/partner_cert_images/SAFe_agilist.jpg",
+      "/images/course_details_images/partner_cert_images/SAFe_agilist.png",
     description: "Certified SAFe Agilist",
     about_this_course:
       "A foundational course for the Certified SAFe Agilist certificate",
@@ -218,7 +218,7 @@ const courseData = [
       "images/course_details_images/EDA-75_attachments/Raj_Heda.jpg",
     partner_image: "images/safe-logo.png",
     review_images:
-      "/images/course_details_images/EDA-67_attachments/CSM_Review_1.jpg,/images/course_details_images/EDA-67_attachments/CSM_Review_2.jpg,/images/course_details_images/EDA-67_attachments/CSM_Review_3.jpg,/images/course_details_images/EDA-67_attachments/CSM_Review_4.jpg",
+      "/images/course_details_images/EDA-67_attachments/SAFe_Agilist_Review_1.jpg,/images/course_details_images/EDA-67_attachments/SAFe_Agilist_Review_2.jpg,/images/course_details_images/EDA-67_attachments/SAFe_Agilist_Review_3.jpg,/images/course_details_images/EDA-67_attachments/SAFe_Agilist_Review_4.jpg",
     review_text:
       "Great course; I learned everything I needed and more! I am excited to implement these skills into my role in my organization.,Fantastic experience! Highly recommended! I am looking forward to sharing what Ive learned with my enterprise.,Raj is an excellent instructor, always willing to help and great at explaining concepts.,This course equipped me with the skills I needed to grow and advance in my career. Many thanks",
     header_background_image:
@@ -227,7 +227,7 @@ const courseData = [
   {
     course_name: "Certified SAFe Scrum Master",
     certifying_body: "SAFe",
-    cert_image: "/images/course_details_images/partner_cert_images/SAFe_SM.jpg",
+    cert_image: "/images/course_details_images/partner_cert_images/SAFe_SM.png",
     description: "Certified SAFe Scrum Master",
     about_this_course:
       "A foundational course for the Certified SAFe Scrum Master certificate",
@@ -250,7 +250,7 @@ const courseData = [
       "images/course_details_images/EDA-75_attachments/Raj_Heda.jpg",
     partner_image: "images/safe-logo.png",
     review_images:
-      "/images/course_details_images/EDA-68_attachments/CSM_Review_1.jpg,/images/course_details_images/EDA-68_attachments/CSM_Review_2.jpg,/images/course_details_images/EDA-68_attachments/CSM_Review_3.jpg,/images/course_details_images/EDA-68_attachments/CSM_Review_4.jpg",
+      "/images/course_details_images/EDA-68_attachments/Review_1.jpg,/images/course_details_images/EDA-68_attachments/Review_2.jpg,/images/course_details_images/EDA-68_attachments/Review_3.jpg,/images/course_details_images/EDA-68_attachments/Review_4.jpg",
     review_text:
       "Great course; I learned everything I needed and more! I am excited to implement these skills into my role in my organization.,Fantastic experience! Highly recommended! I am looking forward to sharing what Ive learned with my enterprise.,Raj is an excellent instructor, always willing to help and great at explaining concepts.,This course equipped me with the skills I needed to grow and advance in my career. Many thanks",
     header_background_image:
@@ -259,7 +259,7 @@ const courseData = [
   {
     course_name: "Certified SAFe Product Owner / Product Manager",
     certifying_body: "SAFe",
-    cert_image: "/images/course_details_images/partner_cert_images/SAFe_PO.jpg",
+    cert_image: "/images/course_details_images/partner_cert_images/SAFe_PO.png",
     description: "Certified SAFe Product Owner / Product Manager",
     about_this_course:
       "A foundational course for the Certified SAFe Product Owner / Product Manager certificate",
@@ -282,7 +282,7 @@ const courseData = [
       "images/course_details_images/EDA-75_attachments/Raj_Heda.jpg",
     partner_image: "images/safe-logo.png",
     review_images:
-      "/images/course_details_images/EDA-69_attachments/CSM_Review_1.jpg,/images/course_details_images/EDA-69_attachments/CSM_Review_2.jpg,/images/course_details_images/EDA-69_attachments/CSM_Review_3.jpg,/images/course_details_images/EDA-69_attachments/CSM_Review_4.jpg",
+      "/images/course_details_images/EDA-69_attachments/Review_1.jpg,/images/course_details_images/EDA-69_attachments/Review_2.jpg,/images/course_details_images/EDA-69_attachments/Review_3.jpg,/images/course_details_images/EDA-69_attachments/Review_4.jpg",
     review_text:
       "Great course; I learned everything I needed and more! I am excited to implement these skills into my role in my organization.,Fantastic experience! Highly recommended! I am looking forward to sharing what Ive learned with my enterprise.,Raj is an excellent instructor, always willing to help and great at explaining concepts.,This course equipped me with the skills I needed to grow and advance in my career. Many thanks",
     header_background_image:
@@ -292,7 +292,7 @@ const courseData = [
     course_name: "SAFe Portfolio Management",
     certifying_body: "SAFe",
     cert_image:
-      "/images/course_details_images/partner_cert_images/SAFe_LPM.jpg",
+      "/images/course_details_images/partner_cert_images/SAFe_LPM.png",
     description: "SAFe Portfolio Management",
     about_this_course:
       "A foundational Lean-Agile and Portfolio operations course for SAFe portfolio managers.",
@@ -315,7 +315,7 @@ const courseData = [
       "images/course_details_images/EDA-75_attachments/Raj_Heda.jpg",
     partner_image: "images/safe-logo.png",
     review_images:
-      "/images/course_details_images/EDA-79_attachments/CSM_Review_1.jpg,/images/course_details_images/EDA-79_attachments/CSM_Review_2.jpg,/images/course_details_images/EDA-79_attachments/CSM_Review_3.jpg,/images/course_details_images/EDA-79_attachments/CSM_Review_4.jpg",
+      "/images/course_details_images/EDA-79_attachments/Review_1.jpg,/images/course_details_images/EDA-79_attachments/Review_2.jpg,/images/course_details_images/EDA-79_attachments/Review_3.jpg,/images/course_details_images/EDA-79_attachments/Review_4.jpg",
     review_text:
       "Great course; I learned everything I needed and more! I am excited to implement these skills into my role in my organization.,Fantastic experience! Highly recommended! I am looking forward to sharing what Ive learned with my enterprise.,Raj is an excellent instructor, always willing to help and great at explaining concepts.,This course equipped me with the skills I needed to grow and advance in my career. Many thanks",
     header_background_image:
@@ -324,7 +324,7 @@ const courseData = [
   {
     course_name: "CSM - Certified ScrumMaster",
     certifying_body: "Scrum Alliance",
-    cert_image: "/images/course_details_images/partner_cert_images/CSM.jpg",
+    cert_image: "/images/course_details_images/partner_cert_images/CSM.png",
     description: "CSM - Certified ScrumMaster",
     about_this_course:
       "A foundational course for the Certified SAFe Scrum Master certificate",
@@ -345,9 +345,9 @@ const courseData = [
     jira_id: "EDA-75",
     instructorImage:
       "images/course_details_images/EDA-75_attachments/Raj_Heda.jpg",
-    partner_image: "images/scrum_alliance.jpg",
+    partner_image: "images/scrum_alliance.png",
     review_images:
-      "/images/course_details_images/EDA-75_attachments/CSM_Review_1.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_2.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_3.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_4.jpg",
+      "/images/course_details_images/EDA-75_attachments/Review_1.jpg,/images/course_details_images/EDA-75_attachments/Review_2.jpg,/images/course_details_images/EDA-75_attachments/Review_3.jpg,/images/course_details_images/EDA-75_attachments/Review_4.jpg",
     review_text:
       "This class gave me the exposure to agile and the scrum process that I needed. Thanks!,I started with very little knowledge about how agile actually works, but the class provided more than enough to start implementing the techniques at my company.,When I began my training I thought that a scrum master was just a project manager. The class showed me how the roles are different and how to get a team to work toward a common goal.,My instructor was great. They kept the energy level high, and everyone in the class passed the CSM certification on their first try. Highly recommended.",
     header_background_image:
@@ -356,7 +356,7 @@ const courseData = [
   {
     course_name: "Certified Agile Leadership (CAL1)",
     certifying_body: "Scrum Alliance",
-    cert_image: "/images/course_details_images/partner_cert_images/CSCAL1.jpg",
+    cert_image: "/images/course_details_images/partner_cert_images/CSCAL1.png",
     description: "Certified Agile Leadership (CAL1)",
     about_this_course:
       "A foundational course for managers to prepare for the Agile Leadership 1 certificate",
@@ -377,9 +377,9 @@ const courseData = [
     jira_id: "EDA-66",
     instructorImage:
       "images/course_details_images/EDA-75_attachments/Raj_Heda.jpg",
-    partner_image: "images/scrum_alliance.jpg",
+    partner_image: "images/scrum_alliance.png",
     review_images:
-      "/images/course_details_images/EDA-66_attachments/CSM_Review_1.jpg,/images/course_details_images/EDA-66_attachments/CSM_Review_2.jpg,/images/course_details_images/EDA-66_attachments/CSM_Review_3.jpg,/images/course_details_images/EDA-66_attachments/CSM_Review_4.jpg",
+      "/images/course_details_images/EDA-66_attachments/Review_1.jpg,/images/course_details_images/EDA-66_attachments/Review_2.jpg,/images/course_details_images/EDA-66_attachments/Review_3.jpg,/images/course_details_images/EDA-66_attachments/Review_4.jpg",
     review_text:
       "Great course; I learned everything I needed and more! I am excited to implement these skills into my role in my organization.,Fantastic experience! Highly recommended! I am looking forward to sharing what Ive learned with my enterprise.,Raj is an excellent instructor, always willing to help and great at explaining concepts.,This course equipped me with the skills I needed to grow and advance in my career. Many thanks",
     header_background_image:
@@ -388,7 +388,7 @@ const courseData = [
   {
     course_name: "CSPO  Certified Scrum Product Owner",
     certifying_body: "Scrum Alliance",
-    cert_image: "/images/course_details_images/partner_cert_images/CSPO.jpg",
+    cert_image: "/images/course_details_images/partner_cert_images/CSPO.png",
     description: "CSPO  Certified Scrum Product Owner",
     about_this_course:
       "An advanced course for experienced product owners to prepare for the  Scrum Product Owner certificate.",
@@ -409,18 +409,18 @@ const courseData = [
     jira_id: "EDA-76",
     instructorImage:
       "images/course_details_images/EDA-75_attachments/Raj_Heda.jpg",
-    partner_image: "images/scrum_alliance.jpg",
+    partner_image: "images/scrum_alliance.png",
     review_images:
-      "/images/course_details_images/EDA-76_attachments/CSM_Review_1.jpg,/images/course_details_images/EDA-76_attachments/CSM_Review_2.jpg,/images/course_details_images/EDA-76_attachments/CSM_Review_3.jpg,/images/course_details_images/EDA-76_attachments/CSM_Review_4.jpg",
+      "/images/course_details_images/EDA-76_attachments/Review_1.jpg,/images/course_details_images/EDA-76_attachments/Review_2.jpg,/images/course_details_images/EDA-76_attachments/Review_3.jpg,/images/course_details_images/EDA-76_attachments/Review_4.jpg",
     review_text:
-      "I got a lot from this class. I�m now able to better manage my team�s backlog, and our  outcomes have really improved.,I started with very little knowledge about how agile actually works, but the class  provided more than enough to start implementing the techniques at my company.,The class showed me how the product manager role guides a team to work toward a  common goal.,My instructor was great. He kept the energy level high and made it easy to learn the  material. Highly recommended.",
+      "I got a lot from this class. Im now able to better manage my teams backlog, and our  outcomes have really improved.,I started with very little knowledge about how agile actually works, but the class  provided more than enough to start implementing the techniques at my company.,The class showed me how the product manager role guides a team to work toward a  common goal.,My instructor was great. He kept the energy level high and made it easy to learn the  material. Highly recommended.",
     header_background_image:
       "/images/course_details_images/EDA-76_attachments/Header.jpg",
   },
   {
     course_name: "CSD Certified Scrum Developer ",
     certifying_body: "Scrum Alliance",
-    cert_image: "/images/course_details_images/partner_cert_images/CSD.jpg",
+    cert_image: "/images/course_details_images/partner_cert_images/CSD.png",
     description: "CSD Certified Scrum Developer ",
     about_this_course:
       "A foundational course for developers to prepare for the Scrum Developer Scrumalliance.org certificate.",
@@ -441,9 +441,9 @@ const courseData = [
     jira_id: "EDA-77",
     instructorImage:
       "images/course_details_images/EDA-75_attachments/Raj_Heda.jpg",
-    partner_image: "images/scrum_alliance.jpg",
+    partner_image: "images/scrum_alliance.png",
     review_images:
-      "/images/course_details_images/EDA-77_attachments/CSM_Review_1.jpg,/images/course_details_images/EDA-77_attachments/CSM_Review_2.jpg,/images/course_details_images/EDA-77_attachments/CSM_Review_3.jpg,/images/course_details_images/EDA-77_attachments/CSM_Review_4.jpg",
+      "/images/course_details_images/EDA-77_attachments/Review_1.jpg,/images/course_details_images/EDA-77_attachments/Review_2.jpg,/images/course_details_images/EDA-77_attachments/Review_3.jpg,/images/course_details_images/EDA-77_attachments/Review_4.jpg",
     review_text:
       "This class gave me the exposure to agile and the scrum process that I needed. Thanks!,I started with very little knowledge about how agile actually works, but the class provided more than enough to start implementing the techniques at my company.,When I began my training I thought that a scrum master was just a project manager. The class showed me how the roles are different and how to get a team to work toward a common goal.,My instructor was great. They kept the energy level high, and everyone in the class passed the CSM certification on their first try. Highly recommended.",
     header_background_image:
@@ -452,7 +452,7 @@ const courseData = [
   {
     course_name: "Professional Scrum Master Training",
     certifying_body: "scrum.org",
-    cert_image: "/images/course_details_images/partner_cert_images/PSM.jpg",
+    cert_image: "/images/course_details_images/partner_cert_images/PSM.png",
     description: "Professional Scrum Master Training",
     about_this_course:
       "<p>If you are seeking to learn how to become a successful Product Owner or Product Manager within a Lean enterprise, this course is designed for you. In this two day course, you will learn the skills necessary to be able to lead a team to deliver high value as you seek to deliver successful products in your organization.</p> <p>Trainers will equip you with the knowledge and understanding you need in order to be an effective Product Owner/Product Manager within the Agile Release Train (ART). You will discover how you can utilize Lean thinking within the Agile process as you break down Epics first into Features, and then into Stories. In addition, you will learn about the refinement process and how to best refine and manage features, stories, and product backlogs within Iterations and any Program Increments set forth by your enterprise. Finally, you will learn about Continuous Delivery and DevOps, and how these two entities add to the ongoing improvement that takes place within the Agile Release Train (ART).</p> <p>When you complete this course and gain the Certified SAFe Scrum Master certificate, this certification will demonstrate to companies that you are equipped and ready to lead Agile teams in a SAFe environment, and that your servant leadership and coaching skills will bring tremendous growth and value to their organizations.</p> <p>Unlike any other training program, we offer the following bonuses:</p> <ul> The highest passing rates: The Certified SAFe Scrum Master certification exams are rigorous, but you will be prepared. Nearly 100% of our graduates pass the exam on their very first attempt. In the unlikely event that you would need to retake the exam, a second trial is free and additional examinations are discounted. <li>Free follow-up access to your course materials for one year.</li> <li>25% discount on future course fees. Save on courses as you sail through the certification process.</li> <li>Anytime availability: Your course are available over the Internet 7 days a week and 24 hours a day. Study at any day and time you want. Once you are ready, simply sign up to take the certification exam!</li> </ul> <p>Prerequisites: Highly recommended that participants attend a course on Leading SAFe, have work experience in SAFe environment, and have experience in Lean, Agile, or other similar certifications.</p>",
@@ -473,9 +473,9 @@ const courseData = [
     jira_id: "EDA-72",
     instructorImage:
       "images/course_details_images/EDA-75_attachments/Raj_Heda.jpg",
-    partner_image: "images/scrum-org-logo.jpg",
+    partner_image: "images/scrum-org-logo.png",
     review_images:
-      "/images/course_details_images/EDA-72_attachments/CSM_Review_1.jpg,/images/course_details_images/EDA-72_attachments/CSM_Review_2.jpg,/images/course_details_images/EDA-72_attachments/CSM_Review_3.jpg,/images/course_details_images/EDA-72_attachments/CSM_Review_4.jpg",
+      "/images/course_details_images/EDA-72_attachments/Review_1.jpg,/images/course_details_images/EDA-72_attachments/Review_2.jpg,/images/course_details_images/EDA-72_attachments/Review_3.jpg,/images/course_details_images/EDA-72_attachments/Review_4.jpg",
     review_text:
       "Great course; I learned everything I needed and more! I am excited to implement these skills into my role in my organization.,Fantastic experience! Highly recommended! I am looking forward to sharing what Ive learned with my enterprise.,Raj is an excellent instructor, always willing to help and great at explaining concepts.,This course equipped me with the skills I needed to grow and advance in my career. Many thanks",
     header_background_image:
@@ -484,7 +484,7 @@ const courseData = [
   {
     course_name: "Professional Scrum Product Owner",
     certifying_body: "scrum.org",
-    cert_image: "/images/course_details_images/partner_cert_images/PSPO.jpg",
+    cert_image: "/images/course_details_images/partner_cert_images/PSPO.png",
     description: "Professional Scrum Product Owner",
     about_this_course:
       "A course to prepare for Professional Scrum Product Owner Certification",
@@ -505,9 +505,9 @@ const courseData = [
     jira_id: "EDA-73",
     instructorImage:
       "images/course_details_images/EDA-75_attachments/Raj_Heda.jpg",
-    partner_image: "images/scrum-org-logo.jpg",
+    partner_image: "images/scrum-org-logo.png",
     review_images:
-      "/images/course_details_images/EDA-73_attachments/CSM_Review_1.jpg,/images/course_details_images/EDA-73_attachments/CSM_Review_2.jpg,/images/course_details_images/EDA-73_attachments/CSM_Review_3.jpg,/images/course_details_images/EDA-73_attachments/CSM_Review_4.jpg",
+      "/images/course_details_images/EDA-73_attachments/Review_1.jpg,/images/course_details_images/EDA-73_attachments/Review_2.jpg,/images/course_details_images/EDA-73_attachments/Review_3.jpg,/images/course_details_images/EDA-73_attachments/Review_4.jpg",
     review_text:
       "Great course; I learned everything I needed and more! I am excited to implement these skills into my role in my organization.,Fantastic experience! Highly recommended! I am looking forward to sharing what Ive learned with my enterprise.,Raj is an excellent instructor, always willing to help and great at explaining concepts.,This course equipped me with the skills I needed to grow and advance in my career. Many thanks",
     header_background_image:
@@ -537,9 +537,9 @@ const courseData = [
     jira_id: "EDA-74",
     instructorImage:
       "images/course_details_images/EDA-75_attachments/Raj_Heda.jpg",
-    partner_image: "images/scrum-org-logo.jpg",
+    partner_image: "images/scrum-org-logo.png",
     review_images:
-      "/images/course_details_images/EDA-74_attachments/CSM_Review_1.jpg,/images/course_details_images/EDA-74_attachments/CSM_Review_2.jpg,/images/course_details_images/EDA-74_attachments/CSM_Review_3.jpg,/images/course_details_images/EDA-74_attachments/CSM_Review_4.jpg",
+      "/images/course_details_images/EDA-74_attachments/Review_1.jpg,/images/course_details_images/EDA-74_attachments/Review_2.jpg,/images/course_details_images/EDA-74_attachments/Review_3.jpg,/images/course_details_images/EDA-74_attachments/Review_4.jpg",
     review_text:
       "Great course; I learned everything I needed and more! I am excited to implement these skills into my role in my organization.,Fantastic experience! Highly recommended! I am looking forward to sharing what Ive learned with my enterprise.,Raj is an excellent instructor, always willing to help and great at explaining concepts.,This course equipped me with the skills I needed to grow and advance in my career. Many thanks",
     header_background_image:
