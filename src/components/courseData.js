@@ -1,9 +1,10 @@
 import time from "./upcoming_courses/months";
 const courseData = [
   {
-    course_name: "Value Stream Corporate Workshop",
+    course_name: "Value Stream Corporate Workshop (customized offering)",
     partner: "edura",
-    cert_image: "",
+    cert_image:
+      "/images/course_details_images/partner_cert_images/Edura_logo.svg",
     description: "Value Stream Corporate Workshop",
     about_this_course:
       "A foundational workshop to introduce the concept of Value Streams.",
@@ -19,25 +20,25 @@ const courseData = [
     city: "Boston",
     state: "MA",
     country: "USA",
-    instructorImage:
-      "images/course_details_images/EDA-75_attachments/Raj_Heda.png",
     start_date: "6/10/22",
     end_date: "6/12/22",
+    jira_id: "EDA-78",
+    instructorImage:
+      "images/course_details_images/EDA-75_attachments/Raj_Heda.jpg",
     partner_image:
-      "images/course_details_images/EDA-75_attachments/scrum_alliance.png",
-    type: "course",
+      "images/course_details_images/EDA-75_attachments/scrum_alliance.jpg",
     review_images:
       "/images/course_details_images/EDA-75_attachments/CSM_Review_1.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_2.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_3.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_4.jpg",
     review_text:
       "This class gave me the exposure to agile and the scrum process that I needed. Thanks!,I started with very little knowledge about how agile actually works, but the class provided more than enough to start implementing the techniques at my company.,When I began my training I thought that a scrum master was just a project manager. The class showed me how the roles are different and how to get a team to work toward a common goal.,My instructor was great. They kept the energy level high, and everyone in the class passed the CSM certification on their first try. Highly recommended.",
     header_background_image:
       "/images/course_details_images/EDA-75_attachments/CSM_Header.jpg",
-    "": "",
   },
   {
     course_name: "Program Increment Workshop (customized offering)",
     partner: "edura",
-    cert_image: "",
+    cert_image:
+      "/images/course_details_images/partner_cert_images/Edura_logo.svg",
     description: "Program Increment Workshop (customized offering)",
     about_this_course: "An interactive course for all Agile practitioners",
     instructor: "Raj Heda",
@@ -52,25 +53,25 @@ const courseData = [
     city: "Boston",
     state: "MA",
     country: "USA",
-    instructorImage:
-      "images/course_details_images/EDA-75_attachments/Raj_Heda.png",
     start_date: "6/10/22",
     end_date: "6/13/22",
+    jira_id: "EDA-80",
+    instructorImage:
+      "images/course_details_images/EDA-75_attachments/Raj_Heda.jpg",
     partner_image:
-      "images/course_details_images/EDA-75_attachments/scrum_alliance.png",
-    type: "course",
+      "images/course_details_images/EDA-75_attachments/scrum_alliance.jpg",
     review_images:
       "/images/course_details_images/EDA-75_attachments/CSM_Review_1.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_2.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_3.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_4.jpg",
     review_text:
       "This class gave me the exposure to agile and the scrum process that I needed. Thanks!,I started with very little knowledge about how agile actually works, but the class provided more than enough to start implementing the techniques at my company.,When I began my training I thought that a scrum master was just a project manager. The class showed me how the roles are different and how to get a team to work toward a common goal.,My instructor was great. They kept the energy level high, and everyone in the class passed the CSM certification on their first try. Highly recommended.",
     header_background_image:
       "/images/course_details_images/EDA-75_attachments/CSM_Header.jpg",
-    "": "",
   },
   {
     course_name: "Inspect and Adapt (customized offering)",
     partner: "edura",
-    cert_image: "",
+    cert_image:
+      "/images/course_details_images/partner_cert_images/Edura_logo.svg",
     description: "Inspect & Adapt (customized offering)",
     about_this_course:
       "A foundational course suitable for all Agile team members",
@@ -86,25 +87,25 @@ const courseData = [
     city: "Boston",
     state: "MA",
     country: "USA",
-    instructorImage:
-      "images/course_details_images/EDA-75_attachments/Raj_Heda.png",
     start_date: "6/10/22",
     end_date: "6/13/22",
+    jira_id: "EDA-81",
+    instructorImage:
+      "images/course_details_images/EDA-75_attachments/Raj_Heda.jpg",
     partner_image:
-      "images/course_details_images/EDA-75_attachments/scrum_alliance.png",
-    type: "course",
+      "images/course_details_images/EDA-75_attachments/scrum_alliance.jpg",
     review_images:
       "/images/course_details_images/EDA-75_attachments/CSM_Review_1.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_2.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_3.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_4.jpg",
     review_text:
       "This class gave me the exposure to agile and the scrum process that I needed. Thanks!,I started with very little knowledge about how agile actually works, but the class provided more than enough to start implementing the techniques at my company.,When I began my training I thought that a scrum master was just a project manager. The class showed me how the roles are different and how to get a team to work toward a common goal.,My instructor was great. They kept the energy level high, and everyone in the class passed the CSM certification on their first try. Highly recommended.",
     header_background_image:
       "/images/course_details_images/EDA-75_attachments/CSM_Header.jpg",
-    "": "",
   },
   {
     course_name: "Product Management Workshop (customized offering)",
     partner: "edura",
-    cert_image: "",
+    cert_image:
+      "/images/course_details_images/partner_cert_images/Edura_logo.svg",
     description: "Product Management Workshop (customized offering)",
     about_this_course:
       "A workshop for experience product managers interested in working in an Agile environment",
@@ -120,25 +121,25 @@ const courseData = [
     city: "Boston",
     state: "MA",
     country: "USA",
-    instructorImage:
-      "images/course_details_images/EDA-75_attachments/Raj_Heda.png",
     start_date: "6/10/22",
     end_date: "6/13/22",
+    jira_id: "EDA-82",
+    instructorImage:
+      "images/course_details_images/EDA-75_attachments/Raj_Heda.jpg",
     partner_image:
-      "images/course_details_images/EDA-75_attachments/scrum_alliance.png",
-    type: "course",
+      "images/course_details_images/EDA-75_attachments/scrum_alliance.jpg",
     review_images:
       "/images/course_details_images/EDA-75_attachments/CSM_Review_1.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_2.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_3.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_4.jpg",
     review_text:
       "This class gave me the exposure to agile and the scrum process that I needed. Thanks!,I started with very little knowledge about how agile actually works, but the class provided more than enough to start implementing the techniques at my company.,When I began my training I thought that a scrum master was just a project manager. The class showed me how the roles are different and how to get a team to work toward a common goal.,My instructor was great. They kept the energy level high, and everyone in the class passed the CSM certification on their first try. Highly recommended.",
     header_background_image:
       "/images/course_details_images/EDA-75_attachments/CSM_Header.jpg",
-    "": "",
   },
   {
-    course_name: "Team Building Workshop",
+    course_name: "Team Building Workshop (customized offering)",
     partner: "edura",
-    cert_image: "",
+    cert_image:
+      "/images/course_details_images/partner_cert_images/Edura_logo.svg",
     description: "Team Building Workshop",
     about_this_course:
       "A workshop designed to help teams connect and increase their effectiveness",
@@ -154,25 +155,25 @@ const courseData = [
     city: "Boston",
     state: "MA",
     country: "USA",
-    instructorImage:
-      "images/course_details_images/EDA-75_attachments/Raj_Heda.png",
     start_date: "6/10/22",
     end_date: "6/12/22",
+    jira_id: "EDA-83",
+    instructorImage:
+      "images/course_details_images/EDA-75_attachments/Raj_Heda.jpg",
     partner_image:
-      "images/course_details_images/EDA-75_attachments/scrum_alliance.png",
-    type: "course",
+      "images/course_details_images/EDA-75_attachments/scrum_alliance.jpg",
     review_images:
       "/images/course_details_images/EDA-75_attachments/CSM_Review_1.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_2.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_3.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_4.jpg",
     review_text:
       "This class gave me the exposure to agile and the scrum process that I needed. Thanks!,I started with very little knowledge about how agile actually works, but the class provided more than enough to start implementing the techniques at my company.,When I began my training I thought that a scrum master was just a project manager. The class showed me how the roles are different and how to get a team to work toward a common goal.,My instructor was great. They kept the energy level high, and everyone in the class passed the CSM certification on their first try. Highly recommended.",
     header_background_image:
       "/images/course_details_images/EDA-75_attachments/CSM_Header.jpg",
-    "": "",
   },
   {
-    course_name: "Customized Scrum/Kanban Workshop",
+    course_name: "Customized Scrum/Kanban Workshop (customized offering)",
     partner: "edura",
-    cert_image: "",
+    cert_image:
+      "/images/course_details_images/partner_cert_images/Edura_logo.svg",
     description: "Customized Scrum/Kanban Workshop",
     about_this_course:
       "A workshop designed to help teams be equipped to use Scrum and Kanban principles in their working environments.",
@@ -188,26 +189,25 @@ const courseData = [
     city: "Boston",
     state: "MA",
     country: "USA",
-    instructorImage:
-      "images/course_details_images/EDA-75_attachments/Raj_Heda.png",
     start_date: "6/10/22",
     end_date: "6/11/22",
+    jira_id: "EDA-84",
+    instructorImage:
+      "images/course_details_images/EDA-75_attachments/Raj_Heda.jpg",
     partner_image:
-      "images/course_details_images/EDA-75_attachments/scrum_alliance.png",
-    type: "course",
+      "images/course_details_images/EDA-75_attachments/scrum_alliance.jpg",
     review_images:
       "/images/course_details_images/EDA-75_attachments/CSM_Review_1.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_2.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_3.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_4.jpg",
     review_text:
       "This class gave me the exposure to agile and the scrum process that I needed. Thanks!,I started with very little knowledge about how agile actually works, but the class provided more than enough to start implementing the techniques at my company.,When I began my training I thought that a scrum master was just a project manager. The class showed me how the roles are different and how to get a team to work toward a common goal.,My instructor was great. They kept the energy level high, and everyone in the class passed the CSM certification on their first try. Highly recommended.",
     header_background_image:
       "/images/course_details_images/EDA-75_attachments/CSM_Header.jpg",
-    "": "",
   },
   {
     course_name: "Certified SAFe Agilist",
     partner: "SAFE",
     cert_image:
-      "/images/course_details_images/EDA-75_attachments/partner_cert_images/SAFe_agilist.png",
+      "/images/course_details_images/partner_cert_images/SAFe_agilist.jpg",
     description: "Certified SAFe Agilist",
     about_this_course:
       "A foundational course for the Certified SAFe Agilist certificate",
@@ -223,26 +223,24 @@ const courseData = [
     city: "Bangalore",
     state: "Karnataka",
     country: "India",
-    instructorImage:
-      "images/course_details_images/EDA-75_attachments/Raj_Heda.png",
     start_date: "10/7/22",
     end_date: "10/9/22",
+    jira_id: "EDA-67",
+    instructorImage:
+      "images/course_details_images/EDA-75_attachments/Raj_Heda.jpg",
     partner_image:
-      "images/course_details_images/EDA-75_attachments/scrum_alliance.png",
-    type: "course",
+      "images/course_details_images/EDA-75_attachments/scrum_alliance.jpg",
     review_images:
       "/images/course_details_images/EDA-75_attachments/CSM_Review_1.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_2.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_3.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_4.jpg",
     review_text:
       "Great course; I learned everything I needed and more! I am excited to implement these skills into my role in my organization.,Fantastic experience! Highly recommended! I am looking forward to sharing what Ive learned with my enterprise.,Raj is an excellent instructor, always willing to help and great at explaining concepts.,This course equipped me with the skills I needed to grow and advance in my career. Many thanks",
     header_background_image:
       "/images/course_details_images/EDA-75_attachments/CSM_Header.jpg",
-    "": "",
   },
   {
     course_name: "Certified SAFe Scrum Master",
     partner: "SAFE",
-    cert_image:
-      "/images/course_details_images/EDA-75_attachments/partner_cert_images/SAFe_SM.png",
+    cert_image: "/images/course_details_images/partner_cert_images/SAFe_SM.jpg",
     description: "Certified SAFe Scrum Master",
     about_this_course:
       "A foundational course for the Certified SAFe Scrum Master certificate",
@@ -258,26 +256,24 @@ const courseData = [
     city: "Bangalore",
     state: "Karnataka",
     country: "India",
-    instructorImage:
-      "images/course_details_images/EDA-75_attachments/Raj_Heda.png",
     start_date: "10/7/22",
     end_date: "10/9/22",
+    jira_id: "EDA-68",
+    instructorImage:
+      "images/course_details_images/EDA-75_attachments/Raj_Heda.jpg",
     partner_image:
-      "images/course_details_images/EDA-75_attachments/scrum_alliance.png",
-    type: "course",
+      "images/course_details_images/EDA-75_attachments/scrum_alliance.jpg",
     review_images:
       "/images/course_details_images/EDA-75_attachments/CSM_Review_1.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_2.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_3.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_4.jpg",
     review_text:
       "This class gave me the exposure to agile and the scrum process that I needed. Thanks!,I started with very little knowledge about how agile actually works, but the class provided more than enough to start implementing the techniques at my company.,When I began my training I thought that a scrum master was just a project manager. The class showed me how the roles are different and how to get a team to work toward a common goal.,My instructor was great. They kept the energy level high, and everyone in the class passed the CSM certification on their first try. Highly recommended.",
     header_background_image:
       "/images/course_details_images/EDA-75_attachments/CSM_Header.jpg",
-    "": "",
   },
   {
     course_name: "Certified SAFe Product Owner / Product Manager",
     partner: "SAFE",
-    cert_image:
-      "/images/course_details_images/EDA-75_attachments/partner_cert_images/SAFe_PO.png",
+    cert_image: "/images/course_details_images/partner_cert_images/SAFe_PO.jpg",
     description: "Certified SAFe Product Owner / Product Manager",
     about_this_course:
       "A foundational course for the Certified SAFe Product Owner / Product Manager certificate",
@@ -293,26 +289,25 @@ const courseData = [
     city: "Bangalore",
     state: "Karnataka",
     country: "India",
-    instructorImage:
-      "images/course_details_images/EDA-75_attachments/Raj_Heda.png",
     start_date: "10/7/22",
     end_date: "10/9/22",
+    jira_id: "EDA-69",
+    instructorImage:
+      "images/course_details_images/EDA-75_attachments/Raj_Heda.jpg",
     partner_image:
-      "images/course_details_images/EDA-75_attachments/scrum_alliance.png",
-    type: "course",
+      "images/course_details_images/EDA-75_attachments/scrum_alliance.jpg",
     review_images:
       "/images/course_details_images/EDA-75_attachments/CSM_Review_1.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_2.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_3.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_4.jpg",
     review_text:
       "This class gave me the exposure to agile and the scrum process that I needed. Thanks!,I started with very little knowledge about how agile actually works, but the class provided more than enough to start implementing the techniques at my company.,When I began my training I thought that a scrum master was just a project manager. The class showed me how the roles are different and how to get a team to work toward a common goal.,My instructor was great. They kept the energy level high, and everyone in the class passed the CSM certification on their first try. Highly recommended.",
     header_background_image:
       "/images/course_details_images/EDA-75_attachments/CSM_Header.jpg",
-    "": "",
   },
   {
     course_name: "SAFe Portfolio Management",
     partner: "SAFE",
     cert_image:
-      "/images/course_details_images/EDA-75_attachments/partner_cert_images/SAFe_LPM.png",
+      "/images/course_details_images/partner_cert_images/SAFe_LPM.jpg",
     description: "SAFe Portfolio Management",
     about_this_course:
       "A foundational Lean-Agile and Portfolio operations course for SAFe portfolio managers.",
@@ -328,25 +323,24 @@ const courseData = [
     city: "Boston",
     state: "MA",
     country: "USA",
-    instructorImage:
-      "images/course_details_images/EDA-75_attachments/Raj_Heda.png",
     start_date: "6/10/22",
     end_date: "6/12/22",
+    jira_id: "EDA-79",
+    instructorImage:
+      "images/course_details_images/EDA-75_attachments/Raj_Heda.jpg",
     partner_image:
-      "images/course_details_images/EDA-75_attachments/scrum_alliance.png",
-    type: "course",
+      "images/course_details_images/EDA-75_attachments/scrum_alliance.jpg",
     review_images:
       "/images/course_details_images/EDA-75_attachments/CSM_Review_1.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_2.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_3.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_4.jpg",
     review_text:
       "This class gave me the exposure to agile and the scrum process that I needed. Thanks!,I started with very little knowledge about how agile actually works, but the class provided more than enough to start implementing the techniques at my company.,When I began my training I thought that a scrum master was just a project manager. The class showed me how the roles are different and how to get a team to work toward a common goal.,My instructor was great. They kept the energy level high, and everyone in the class passed the CSM certification on their first try. Highly recommended.",
     header_background_image:
       "/images/course_details_images/EDA-75_attachments/CSM_Header.jpg",
-    "": "",
   },
   {
     course_name: "CSM - Certified ScrumMaster",
     partner: "scrum alliance",
-    cert_image: "/images/course_details_images/EDA-75_attachments/CSM.png",
+    cert_image: "/images/course_details_images/partner_cert_images/CSM.jpg",
     description: "CSM - Certified ScrumMaster",
     about_this_course:
       "A foundational course for the Certified SAFe Scrum Master certificate",
@@ -361,26 +355,25 @@ const courseData = [
     effort_duration: 2,
     city: "Mumbai",
     state: "Maharashtra",
-    country: "india",
-    instructorImage:
-      "images/course_details_images/EDA-75_attachments/Raj_Heda.png",
+    country: "India",
     start_date: "9/10/22",
     end_date: "9/12/22",
+    jira_id: "EDA-75",
+    instructorImage:
+      "images/course_details_images/EDA-75_attachments/Raj_Heda.jpg",
     partner_image:
-      "images/course_details_images/EDA-75_attachments/scrum_alliance.png",
-    type: "course",
+      "images/course_details_images/EDA-75_attachments/scrum_alliance.jpg",
     review_images:
       "/images/course_details_images/EDA-75_attachments/CSM_Review_1.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_2.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_3.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_4.jpg",
     review_text:
       "This class gave me the exposure to agile and the scrum process that I needed. Thanks!,I started with very little knowledge about how agile actually works, but the class provided more than enough to start implementing the techniques at my company.,When I began my training I thought that a scrum master was just a project manager. The class showed me how the roles are different and how to get a team to work toward a common goal.,My instructor was great. They kept the energy level high, and everyone in the class passed the CSM certification on their first try. Highly recommended.",
     header_background_image:
       "/images/course_details_images/EDA-75_attachments/CSM_Header.jpg",
-    "": "",
   },
   {
     course_name: "Certified Agile Leadership (CAL1)",
     partner: "scrum alliance",
-    cert_image: "/images/course_details_images/EDA-75_attachments/CSM.png",
+    cert_image: "/images/course_details_images/partner_cert_images/CSCAL1.jpg",
     description: "Certified Agile Leadership (CAL1)",
     about_this_course:
       "A foundational course for managers to prepare for the Agile Leadership 1 certificate",
@@ -395,26 +388,25 @@ const courseData = [
     effort_duration: 2,
     city: "Mumbai",
     state: "Maharashtra",
-    country: "india",
-    instructorImage:
-      "images/course_details_images/EDA-75_attachments/Raj_Heda.png",
+    country: "India",
     start_date: "9/10/22",
     end_date: "9/12/22",
+    jira_id: "EDA-66",
+    instructorImage:
+      "images/course_details_images/EDA-75_attachments/Raj_Heda.jpg",
     partner_image:
-      "images/course_details_images/EDA-75_attachments/scrum_alliance.png",
-    type: "course",
+      "images/course_details_images/EDA-75_attachments/scrum_alliance.jpg",
     review_images:
       "/images/course_details_images/EDA-75_attachments/CSM_Review_1.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_2.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_3.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_4.jpg",
     review_text:
       "This class gave me the exposure to agile and the scrum process that I needed. Thanks!,I started with very little knowledge about how agile actually works, but the class provided more than enough to start implementing the techniques at my company.,When I began my training I thought that a scrum master was just a project manager. The class showed me how the roles are different and how to get a team to work toward a common goal.,My instructor was great. They kept the energy level high, and everyone in the class passed the CSM certification on their first try. Highly recommended.",
     header_background_image:
       "/images/course_details_images/EDA-75_attachments/CSM_Header.jpg",
-    "": "",
   },
   {
     course_name: "CSPO  Certified Scrum Product Owner",
     partner: "scrum alliance",
-    cert_image: "/images/course_details_images/EDA-75_attachments/CSM.png",
+    cert_image: "/images/course_details_images/partner_cert_images/CSPO.jpg",
     description: "CSPO  Certified Scrum Product Owner",
     about_this_course:
       "An advanced course for experienced product owners to prepare for the  Scrum Product Owner certificate.",
@@ -430,26 +422,25 @@ const courseData = [
     city: "Boston",
     state: "MA",
     country: "USA",
-    instructorImage:
-      "images/course_details_images/EDA-75_attachments/Raj_Heda.png",
     start_date: "6/10/22",
     end_date: "6/12/22",
+    jira_id: "EDA-76",
+    instructorImage:
+      "images/course_details_images/EDA-75_attachments/Raj_Heda.jpg",
     partner_image:
-      "images/course_details_images/EDA-75_attachments/scrum_alliance.png",
-    type: "course",
+      "images/course_details_images/EDA-75_attachments/scrum_alliance.jpg",
     review_images:
       "/images/course_details_images/EDA-75_attachments/CSM_Review_1.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_2.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_3.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_4.jpg",
     review_text:
       "This class gave me the exposure to agile and the scrum process that I needed. Thanks!,I started with very little knowledge about how agile actually works, but the class provided more than enough to start implementing the techniques at my company.,When I began my training I thought that a scrum master was just a project manager. The class showed me how the roles are different and how to get a team to work toward a common goal.,My instructor was great. They kept the energy level high, and everyone in the class passed the CSM certification on their first try. Highly recommended.",
     header_background_image:
       "/images/course_details_images/EDA-75_attachments/CSM_Header.jpg",
-    "": "",
   },
   {
-    course_name: "CSD  Certified Scrum Developer",
+    course_name: "CSD Certified Scrum Developer ",
     partner: "scrum alliance",
-    cert_image: "/images/course_details_images/EDA-75_attachments/CSM.png",
-    description: "CSD  Certified Scrum Developer",
+    cert_image: "/images/course_details_images/partner_cert_images/CSD.jpg",
+    description: "CSD Certified Scrum Developer ",
     about_this_course:
       "A foundational course for developers to prepare for the Scrum Developer Scrumalliance.org certificate.",
     instructor: "Raj Heda",
@@ -464,25 +455,24 @@ const courseData = [
     city: "Boston",
     state: "MA",
     country: "USA",
-    instructorImage:
-      "images/course_details_images/EDA-75_attachments/Raj_Heda.png",
     start_date: "6/10/22",
     end_date: "6/15/22",
+    jira_id: "EDA-77",
+    instructorImage:
+      "images/course_details_images/EDA-75_attachments/Raj_Heda.jpg",
     partner_image:
-      "images/course_details_images/EDA-75_attachments/scrum_alliance.png",
-    type: "course",
+      "images/course_details_images/EDA-75_attachments/scrum_alliance.jpg",
     review_images:
       "/images/course_details_images/EDA-75_attachments/CSM_Review_1.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_2.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_3.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_4.jpg",
     review_text:
       "This class gave me the exposure to agile and the scrum process that I needed. Thanks!,I started with very little knowledge about how agile actually works, but the class provided more than enough to start implementing the techniques at my company.,When I began my training I thought that a scrum master was just a project manager. The class showed me how the roles are different and how to get a team to work toward a common goal.,My instructor was great. They kept the energy level high, and everyone in the class passed the CSM certification on their first try. Highly recommended.",
     header_background_image:
       "/images/course_details_images/EDA-75_attachments/CSM_Header.jpg",
-    "": "",
   },
   {
     course_name: "Professional Scrum Master Training",
     partner: "scrum.org",
-    cert_image: "/images/course_details_images/EDA-75_attachments/CSM.png",
+    cert_image: "/images/course_details_images/partner_cert_images/PSM.jpg",
     description: "Professional Scrum Master Training",
     about_this_course:
       "<p>If you are seeking to learn how to become a successful Product Owner or Product Manager within a Lean enterprise, this course is designed for you. In this two day course, you will learn the skills necessary to be able to lead a team to deliver high value as you seek to deliver successful products in your organization.</p> <p>Trainers will equip you with the knowledge and understanding you need in order to be an effective Product Owner/Product Manager within the Agile Release Train (ART). You will discover how you can utilize Lean thinking within the Agile process as you break down Epics first into Features, and then into Stories. In addition, you will learn about the refinement process and how to best refine and manage features, stories, and product backlogs within Iterations and any Program Increments set forth by your enterprise. Finally, you will learn about Continuous Delivery and DevOps, and how these two entities add to the ongoing improvement that takes place within the Agile Release Train (ART).</p> <p>When you complete this course and gain the Certified SAFe Scrum Master certificate, this certification will demonstrate to companies that you are equipped and ready to lead Agile teams in a SAFe environment, and that your servant leadership and coaching skills will bring tremendous growth and value to their organizations.</p> <p>Unlike any other training program, we offer the following bonuses:</p> <ul> The highest passing rates: The Certified SAFe Scrum Master certification exams are rigorous, but you will be prepared. Nearly 100% of our graduates pass the exam on their very first attempt. In the unlikely event that you would need to retake the exam, a second trial is free and additional examinations are discounted. <li>Free follow-up access to your course materials for one year.</li> <li>25% discount on future course fees. Save on courses as you sail through the certification process.</li> <li>Anytime availability: Your course are available over the Internet 7 days a week and 24 hours a day. Study at any day and time you want. Once you are ready, simply sign up to take the certification exam!</li> </ul> <p>Prerequisites: Highly recommended that participants attend a course on Leading SAFe, have work experience in SAFe environment, and have experience in Lean, Agile, or other similar certifications.</p>",
@@ -498,25 +488,24 @@ const courseData = [
     city: "Boston",
     state: "MA",
     country: "USA",
-    instructorImage:
-      "images/course_details_images/EDA-75_attachments/Raj_Heda.png",
     start_date: "10/7/22",
     end_date: "10/9/22",
+    jira_id: "EDA-72",
+    instructorImage:
+      "images/course_details_images/EDA-75_attachments/Raj_Heda.jpg",
     partner_image:
-      "images/course_details_images/EDA-75_attachments/scrum_alliance.png",
-    type: "course",
+      "images/course_details_images/EDA-75_attachments/scrum_alliance.jpg",
     review_images:
       "/images/course_details_images/EDA-75_attachments/CSM_Review_1.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_2.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_3.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_4.jpg",
     review_text:
       "This class gave me the exposure to agile and the scrum process that I needed. Thanks!,I started with very little knowledge about how agile actually works, but the class provided more than enough to start implementing the techniques at my company.,When I began my training I thought that a scrum master was just a project manager. The class showed me how the roles are different and how to get a team to work toward a common goal.,My instructor was great. They kept the energy level high, and everyone in the class passed the CSM certification on their first try. Highly recommended.",
     header_background_image:
       "/images/course_details_images/EDA-75_attachments/CSM_Header.jpg",
-    "": "",
   },
   {
     course_name: "Professional Scrum Product Owner",
     partner: "scrum.org",
-    cert_image: "/images/course_details_images/EDA-75_attachments/CSM.png",
+    cert_image: "/images/course_details_images/partner_cert_images/PSPO.jpg",
     description: "Professional Scrum Product Owner",
     about_this_course:
       "A course to prepare for Professional Scrum Product Owner Certification",
@@ -532,25 +521,24 @@ const courseData = [
     city: "Boston",
     state: "MA",
     country: "USA",
-    instructorImage:
-      "images/course_details_images/EDA-75_attachments/Raj_Heda.png",
     start_date: "6/10/22",
     end_date: "6/12/22",
+    jira_id: "EDA-73",
+    instructorImage:
+      "images/course_details_images/EDA-75_attachments/Raj_Heda.jpg",
     partner_image:
-      "images/course_details_images/EDA-75_attachments/scrum_alliance.png",
-    type: "course",
+      "images/course_details_images/EDA-75_attachments/scrum_alliance.jpg",
     review_images:
       "/images/course_details_images/EDA-75_attachments/CSM_Review_1.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_2.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_3.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_4.jpg",
     review_text:
       "This class gave me the exposure to agile and the scrum process that I needed. Thanks!,I started with very little knowledge about how agile actually works, but the class provided more than enough to start implementing the techniques at my company.,When I began my training I thought that a scrum master was just a project manager. The class showed me how the roles are different and how to get a team to work toward a common goal.,My instructor was great. They kept the energy level high, and everyone in the class passed the CSM certification on their first try. Highly recommended.",
     header_background_image:
       "/images/course_details_images/EDA-75_attachments/CSM_Header.jpg",
-    "": "",
   },
   {
     course_name: "Professional Scrum Developer",
     partner: "scrum.org",
-    cert_image: "/images/course_details_images/EDA-75_attachments/CSM.png",
+    cert_image: "/images/course_details_images/partner_cert_images/PSD.jpg",
     description: "Professional Scrum Developer",
     about_this_course:
       "Preparation for Scrum.orgs certification as a Professional Scrum Developer",
@@ -566,20 +554,19 @@ const courseData = [
     city: "Boston",
     state: "MA",
     country: "USA",
-    instructorImage:
-      "images/course_details_images/EDA-75_attachments/Raj_Heda.png",
     start_date: "6/10/22",
     end_date: "6/13/22",
+    jira_id: "EDA-74",
+    instructorImage:
+      "images/course_details_images/EDA-75_attachments/Raj_Heda.jpg",
     partner_image:
-      "images/course_details_images/EDA-75_attachments/scrum_alliance.png",
-    type: "course",
+      "images/course_details_images/EDA-75_attachments/scrum_alliance.jpg",
     review_images:
       "/images/course_details_images/EDA-75_attachments/CSM_Review_1.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_2.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_3.jpg,/images/course_details_images/EDA-75_attachments/CSM_Review_4.jpg",
     review_text:
       "This class gave me the exposure to agile and the scrum process that I needed. Thanks!,I started with very little knowledge about how agile actually works, but the class provided more than enough to start implementing the techniques at my company.,When I began my training I thought that a scrum master was just a project manager. The class showed me how the roles are different and how to get a team to work toward a common goal.,My instructor was great. They kept the energy level high, and everyone in the class passed the CSM certification on their first try. Highly recommended.",
     header_background_image:
       "/images/course_details_images/EDA-75_attachments/CSM_Header.jpg",
-    "": "",
   },
 ];
 

@@ -2,12 +2,14 @@ import { useSearchParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 const CourseHeader = (props) => {
+  const header_background_image = `/images/course_details_images/${props.data.jira_id}_attachments/Header.jpg`;
+
   return (
     <div style={{ backgroundColor: "white" }}>
       <div
         id="course_jumbotron"
         style={{
-          backgroundImage: `url(${props.data.header_background_image})`,
+          background: `center/cover no-repeat url(${header_background_image}) `,
           height: "500px",
         }}
       ></div>
@@ -25,7 +27,7 @@ const CourseHeader = (props) => {
             style={{ display: "grid", grid: "1fr / 3fr 7fr" }}
           >
             <img
-              src={props.data.partner_image}
+              src={props.data.partner_image.replace("png", "jpg")}
               id="partner_image"
               alt={props.data.partner_name}
             ></img>
