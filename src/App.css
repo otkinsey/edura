@@ -155,6 +155,11 @@ button.btn:hover,
   color: #f8d123;
   border-color: #f8d123;
 }
+.filter_button,
+.filter_button option {
+  text-transform: capitalize !important;
+}
+
 .flex {
   display: flex;
 }
@@ -532,6 +537,9 @@ section#header li:hover .submenu {
 }
 #course_calendar h2 {
   padding-top: 0;
+}
+#course_calendar td {
+  text-transform: capitalize;
 }
 #upcoming_courses #course_calendar > h2 {
   text-align: left;

@@ -39,10 +39,6 @@ const CourseList = (props) => {
         <td id="date">{`${
           time.months[startDate.getMonth()]
         } ${startDate.getDate()}`}</td>
-        <td id="date">{`${
-          time.months[endDate.getMonth()]
-        } ${endDate.getDate()}`}</td>
-        <td id="time">{obj.time}</td>
       </tr>
     );
   });

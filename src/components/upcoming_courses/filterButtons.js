@@ -7,15 +7,26 @@ const FilterButtons = (props) => {
 
   const filterKeys = Object.keys(props.filterOptions);
 
+  const selectLabelValue = (formattedKey) => {
+    let changedValue = "";
+    if (formattedKey === "Course name") {
+      changedValue = "Course Type";
+    } else if (formattedKey === "Start date") {
+      changedValue = "Date";
+    } else {
+      changedValue = formattedKey;
+    }
+    return changedValue;
+  };
+
   const filtersArray = [
     "course_name",
     "trainer",
     "month",
     "start_date",
-    "end_date",
     "country",
     "city",
-    "partner",
+    "certifying_body",
   ];
   /**
    * @REFACTOR separate out as component
@@ -43,7 +54,7 @@ const FilterButtons = (props) => {
                 fontWeight: "bold",
               }}
             >
-              {formattedKey === "Course name" ? "Course Type" : formattedKey}
+              {selectLabelValue(formattedKey)}
             </label>
             <select
               className="filter_button"
