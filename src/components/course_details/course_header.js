@@ -2,12 +2,14 @@ import { useSearchParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 const CourseHeader = (props) => {
+  const header_background_image = `/images/course_details_images/${props.data.jira_id}_attachments/Header.jpg`;
+
   return (
     <div style={{ backgroundColor: "white" }}>
       <div
         id="course_jumbotron"
         style={{
-          backgroundImage: `url(${props.data.header_background_image})`,
+          background: `center/cover no-repeat url(${header_background_image}) `,
           height: "500px",
         }}
       ></div>
@@ -16,7 +18,7 @@ const CourseHeader = (props) => {
           id="course_header"
           style={{
             display: "grid",
-            grid: "125px 125px/ 1fr",
+            grid: "165px 125px/ 1fr",
             textAlign: "left",
           }}
         >
@@ -30,12 +32,12 @@ const CourseHeader = (props) => {
               alt={props.data.partner_name}
             ></img>
             <div>
-              <h2>{props.courseName}&reg;</h2>
+              <h2>{props.course_name}&reg;</h2>
 
               <div>
                 {props.data.start_date} - {props.data.end_date}
               </div>
-              <div>{props.data.location}</div>
+              <div>{`${props.data.city}, ${props.data.state}, ${props.data.country}`}</div>
             </div>
           </div>
           <div
@@ -46,11 +48,16 @@ const CourseHeader = (props) => {
               grid: "1fr / 3fr 7fr",
             }}
           >
-            <img
-              src={props.data.cert_image}
-              id="cert_image"
-              alt={props.data.description}
-            ></img>
+            {props.course_name.includes("customized offering") ? (
+              <div></div>
+            ) : (
+              <img
+                src={props.data.cert_image}
+                id="cert_image"
+                alt={props.data.description}
+              ></img>
+            )}
+
             <div style={{ position: "relative" }}>
               <Link
                 to="/register"
