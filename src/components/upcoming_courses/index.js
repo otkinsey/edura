@@ -33,6 +33,7 @@ const showDropDown = (event, display) => {
     list.style["display"] = "none";
   });
   const target = document.getElementById(optionListId);
+
   if (event.target.className === "filter_button") {
     target.style["display"] = display;
   }
@@ -41,7 +42,7 @@ const showDropDown = (event, display) => {
 const Courses = () => {
   //  State variables:
   const [filteredData, setFilteredData] = useState(courseData);
-  const [display, setDisplay] = useState("none");
+  const [filtered, setFiltered] = useState(false);
   /**
    * @description filters course data according to params
    * @param {*} key
@@ -51,21 +52,25 @@ const Courses = () => {
    */
   const filterCourseData = (key, value) => {
     setFilteredData(courseData.filter((course) => course[key] === value));
-    return filteredData;
-  };
-
-  const setDisplayState = (event) => {
-    if (display === "none") {
-      setDisplay("block");
-    } else {
-      setDisplay("none");
-    }
-    showDropDown(event, display);
+    return true;
   };
 
   const clearFilters = () => setFilteredData(courseData);
+
+  const updateFilterOptions = (event, currentOption) => {
+    const filterButtons = Array.from(
+      document.getElementsByClassName("filter_button")
+    );
+
+    filterButtons.forEach((button) =>
+      button.value === currentOption
+        ? (button.value = currentOption)
+        : (button.value = "select filter option")
+    );
+  };
+
   return (
-    <div className="component" onClick={(e) => setDisplayState(e)}>
+    <div className="component">
       <div className="jumbotron">
         <h1>Upcoming Courses</h1>
       </div>
@@ -79,14 +84,16 @@ const Courses = () => {
               clearFilters={clearFilters}
               filterOptions={filterOptions}
               showDropDown={showDropDown}
-              display={display}
-              setDisplay={setDisplay}
-              setDisplayState={setDisplayState}
+              filtered={filtered}
+              setFiltered={setFiltered}
+              filteredData={filteredData}
+              updateFilterOptions={updateFilterOptions}
             />
           }
           <Link
             to="/"
             onClick={(event) => {
+              updateFilterOptions(event, "");
               event.preventDefault();
               clearFilters();
             }}
@@ -104,11 +111,9 @@ const Courses = () => {
               <tr className="table_headings">
                 <th id="instructor_image">instructor</th>
                 <th id="course_name">course name</th>
-                <th id="location">description</th>
+                {/* <th id="location">description</th> */}
                 <th id="location">location</th>
-                <th id="date">start data</th>
-                <th id="date">end data</th>
-                <th id="time">time</th>
+                <th id="date">Date</th>
               </tr>
             </thead>
 

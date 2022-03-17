@@ -48,12 +48,8 @@ a:hover {
 button.btn-primary,
 button.filter_button,
 button.btn,
-<<<<<<< HEAD
-.button.btn {
-=======
 .button.btn,
 .button.btn-primary {
->>>>>>> 1868bf6126c6e04ff005d3bbe0c9113f84ff359b
   color: white;
   background-color: #5d5c61;
   height: 50px;
@@ -63,14 +59,10 @@ button.btn,
   width: 220px;
   border: none;
   transition: background-color 0.3s;
-<<<<<<< HEAD
-}
-=======
   display: flex;
   font-weight: bold;
 }
 
->>>>>>> 1868bf6126c6e04ff005d3bbe0c9113f84ff359b
 button:hover,
 button.btn:hover,
 .button.btn:hover {
@@ -111,8 +103,6 @@ button.btn:hover,
 .courousel * {
   height: 100%;
 }
-<<<<<<< HEAD
-=======
 #course_details h2 {
   font-size: 2rem;
   color: black;
@@ -135,7 +125,6 @@ button.btn:hover,
   color: #557a94;
   margin-bottom: 25px;
 }
->>>>>>> 1868bf6126c6e04ff005d3bbe0c9113f84ff359b
 .carousel-inner,
 .carousel-inner .carousel-item {
   height: 100%;
@@ -529,10 +518,6 @@ section#header li:hover .submenu {
   display: flex;
   position: relative;
 }
-<<<<<<< HEAD
-#upcoming_courses #course_filters {
-  padding: 20px;
-=======
 
 #upcoming_courses > div {
   padding-top: 60px;
@@ -540,17 +525,13 @@ section#header li:hover .submenu {
 #upcoming_courses #course_filters {
   padding-left: 20px;
   padding-right: 20px;
->>>>>>> 1868bf6126c6e04ff005d3bbe0c9113f84ff359b
 }
 #upcoming_courses table {
   text-align: left;
 }
-<<<<<<< HEAD
-=======
 #course_calendar h2 {
   padding-top: 0;
 }
->>>>>>> 1868bf6126c6e04ff005d3bbe0c9113f84ff359b
 #upcoming_courses #course_calendar > h2 {
   text-align: left;
   padding-left: 20px;
@@ -581,28 +562,17 @@ section#header li:hover .submenu {
   background-color: #f5f5f5;
 }
 #upcoming_courses th#location {
-<<<<<<< HEAD
-  width: 30%;
-=======
   width: 20%;
->>>>>>> 1868bf6126c6e04ff005d3bbe0c9113f84ff359b
 }
 #upcoming_courses #course_filters {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-<<<<<<< HEAD
-#upcoming_courses #course_filters button {
-  /* border: ; */
-  margin: 10px 5px;
-}
-=======
 /* #upcoming_courses #course_filters button {
   border: ;
   margin: 10px 5px;
 } */
->>>>>>> 1868bf6126c6e04ff005d3bbe0c9113f84ff359b
 #upcoming_courses ul,
 #upcoming_courses ul {
   list-style-type: none;
