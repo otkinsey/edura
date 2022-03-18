@@ -86,4 +86,5 @@ public abstract class Wait {
 		Thread.sleep(5000);
 		jse.executeScript("arguments[0].scrollIntoView()", element); 
 	}
+
 }

@@ -1,23 +1,23 @@
 package stepDefinitions;
 
 import org.junit.Assert;
-import org.openqa.selenium.WebDriver;
-
+import selenium.Wait;
 import cucumber.TestContext;
 import io.cucumber.java.en.Then;
 import pageObjects.AssessmentPage;
+import pageObjects.Homepage;
 
-
-public class AssessmentStepDefinitions {
-	
-	WebDriver driver;
+public class AssessmentStepDefinitions{
 
 	TestContext testContext;
 	AssessmentPage assessmentPage;
+	Wait wait;
+	Homepage home;
 	
 	public AssessmentStepDefinitions(TestContext context) {
 		testContext = context;
 		assessmentPage = testContext.getPageObjectManager().getAssessmentPage();
+		home = testContext.getPageObjectManager().getHomePage();
 	}
 	
 	@Then("^I should be navigated to Assessment page$")
@@ -29,3 +29,4 @@ public class AssessmentStepDefinitions {
 	
 	}
 }
+
