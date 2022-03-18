@@ -4,9 +4,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import selenium.Wait;
 
 public class Homepage {
 	WebDriver driver;
+	Wait wait;
+	
 	public Homepage(WebDriver driver) {
 		
 		this.driver = driver;
@@ -114,20 +117,20 @@ public class Homepage {
 	
 	@FindBy(css = "#our_services>div>div:nth-child(2) a")
 	public WebElement ourServicesCoursesLearnMoreLink;
-	
-	@FindBy(css = "#our_services>div>div:nth-child(1) a")
+
+	@FindBy(xpath = ".//a[@href='Assessment']")
 	public WebElement ourServicesAssessmentLearnMoreLink;
 	
 	@FindBy(css = "#about_us h1")
 	public WebElement aboutUsTitle;
-	
-	@FindBy(css = "#button_who_we_are")
+
+	@FindBy(xpath = ".//button[text()='who we are']")
 	public WebElement whoWeAreButton;
 	
-	@FindBy(css = "#button_what_we_do")
+	@FindBy(xpath = "//*[@id='button_what_we_do']")
 	public WebElement whatWeDoButton;
 	
-	@FindBy(css = "#about_us a")
+	@FindBy(xpath = ".//a[text()='contact us']")
 	public WebElement contactUsButton;
 	
 	@FindBy(css = "#about_us #about_us_text")
@@ -136,22 +139,22 @@ public class Homepage {
 	@FindBy(css = "#about_us #about_us_slide_who_we_are h2")
 	public WebElement whoWeAreSubtitle;
 	
-	@FindBy(xpath = ".//*[@id='about_us_slide_who_we_are']/text()")
+	@FindBy(xpath = ".//*[@id='about_us_slide_who_we_are']")
 	public WebElement whoWeAreDescription;
 	
 	@FindBy(css = "#about_us #about_us_slide_what_we_do h2")
 	public WebElement whatWeDoSubtitle;
 	
-	@FindBy(xpath = ".//*[@id='about_us_slide_what_we_do']/text()")
+	@FindBy(xpath = ".//*[@id='about_us_slide_what_we_do']")
 	public WebElement whatWeDoDescription;
 	
 	@FindBy(css = "#our_partners h1")
 	public WebElement ourPartnersTitle;
-	
-	@FindBy(css = "#our_partners>div>div:nth-child(1)>a")
+
+	@FindBy(xpath = "//*[@id='our_partners']/div/div[1]/a")
 	public WebElement scrumAllianceLogo;
 	
-	@FindBy(css = "#our_partners>div>div:nth-child(2)>a")
+	@FindBy(xpath = ".//a[@href='https://www.scrum.org']")
 	public WebElement scrumOrgLogo;
 	
 	@FindBy(css = "#our_partners>div>div:nth-child(3)>a")
@@ -204,9 +207,10 @@ public class Homepage {
     	homepageValidation.isDisplayed();
     }
     
-    public void getUrl() {
+
+    public String getUrl() {
     	String URL = driver.getCurrentUrl();
-    	System.out.println(URL);
+    	return URL;
     }
     
     public void checkScrollingImagesSection() {
@@ -236,44 +240,68 @@ public class Homepage {
     public void checkFooterSection() {
     	footerSection.isDisplayed();
     }
-    
-    public void clickAssessmentLink() {
+ 
+    public void clickAssessmentLink() throws Throwable {
+    	wait.waitUntilObjectClickable(driver, assessmentLink);
     	assessmentLink.click();
     }
     
-    public void clickTrainingLink() {
+    public void clickTrainingLink() throws Throwable {
+    	wait.waitUntilObjectClickable(driver, trainingLink);
     	trainingLink.click();
     }
     
-    public void clickAssessmentLearnMoreLink() {
-    	ourServicesAssessmentLearnMoreLink.click();
+    public void clickAssessmentLearnMoreLink() throws Throwable {
+    	wait.waitUntilObjectFound(driver, ourServicesAssessmentLearnMoreLink);
+    	System.out.println("Waited for the element");
+    	wait.clickUsingJavaScriptExecutor(driver, ourServicesAssessmentLearnMoreLink);
+    	System.out.println("Element clicked successfully");
     }
     
-    public void clickCoursesLearnMoreLink() {
-    	ourServicesCoursesLearnMoreLink.click();
+    public void clickCoursesLearnMoreLink() throws Throwable {
+    	System.out.println("Waited for the element");
+    	wait.waitUntilObjectFound(driver, ourServicesAssessmentLearnMoreLink);
+    	wait.clickUsingJavaScriptExecutor(driver, ourServicesAssessmentLearnMoreLink);
+    	//ourServicesCoursesLearnMoreLink.click();
+    	System.out.println("Element clicked successfully");
     }
     
-    public void clickWhoWeAreButton() {
-    	whoWeAreButton.click();
+    public void clickWhoWeAreButton() throws Throwable {
+    	wait.waitUntilObjectFound(driver, whatWeDoButton);
+    	wait.clickUsingJavaScriptExecutor(driver, whatWeDoButton);
+    	wait.waitUntilObjectFound(driver, whoWeAreButton);
+    	wait.clickUsingJavaScriptExecutor(driver, whatWeDoButton);
     }
     
-    public void clickWhatWeDoButton() {
-    	whatWeDoButton.click();
+    public void clickWhatWeDoButton() throws Throwable {
+    	wait.waitUntilObjectFound(driver, whatWeDoButton);
+    	System.out.println("Waited for the element");
+    	wait.clickUsingJavaScriptExecutor(driver, whatWeDoButton);
+    	System.out.println("Element clicked successfully");
     }
     
-    public void clickContactUsButton() {
-    	contactUsButton.click();
+    public void clickContactUsButton() throws Throwable {
+    	wait.waitUntilObjectFound(driver, contactUsButton);
+    	wait.clickUsingJavaScriptExecutor(driver, contactUsButton);
+    	//contactUsButton.click();
     }
     
-    public void clickScrumAllianceLogo() {
-    	scrumAllianceLogo.click();
+    public void clickScrumAllianceLogo() throws Throwable {
+    	wait.waitUntilObjectFound(driver, scrumAllianceLogo);
+    	wait.clickUsingJavaScriptExecutor(driver, scrumAllianceLogo);
+    	//scrumAllianceLogo.click();
     }
     
-    public void clickScrumOrgLogo() {
-    	scrumOrgLogo.click();
+    public void clickScrumOrgLogo() throws Throwable {
+    	wait.waitUntilObjectFound(driver, scrumOrgLogo);
+    	wait.clickUsingJavaScriptExecutor(driver, scrumOrgLogo);
+    	System.out.println("Clicked on scrum org logo");
+    	//scrumOrgLogo.click();
     }
     
-    public void clickSafeLogo() {
-    	safeLogo.click();
+    public void clickSafeLogo() throws Throwable {
+    	wait.waitUntilObjectFound(driver, safeLogo);
+    	wait.clickUsingJavaScriptExecutor(driver, safeLogo);
+    	//safeLogo.click();
     }
 }

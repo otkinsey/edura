@@ -84,7 +84,7 @@ Feature: Homepage Feature file
 		Then The description should show subtitle what we do
 		And The details about what we do should be displayed
 	
-	Scenario: To validate What we do in About us section
+	Scenario: To validate Contact Us in About us section
 		Given I am on edura homepage
 		And I view About Us section
 		When I click on contact us button
