@@ -26,6 +26,7 @@ public class AssessmentStepDefinitions{
 //		String URL = home.getUrl();
 //		Assert.assertTrue("Url does not consist of Assessment", URL.contains("/Assessment"));
 		Assert.assertTrue("User is not navigated to Assessment Page", assessmentPage.assessmentPageTitle.isDisplayed());
+	
 	}
 }
 

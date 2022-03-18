@@ -74,7 +74,6 @@ Scenario: To validate About Us section
 	And I should see Contact Us button is displayed 
 	And I should see description displayed to right of the buttons 
 
-
 Scenario: To validate Who we are in About us section 
 	Given I am on edura homepage 
 	And I view About Us section 
@@ -102,7 +101,6 @@ Scenario: To validate Our Partners Section
 	And I should see scrum org logo displayed 
 	And I should see scrum alliance logo displayed 
 	And I should see SAFE agile logo displayed 
-	
 
 Scenario: To click on Scrum.org logo 
 	Given I am on edura homepage 

@@ -383,4 +383,3 @@ public class HomepageStepDefinitions {
 		Assert.assertTrue("Follow us links with social media icons in footer is not displayed", home.followUsLinks.isDisplayed());
 	}
 }
-
