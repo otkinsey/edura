@@ -122,7 +122,17 @@ const Courses = () => {
             <tbody>
               {
                 <CourseList
-                  data={filteredData.length > 0 ? filteredData : courseData}
+                  data={
+                    filteredData.length > 0
+                      ? filteredData.sort(
+                          (a, b) =>
+                            new Date(a.start_date) - new Date(b.start_date)
+                        )
+                      : courseData.sort(
+                          (a, b) =>
+                            new Date(a.start_date) - new Date(b.start_date)
+                        )
+                  }
                 />
               }
             </tbody>
