@@ -386,10 +386,10 @@ const courseData = [
       "/images/course_details_images/EDA-66_attachments/Header.jpg",
   },
   {
-    course_name: "CSPO  Certified Scrum Product Owner",
+    course_name: "CSPO Certified Scrum Product Owner",
     certifying_body: "Scrum Alliance",
     cert_image: "/images/course_details_images/partner_cert_images/CSPO.png",
-    description: "CSPO  Certified Scrum Product Owner",
+    description: "CSPO Certified Scrum Product Owner",
     about_this_course:
       "An advanced course for experienced product owners to prepare for the  Scrum Product Owner certificate.",
     instructor: "Raj Heda",

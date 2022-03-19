@@ -51,7 +51,9 @@ const Courses = () => {
    * @returns
    */
   const filterCourseData = (key, value) => {
-    setFilteredData(courseData.filter((course) => course[key] === value));
+    setFilteredData(
+      courseData.filter((course) => course[key].trim() === value.trim())
+    );
     return true;
   };
 
