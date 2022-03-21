@@ -223,7 +223,7 @@ const courseData = [
       "images/course_details_images/EDA-75_attachments/Raj_Heda.jpg",
     partner_image: "images/safe-logo.png",
     review_images:
-      "/images/course_details_images/EDA-67_attachments/SAFe_Agilist_Review_1.jpg,/images/course_details_images/EDA-67_attachments/SAFe_Agilist_Review_2.jpg,/images/course_details_images/EDA-67_attachments/SAFe_Agilist_Review_3.jpg,/images/course_details_images/EDA-67_attachments/SAFe_Agilist_Review_4.jpg",
+      "/images/course_details_images/EDA-67_attachments/Review_1.jpg,/images/course_details_images/EDA-67_attachments/Review_2.jpg,/images/course_details_images/EDA-67_attachments/Review_3.jpg,/images/course_details_images/EDA-67_attachments/Review_4.jpg",
     review_text:
       "Great course.  I learned everything I needed and more! I am excited to implement these skills into my role in my organization.,Fantastic experience! Highly recommended! I am looking forward to sharing what Ive learned with my enterprise.,Raj is an excellent instructor.  He is always willing to help and great at explaining concepts.,This course equipped me with the skills I needed to grow and advance in my career. Many thanks",
     header_background_image:
@@ -366,7 +366,7 @@ const courseData = [
   {
     course_name: "Certified Agile Leadership (CAL1)",
     certifying_body: "Scrum Alliance",
-    cert_image: "/images/course_details_images/partner_cert_images/CSCAL1.png",
+    cert_image: "/images/course_details_images/partner_cert_images/CSCAL1.jpg",
     description: "Certified Agile Leadership (CAL1)",
     about_this_course:
       "A foundational course for managers to prepare for the Agile Leadership 1 certificate",
@@ -531,7 +531,7 @@ const courseData = [
   {
     course_name: "Professional Scrum Developer",
     certifying_body: "scrum.org",
-    cert_image: "/images/course_details_images/partner_cert_images/PSD.jpg",
+    cert_image: "/images/course_details_images/partner_cert_images/PSD.png",
     description: "Professional Scrum Developer",
     about_this_course:
       "Preparation for Scrum.orgs certification as a Professional Scrum Developer",

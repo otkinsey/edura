@@ -106,6 +106,7 @@ button.btn:hover,
 #course_details h2 {
   font-size: 2rem;
   color: black;
+  padding: 0;
 }
 #course_details #course_header #partner_image {
   width: 200px;
