@@ -42,24 +42,27 @@ const TrainingPage = () => {
   const renderTrainingList = (category, idx) => {
     let trainings = category.map((training, idx) => {
       return (
-        <>
-          {" "}
-          <img src={training.cert_image} alt={training.course_name} />
+        <div class="training">
+          <img
+            src={training.cert_image}
+            alt={training.course_name}
+            className="training_image"
+          />
           <Link
             to={`course_details?course_name=${training.course_name}`}
             className="button btn-primary"
           >
             {training.course_name}
           </Link>
-        </>
+        </div>
       );
     });
     return trainings;
   };
 
   return (
-    <>
-      <div>
+    <div id="trainings">
+      <div className="filters">
         <FilterButtons
           data={filteredData.length > 0 ? filteredData : shared.courseData}
           filterCourseData={filterCourseData}
@@ -83,7 +86,7 @@ const TrainingPage = () => {
           );
         })}
       </div>
-    </>
+    </div>
   );
 };
 

@@ -518,15 +518,24 @@ section#header li:hover .submenu {
   padding: 20px;
   width: 100%;
 }
-#upcoming_courses {
+.trainings_list {
+  display: flex;
+}
+.trainings_list .training img {
+  height: 150px;
+}
+#upcoming_courses,
+#trainings {
   display: grid;
   grid: 1fr / 15% 84%;
   gap: 20px;
   padding: 20px;
   background: #dedede;
 }
-#upcoming_courses > div {
+#upcoming_courses > div,
+#trainings > div {
   background: white;
+  padding-top: 60px;
 }
 #upcoming_courses #instructor_image {
   display: flex;
@@ -544,10 +553,7 @@ section#header li:hover .submenu {
   position: relative;
 }
 
-#upcoming_courses > div {
-  padding-top: 60px;
-}
-#upcoming_courses #course_filters {
+.filters {
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 60px;
@@ -593,12 +599,12 @@ section#header li:hover .submenu {
 #upcoming_courses th#location {
   width: 20%;
 }
-#upcoming_courses #course_filters {
+.filters {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-/* #upcoming_courses #course_filters button {
+/* .filters button {
   border: ;
   margin: 10px 5px;
 } */

@@ -61,7 +61,7 @@ const Courses = () => {
         <h1>Upcoming Courses</h1>
       </div>
       <div id="upcoming_courses">
-        <div id="course_filters">
+        <div id="course_filters" className="filters">
           <h3>Course Filters</h3>
           {
             <FilterButtons
