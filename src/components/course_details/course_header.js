@@ -22,10 +22,7 @@ const CourseHeader = (props) => {
             textAlign: "left",
           }}
         >
-          <div
-            id="course_header_images"
-            style={{ display: "grid", grid: "1fr / 3fr 7fr" }}
-          >
+          <div id="course_header_images">
             <img
               src={props.data.partner_image}
               id="partner_image"
@@ -40,14 +37,7 @@ const CourseHeader = (props) => {
               <div>{`${props.data.city}, ${props.data.state}, ${props.data.country}`}</div>
             </div>
           </div>
-          <div
-            id="course_header_details"
-            style={{
-              position: "relative",
-              display: "grid",
-              grid: "1fr / 3fr 7fr",
-            }}
-          >
+          <div id="course_header_details">
             {props.course_name.includes("customized offering") ? (
               <div></div>
             ) : (
