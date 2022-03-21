@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import time from "./months";
+import time from "../months";
 
 /**
  * @description Componnent: Uses courseData/filteredData object to display a list of courses

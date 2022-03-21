@@ -3,7 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import CourseHeader from "./course_header";
 import CourseContent from "./course_content";
 
-import courseData from "../courseData";
+import courseData from "../../resources/courseData";
 
 const CourseDetail = () => {
   let [params] = useSearchParams();

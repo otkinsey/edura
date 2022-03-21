@@ -21,10 +21,7 @@ const Header = () => {
             <Link to="/training">training</Link>
             <ul className="submenu">
               <li>
-                <Link to="/public_assessments">Public</Link>
-              </li>
-              <li>
-                <Link to="/corporate">Corporate</Link>
+                <Link to="/training">trainings</Link>
               </li>
               <li>
                 <Link to="upcoming_courses">Upcoming Courses</Link>

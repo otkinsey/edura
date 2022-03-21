@@ -1,7 +1,7 @@
 import React from "react";
 
-import FilterButtons from "./filterButtons";
-import courseData from "../courseData";
+import FilterButtons from "../../resources/filterButtons";
+import courseData from "../../resources/courseData";
 import CourseList from "./courseList";
 
 import { Link } from "react-router-dom";
@@ -22,22 +22,6 @@ const createFilterOptions = (data) => {
 };
 
 const filterOptions = createFilterOptions(courseData);
-
-const showDropDown = (event, display) => {
-  const optionListId = event.target.id.replace("filter_button", "option_list");
-  const optionLists = Array.from(
-    document.getElementsByClassName("filterOptions")
-  );
-
-  optionLists.forEach((list) => {
-    list.style["display"] = "none";
-  });
-  const target = document.getElementById(optionListId);
-
-  if (event.target.className === "filter_button") {
-    target.style["display"] = display;
-  }
-};
 
 const Courses = () => {
   //  State variables:
@@ -85,7 +69,6 @@ const Courses = () => {
               filterCourseData={filterCourseData}
               clearFilters={clearFilters}
               filterOptions={filterOptions}
-              showDropDown={showDropDown}
               filtered={filtered}
               setFiltered={setFiltered}
               filteredData={filteredData}

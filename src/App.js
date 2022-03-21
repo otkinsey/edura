@@ -13,11 +13,11 @@ import Home from "./components/home";
 import OurServices from "./components/our_services/our_services";
 import Resources from "./components/resources";
 import Register from "./components/register";
-import Training from "./components/training/training";
+import Training from "./components/training";
 import WhatWeDo from "./components/what_we_do/what_we_do";
 
 import "./App.css";
-import courseData from "./components/courseData";
+import courseData from "./resources/courseData";
 function App() {
   return (
     <div className="App">
