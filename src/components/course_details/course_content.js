@@ -18,7 +18,9 @@ const CourseContent = (props) => {
         >
           <p id="about_this_course">
             <h3>About This Course</h3>
-            <div>{props.data.about_this_course}</div>
+            <div
+              dangerouslySetInnerHTML={{ __html: props.data.about_this_course }}
+            ></div>
           </p>
           <p>
             <h3>What You'll Learn</h3>

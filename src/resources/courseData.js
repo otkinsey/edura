@@ -27,7 +27,7 @@ const courseData = [
     review_images:
       "/images/course_details_images/EDA-78_attachments/Review_1.jpg,/images/course_details_images/EDA-78_attachments/Review_2.jpg,/images/course_details_images/EDA-78_attachments/Review_3.jpg,/images/course_details_images/EDA-78_attachments/Review_4.jpg",
     review_text:
-      "Great course; I learned everything I needed and more! I am excited to  implement these skills into my role in my organization.,Fantastic experience! Highly recommended! I am looking forward to sharing  what I�ve learned with my enterprise. ,Raj is an excellent instructor, always willing to help and great at explaining  concepts. ,This course equipped me with the skills I needed to grow and advance in my  career. Many thanks! ",
+      "Great course.  I learned everything I needed and more! I am excited to  implement these skills into my role in my organization.,Fantastic experience! Highly recommended! I am looking forward to sharing  what Ive learned with my enterprise. ,Raj is an excellent instructor.  He is always willing to help and great at explaining  concepts. ,This course equipped me with the skills I needed to grow and advance in my  career. Many thanks! ",
     header_background_image:
       "/images/course_details_images/EDA-78_attachments/Header.jpg",
     training_category: "corporate trainings",
@@ -59,7 +59,7 @@ const courseData = [
     review_images:
       "/images/course_details_images/EDA-80_attachments/Review_1.jpg,/images/course_details_images/EDA-80_attachments/Review_2.jpg,/images/course_details_images/EDA-80_attachments/Review_3.jpg,/images/course_details_images/EDA-80_attachments/Review_4.jpg",
     review_text:
-      "We didn�t know the difference between a sprint and a program increment. Now we do,  and it has really improved our value flow. Thanks! ,My company was getting stuck between sprints, so this workshop helped us to keep the  train on the track. ,Every day we learned something new. It was a great benefit to our team. ,Highly recommended � Raj showed us how to define program increments that make  sense, enabling us to succeed. ",
+      "We didn't know the difference between a sprint and a program increment. Now we do,  and it has really improved our value flow. Thanks! ,My company was getting stuck between sprints, so this workshop helped us to keep the  train on the track. ,Every day we learned something new. It was a great benefit to our team. ,Highly recommended  Raj showed us how to define program increments that make  sense, enabling us to succeed. ",
     header_background_image:
       "/images/course_details_images/EDA-80_attachments/Header.jpg",
     training_category: "corporate trainings",
@@ -92,7 +92,7 @@ const courseData = [
     review_images:
       "/images/course_details_images/EDA-81_attachments/Review_1.jpg,/images/course_details_images/EDA-81_attachments/Review_2.jpg,/images/course_details_images/EDA-81_attachments/Review_3.jpg,/images/course_details_images/EDA-81_attachments/Review_4.jpg",
     review_text:
-      "Great workshop � we saw results with our next iteration!,Many groups gloss over this step. The workshop helped us to use the I&A to really make  progress with our processes.,I was amazed at how much value I got from the workshop. Our team is better at getting  better now that we have been shown how the process should be done.,I recommended this workshop to any group who is not seeing the results from their Agile  implementation.",
+      "Great workshop  we saw results with our next iteration!,Many groups gloss over this step. The workshop helped us to use the I&A to really make  progress with our processes.,I was amazed at how much value I got from the workshop. Our team is better at getting  better now that we have been shown how the process should be done.,I recommended this workshop to any group who is not seeing the results from their Agile  implementation.",
     header_background_image:
       "/images/course_details_images/EDA-81_attachments/Header.jpg",
     training_category: "corporate trainings",
@@ -125,7 +125,7 @@ const courseData = [
     review_images:
       "/images/course_details_images/EDA-82_attachments/Review_1.jpg,/images/course_details_images/EDA-82_attachments/Review_2.jpg,/images/course_details_images/EDA-82_attachments/Review_3.jpg,/images/course_details_images/EDA-82_attachments/Review_4.jpg",
     review_text:
-      "This was great � I now understand how to incorporate the Agile principles with product �management. Thanks!,Well worth the time. Our product management has improved and will continue to do so �as we continue our implementation.,We got a lot out of the workshop � I was glad to have been invited to participate.,This was the best use of my time in a long while. Implement Agile requires a new way to �do our jobs, and this workshop has opened my eyes. Just great.",
+      "This was great  I now understand how to incorporate the Agile principles with product management. Thanks!,Well worth the time. Our product management has improved and will continue to do so as we continue our implementation.,We got a lot out of the workshop  I was glad to have been invited to participate.,This was the best use of my time in a long while. Implement Agile requires a new way to do our jobs, and this workshop has opened my eyes. Just great.",
     header_background_image:
       "/images/course_details_images/EDA-82_attachments/Header.jpg",
     training_category: "corporate trainings",
@@ -158,7 +158,7 @@ const courseData = [
     review_images:
       "/images/course_details_images/EDA-83_attachments/Review_1.jpg,/images/course_details_images/EDA-83_attachments/Review_2.jpg,/images/course_details_images/EDA-83_attachments/Review_3.jpg,/images/course_details_images/EDA-83_attachments/Review_4.jpg",
     review_text:
-      "Great course; I learned everything I needed and more! I am excited to  implement these skills into my role in my organization.,Fantastic experience! Highly recommended! I am looking forward to sharing  what I�ve learned with my enterprise.,Raj is an excellent instructor, always willing to help and great at explaining  concepts.,This course equipped me with the skills I needed to grow and advance in my  career. Many thanks!",
+      "Great course.  I learned everything I needed and more! I am excited to  implement these skills into my role in my organization.,Fantastic experience! Highly recommended! I am looking forward to sharing  what Ive learned with my enterprise.,Raj is an excellent instructor.  He is always willing to help and great at explaining  concepts.,This course equipped me with the skills I needed to grow and advance in my  career. Many thanks!",
     header_background_image:
       "/images/course_details_images/EDA-83_attachments/Header.jpg",
     training_category: "corporate trainings",
@@ -191,7 +191,7 @@ const courseData = [
     review_images:
       "/images/course_details_images/EDA-84_attachments/Review_1.jpg,/images/course_details_images/EDA-84_attachments/Review_2.jpg,/images/course_details_images/EDA-84_attachments/Review_3.jpg,/images/course_details_images/EDA-84_attachments/Review_4.jpg",
     review_text:
-      "Great course; I learned everything I needed and more! I am excited to  implement these skills into my role in my organization.,Fantastic experience! Highly recommended! I am looking forward to sharing  what I�ve learned with my enterprise.,Raj is an excellent instructor, always willing to help and great at explaining  concepts.,This course equipped me with the skills I needed to grow and advance in my  career. Many thanks!",
+      "Great course.  I learned everything I needed and more! I am excited to  implement these skills into my role in my organization.,Fantastic experience! Highly recommended! I am looking forward to sharing  what Ive learned with my enterprise.,Raj is an excellent instructor.  He is always willing to help and great at explaining  concepts.,This course equipped me with the skills I needed to grow and advance in my  career. Many thanks!",
     header_background_image:
       "/images/course_details_images/EDA-84_attachments/Header.jpg",
     training_category: "corporate trainings",
@@ -225,7 +225,7 @@ const courseData = [
     review_images:
       "/images/course_details_images/EDA-67_attachments/SAFe_Agilist_Review_1.jpg,/images/course_details_images/EDA-67_attachments/SAFe_Agilist_Review_2.jpg,/images/course_details_images/EDA-67_attachments/SAFe_Agilist_Review_3.jpg,/images/course_details_images/EDA-67_attachments/SAFe_Agilist_Review_4.jpg",
     review_text:
-      "Great course; I learned everything I needed and more! I am excited to implement these skills into my role in my organization.,Fantastic experience! Highly recommended! I am looking forward to sharing what Ive learned with my enterprise.,Raj is an excellent instructor, always willing to help and great at explaining concepts.,This course equipped me with the skills I needed to grow and advance in my career. Many thanks",
+      "Great course.  I learned everything I needed and more! I am excited to implement these skills into my role in my organization.,Fantastic experience! Highly recommended! I am looking forward to sharing what Ive learned with my enterprise.,Raj is an excellent instructor.  He is always willing to help and great at explaining concepts.,This course equipped me with the skills I needed to grow and advance in my career. Many thanks",
     header_background_image:
       "/images/course_details_images/EDA-67_attachments/Header.jpg",
     training_category: "scaled agile 5.0",
@@ -258,7 +258,7 @@ const courseData = [
     review_images:
       "/images/course_details_images/EDA-68_attachments/Review_1.jpg,/images/course_details_images/EDA-68_attachments/Review_2.jpg,/images/course_details_images/EDA-68_attachments/Review_3.jpg,/images/course_details_images/EDA-68_attachments/Review_4.jpg",
     review_text:
-      "Great course; I learned everything I needed and more! I am excited to implement these skills into my role in my organization.,Fantastic experience! Highly recommended! I am looking forward to sharing what Ive learned with my enterprise.,Raj is an excellent instructor, always willing to help and great at explaining concepts.,This course equipped me with the skills I needed to grow and advance in my career. Many thanks",
+      "Great course.  I learned everything I needed and more! I am excited to implement these skills into my role in my organization.,Fantastic experience! Highly recommended! I am looking forward to sharing what Ive learned with my enterprise.,Raj is an excellent instructor.  He is always willing to help and great at explaining concepts.,This course equipped me with the skills I needed to grow and advance in my career. Many thanks",
     header_background_image:
       "/images/course_details_images/EDA-68_attachments/Header.jpg",
     training_category: "scaled agile 5.0",
@@ -291,7 +291,7 @@ const courseData = [
     review_images:
       "/images/course_details_images/EDA-69_attachments/Review_1.jpg,/images/course_details_images/EDA-69_attachments/Review_2.jpg,/images/course_details_images/EDA-69_attachments/Review_3.jpg,/images/course_details_images/EDA-69_attachments/Review_4.jpg",
     review_text:
-      "Great course; I learned everything I needed and more! I am excited to implement these skills into my role in my organization.,Fantastic experience! Highly recommended! I am looking forward to sharing what Ive learned with my enterprise.,Raj is an excellent instructor, always willing to help and great at explaining concepts.,This course equipped me with the skills I needed to grow and advance in my career. Many thanks",
+      "Great course.  I learned everything I needed and more! I am excited to implement these skills into my role in my organization.,Fantastic experience! Highly recommended! I am looking forward to sharing what Ive learned with my enterprise.,Raj is an excellent instructor.  He is always willing to help and great at explaining concepts.,This course equipped me with the skills I needed to grow and advance in my career. Many thanks",
     header_background_image:
       "/images/course_details_images/EDA-69_attachments/Header.jpg",
     training_category: "scaled agile 5.0",
@@ -325,7 +325,7 @@ const courseData = [
     review_images:
       "/images/course_details_images/EDA-79_attachments/Review_1.jpg,/images/course_details_images/EDA-79_attachments/Review_2.jpg,/images/course_details_images/EDA-79_attachments/Review_3.jpg,/images/course_details_images/EDA-79_attachments/Review_4.jpg",
     review_text:
-      "Great course; I learned everything I needed and more! I am excited to implement these skills into my role in my organization.,Fantastic experience! Highly recommended! I am looking forward to sharing what Ive learned with my enterprise.,Raj is an excellent instructor, always willing to help and great at explaining concepts.,This course equipped me with the skills I needed to grow and advance in my career. Many thanks",
+      "Great course.  I learned everything I needed and more! I am excited to implement these skills into my role in my organization.,Fantastic experience! Highly recommended! I am looking forward to sharing what Ive learned with my enterprise.,Raj is an excellent instructor.  He is always willing to help and great at explaining concepts.,This course equipped me with the skills I needed to grow and advance in my career. Many thanks",
     header_background_image:
       "/images/course_details_images/EDA-79_attachments/Header.jpg",
     training_category: "corporate trainings",
@@ -391,7 +391,7 @@ const courseData = [
     review_images:
       "/images/course_details_images/EDA-66_attachments/Review_1.jpg,/images/course_details_images/EDA-66_attachments/Review_2.jpg,/images/course_details_images/EDA-66_attachments/Review_3.jpg,/images/course_details_images/EDA-66_attachments/Review_4.jpg",
     review_text:
-      "Great course; I learned everything I needed and more! I am excited to implement these skills into my role in my organization.,Fantastic experience! Highly recommended! I am looking forward to sharing what Ive learned with my enterprise.,Raj is an excellent instructor, always willing to help and great at explaining concepts.,This course equipped me with the skills I needed to grow and advance in my career. Many thanks",
+      "Great course.  I learned everything I needed and more! I am excited to implement these skills into my role in my organization.,Fantastic experience! Highly recommended! I am looking forward to sharing what Ive learned with my enterprise.,Raj is an excellent instructor.  He is always willing to help and great at explaining concepts.,This course equipped me with the skills I needed to grow and advance in my career. Many thanks",
     header_background_image:
       "/images/course_details_images/EDA-66_attachments/Header.jpg",
     training_category: "leadership",
@@ -424,7 +424,7 @@ const courseData = [
     review_images:
       "/images/course_details_images/EDA-76_attachments/Review_1.jpg,/images/course_details_images/EDA-76_attachments/Review_2.jpg,/images/course_details_images/EDA-76_attachments/Review_3.jpg,/images/course_details_images/EDA-76_attachments/Review_4.jpg",
     review_text:
-      "I got a lot from this class. I�m now able to better manage my team�s backlog, and our  outcomes have really improved.,I started with very little knowledge about how agile actually works, but the class  provided more than enough to start implementing the techniques at my company.,The class showed me how the product manager role guides a team to work toward a  common goal.,My instructor was great. He kept the energy level high and made it easy to learn the  material. Highly recommended.",
+      "I got a lot from this class. Im now able to better manage my teams backlog, and our  outcomes have really improved.,I started with very little knowledge about how agile actually works, but the class  provided more than enough to start implementing the techniques at my company.,The class showed me how the product manager role guides a team to work toward a  common goal.,My instructor was great. He kept the energy level high and made it easy to learn the  material. Highly recommended.",
     header_background_image:
       "/images/course_details_images/EDA-76_attachments/Header.jpg",
     training_category: "scrum alliance",
@@ -490,7 +490,7 @@ const courseData = [
     review_images:
       "/images/course_details_images/EDA-72_attachments/Review_1.jpg,/images/course_details_images/EDA-72_attachments/Review_2.jpg,/images/course_details_images/EDA-72_attachments/Review_3.jpg,/images/course_details_images/EDA-72_attachments/Review_4.jpg",
     review_text:
-      "Great course; I learned everything I needed and more! I am excited to implement these skills into my role in my organization.,Fantastic experience! Highly recommended! I am looking forward to sharing what Ive learned with my enterprise.,Raj is an excellent instructor, always willing to help and great at explaining concepts.,This course equipped me with the skills I needed to grow and advance in my career. Many thanks",
+      "Great course.  I learned everything I needed and more! I am excited to implement these skills into my role in my organization.,Fantastic experience! Highly recommended! I am looking forward to sharing what Ive learned with my enterprise.,Raj is an excellent instructor.  He is always willing to help and great at explaining concepts.,This course equipped me with the skills I needed to grow and advance in my career. Many thanks",
     header_background_image:
       "/images/course_details_images/EDA-72_attachments/Header.jpg",
     training_category: "scrum.org",
@@ -523,7 +523,7 @@ const courseData = [
     review_images:
       "/images/course_details_images/EDA-73_attachments/Review_1.jpg,/images/course_details_images/EDA-73_attachments/Review_2.jpg,/images/course_details_images/EDA-73_attachments/Review_3.jpg,/images/course_details_images/EDA-73_attachments/Review_4.jpg",
     review_text:
-      "Great course; I learned everything I needed and more! I am excited to implement these skills into my role in my organization.,Fantastic experience! Highly recommended! I am looking forward to sharing what Ive learned with my enterprise.,Raj is an excellent instructor, always willing to help and great at explaining concepts.,This course equipped me with the skills I needed to grow and advance in my career. Many thanks",
+      "Great course.  I learned everything I needed and more! I am excited to implement these skills into my role in my organization.,Fantastic experience! Highly recommended! I am looking forward to sharing what Ive learned with my enterprise.,Raj is an excellent instructor.  He is always willing to help and great at explaining concepts.,This course equipped me with the skills I needed to grow and advance in my career. Many thanks",
     header_background_image:
       "/images/course_details_images/EDA-73_attachments/Header.jpg",
     training_category: "scrum.org",
@@ -556,7 +556,7 @@ const courseData = [
     review_images:
       "/images/course_details_images/EDA-74_attachments/Review_1.jpg,/images/course_details_images/EDA-74_attachments/Review_2.jpg,/images/course_details_images/EDA-74_attachments/Review_3.jpg,/images/course_details_images/EDA-74_attachments/Review_4.jpg",
     review_text:
-      "Great course; I learned everything I needed and more! I am excited to implement these skills into my role in my organization.,Fantastic experience! Highly recommended! I am looking forward to sharing what Ive learned with my enterprise.,Raj is an excellent instructor, always willing to help and great at explaining concepts.,This course equipped me with the skills I needed to grow and advance in my career. Many thanks",
+      "Great course.  I learned everything I needed and more! I am excited to implement these skills into my role in my organization.,Fantastic experience! Highly recommended! I am looking forward to sharing what Ive learned with my enterprise.,Raj is an excellent instructor.  He is always willing to help and great at explaining concepts.,This course equipped me with the skills I needed to grow and advance in my career. Many thanks",
     header_background_image:
       "/images/course_details_images/EDA-74_attachments/Header.jpg",
     training_category: "scrum.org",
