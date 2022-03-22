@@ -299,6 +299,9 @@ h3 {
   left: 20px;
   z-index: 2;
 }
+.main_content ul {
+  padding-left: 30px;
+}
 .not_flex {
   display: block;
 }

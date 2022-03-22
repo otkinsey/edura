@@ -16,7 +16,11 @@ const CourseDetail = () => {
     (i) => i["course_name"] === course_name
   )[0];
   return (
-    <div id="course_details" style={{ backgroundColor: "#ECECEC" }}>
+    <div
+      id="course_details"
+      className="main_content"
+      style={{ backgroundColor: "#ECECEC" }}
+    >
       <CourseHeader
         style={{ backgroundColor: "white" }}
         course_name={course_name}
