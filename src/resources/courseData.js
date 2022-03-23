@@ -358,7 +358,7 @@ const courseData = [
     review_images:
       "/images/course_details_images/EDA-75_attachments/Review_1.jpg,/images/course_details_images/EDA-75_attachments/Review_2.jpg,/images/course_details_images/EDA-75_attachments/Review_3.jpg,/images/course_details_images/EDA-75_attachments/Review_4.jpg",
     review_text:
-      "This class gave me the exposure to agile and the scrum process that I needed. Thanks!,I started with very little knowledge about how agile actually works, but the class provided more than enough to start implementing the techniques at my company.,When I began my training I thought that a scrum master was just a project manager. The class showed me how the roles are different and how to get a team to work toward a common goal.,My instructor was great. They kept the energy level high, and everyone in the class passed the CSM certification on their first try. Highly recommended.",
+      "This class gave me the exposure to agile and the scrum process that I needed. Thanks!,I started with very little knowledge about how agile actually works but the class provided more than enough to start implementing the techniques at my company.,When I began my training I thought that a scrum master was just a project manager. The class showed me how the roles are different and how to get a team to work toward a common goal.,My instructor was great. They kept the energy level high and everyone in the class passed the CSM certification on their first try. Highly recommended.",
     header_background_image:
       "/images/course_details_images/EDA-75_attachments/Header.jpg",
     training_category: "scrum alliance",
@@ -457,7 +457,7 @@ const courseData = [
     review_images:
       "/images/course_details_images/EDA-77_attachments/Review_1.jpg,/images/course_details_images/EDA-77_attachments/Review_2.jpg,/images/course_details_images/EDA-77_attachments/Review_3.jpg,/images/course_details_images/EDA-77_attachments/Review_4.jpg",
     review_text:
-      "This class gave me the exposure to agile and the scrum process that I needed. Thanks!,I started with very little knowledge about how agile actually works, but the class provided more than enough to start implementing the techniques at my company.,When I began my training I thought that a scrum master was just a project manager. The class showed me how the roles are different and how to get a team to work toward a common goal.,My instructor was great. They kept the energy level high, and everyone in the class passed the CSM certification on their first try. Highly recommended.",
+      "This class gave me the exposure to agile and the scrum process that I needed. Thanks!,I started with very little knowledge about how agile actually works but the class provided more than enough to start implementing the techniques at my company.,When I began my training I thought that a scrum master was just a project manager. The class showed me how the roles are different and how to get a team to work toward a common goal.,My instructor was great. They kept the energy level high and everyone in the class passed the CSM certification on their first try. Highly recommended.",
     header_background_image:
       "/images/course_details_images/EDA-77_attachments/Header.jpg",
     training_category: "scrum alliance",
