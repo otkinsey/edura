@@ -31,6 +31,7 @@ const courseData = [
     header_background_image:
       "/images/course_details_images/EDA-78_attachments/Header.jpg",
     training_category: "corporate trainings",
+    role: "all",
   },
   {
     course_name: "Program Increment Workshop (customized offering)",
@@ -59,10 +60,11 @@ const courseData = [
     review_images:
       "/images/course_details_images/EDA-80_attachments/Review_1.jpg,/images/course_details_images/EDA-80_attachments/Review_2.jpg,/images/course_details_images/EDA-80_attachments/Review_3.jpg,/images/course_details_images/EDA-80_attachments/Review_4.jpg",
     review_text:
-      "We didn't know the difference between a sprint and a program increment. Now we do,  and it has really improved our value flow. Thanks! ,My company was getting stuck between sprints, so this workshop helped us to keep the  train on the track. ,Every day we learned something new. It was a great benefit to our team. ,Highly recommended  Raj showed us how to define program increments that make  sense, enabling us to succeed. ",
+      "We didn't know the difference between a sprint and a program increment. Now we do and it has really improved our value flow. Thanks! ,My company was getting stuck between sprints so this workshop helped us to keep the  train on the track. ,Every day we learned something new. It was a great benefit to our team. ,Highly recommended  Raj showed us how to define program increments that make  sense, enabling us to succeed. ",
     header_background_image:
       "/images/course_details_images/EDA-80_attachments/Header.jpg",
     training_category: "corporate trainings",
+    role: "all",
   },
   {
     course_name: "Inspect and Adapt (customized offering)",
@@ -96,6 +98,7 @@ const courseData = [
     header_background_image:
       "/images/course_details_images/EDA-81_attachments/Header.jpg",
     training_category: "corporate trainings",
+    role: "all",
   },
   {
     course_name: "Product Management Workshop (customized offering)",
@@ -129,6 +132,7 @@ const courseData = [
     header_background_image:
       "/images/course_details_images/EDA-82_attachments/Header.jpg",
     training_category: "corporate trainings",
+    role: "all",
   },
   {
     course_name: "Team Building Workshop (customized offering)",
@@ -162,6 +166,7 @@ const courseData = [
     header_background_image:
       "/images/course_details_images/EDA-83_attachments/Header.jpg",
     training_category: "corporate trainings",
+    role: "all",
   },
   {
     course_name: "Customized Scrum/Kanban Workshop (customized offering)",
@@ -195,6 +200,7 @@ const courseData = [
     header_background_image:
       "/images/course_details_images/EDA-84_attachments/Header.jpg",
     training_category: "corporate trainings",
+    role: "all",
   },
   {
     course_name: "Certified SAFe Agilist",
@@ -229,6 +235,7 @@ const courseData = [
     header_background_image:
       "/images/course_details_images/EDA-67_attachments/Header.jpg",
     training_category: "scaled agile 5.0",
+    role: "all",
   },
   {
     course_name: "Certified SAFe Scrum Master",
@@ -262,6 +269,7 @@ const courseData = [
     header_background_image:
       "/images/course_details_images/EDA-68_attachments/Header.jpg",
     training_category: "scaled agile 5.0",
+    role: "Scrum Master",
   },
   {
     course_name: "Certified SAFe Product Owner / Product Manager",
@@ -295,6 +303,7 @@ const courseData = [
     header_background_image:
       "/images/course_details_images/EDA-69_attachments/Header.jpg",
     training_category: "scaled agile 5.0",
+    role: "Product Owner",
   },
   {
     course_name: "SAFe Portfolio Management",
@@ -329,12 +338,13 @@ const courseData = [
     header_background_image:
       "/images/course_details_images/EDA-79_attachments/Header.jpg",
     training_category: "corporate trainings",
+    role: "all",
   },
   {
-    course_name: "CSM - Certified ScrumMaster",
+    course_name: "CSM - Certified Scrum Master",
     certifying_body: "Scrum Alliance",
     cert_image: "/images/course_details_images/partner_cert_images/CSM.png",
-    description: "CSM - Certified ScrumMaster",
+    description: "CSM - Certified Scrum Master",
     about_this_course:
       "A foundational course for the Certified SAFe Scrum Master certificate",
     instructor: "Raj Heda",
@@ -362,6 +372,7 @@ const courseData = [
     header_background_image:
       "/images/course_details_images/EDA-75_attachments/Header.jpg",
     training_category: "scrum alliance",
+    role: "scrum master",
   },
   {
     course_name: "Certified Agile Leadership (CAL1)",
@@ -395,6 +406,7 @@ const courseData = [
     header_background_image:
       "/images/course_details_images/EDA-66_attachments/Header.jpg",
     training_category: "leadership",
+    role: "all",
   },
   {
     course_name: "CSPO Certified Scrum Product Owner",
@@ -428,6 +440,7 @@ const courseData = [
     header_background_image:
       "/images/course_details_images/EDA-76_attachments/Header.jpg",
     training_category: "scrum alliance",
+    role: "Product Owner",
   },
   {
     course_name: "CSD Certified Scrum Developer ",
@@ -461,6 +474,7 @@ const courseData = [
     header_background_image:
       "/images/course_details_images/EDA-77_attachments/Header.jpg",
     training_category: "scrum alliance",
+    role: "Developer",
   },
   {
     course_name: "Professional Scrum Master Training",
@@ -494,6 +508,7 @@ const courseData = [
     header_background_image:
       "/images/course_details_images/EDA-72_attachments/Header.jpg",
     training_category: "scrum.org",
+    role: "Scrum Master",
   },
   {
     course_name: "Professional Scrum Product Owner",
@@ -527,6 +542,7 @@ const courseData = [
     header_background_image:
       "/images/course_details_images/EDA-73_attachments/Header.jpg",
     training_category: "scrum.org",
+    role: "Product Owner",
   },
   {
     course_name: "Professional Scrum Developer",
@@ -560,6 +576,7 @@ const courseData = [
     header_background_image:
       "/images/course_details_images/EDA-74_attachments/Header.jpg",
     training_category: "scrum.org",
+    role: "Developer",
   },
 ];
 

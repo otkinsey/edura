@@ -28,6 +28,7 @@ const FilterButtons = (props) => {
     "city",
     "certifying_body",
     "training_catgory",
+    "role",
   ];
   /**
    * @REFACTOR separate out as component

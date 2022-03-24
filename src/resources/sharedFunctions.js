@@ -2,14 +2,13 @@ import courseData from "./courseData";
 
 const sharedFunctions = {
   courseData: courseData,
-  createFilterOptions: (data) => {
+  createFilterOptions: (data, keys = Object.keys(data[0])) => {
     const dataKeys = Object.keys(data[0]);
     const filterOptions = {};
     data.forEach((obj, idx) => {
-      dataKeys.forEach((key, index) => {
-        filterOptions[key] = filterOptions[key]
-          ? filterOptions[key].add(obj[key])
-          : new Set();
+      keys.forEach((key, index) => {
+        filterOptions[key] = new Set();
+        dataKeys.includes(key) ? filterOptions[key].add(obj[key]) : new Set();
       });
     });
     return filterOptions;

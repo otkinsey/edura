@@ -563,6 +563,7 @@ section#header li:hover .submenu {
 }
 #trainings h3 {
   text-align: left;
+  text-transform: capitalize;
 }
 #trainings .training_category {
   padding: 0px 60px;

@@ -21,7 +21,7 @@ const Header = () => {
             <span>training</span>
             <ul className="submenu">
               <li>
-                <Link to="/training">trainings</Link>
+                <Link to="/courses">courses</Link>
               </li>
               <li>
                 <Link to="upcoming_courses">Upcoming Courses</Link>

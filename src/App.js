@@ -24,17 +24,17 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="about_us" element={<AboutUs />} />
-        <Route path="coaching" element={<Coaching />} />
-        <Route path="contact" element={<Contact />} />
-        <Route path="upcoming_courses" element={<Courses />} />
-        <Route path="course_details" element={<CourseDetails />} />
-        <Route path="assessment" element={<Assessments />} />
-        <Route path="resources" element={<Resources />} />
-        <Route path="register" element={<Register />} />
-        <Route path="training" element={<Training />} />
-        <Route path="what_we_do" element={<WhatWeDo />} />
-        <Route path="our_services" element={<OurServices />} />
+        <Route path="/about_us" element={<AboutUs />} />
+        <Route path="/coaching" element={<Coaching />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/upcoming_courses" element={<Courses />} />
+        <Route path="/course_details" element={<CourseDetails />} />
+        <Route path="/assessment" element={<Assessments />} />
+        <Route path="/resources" element={<Resources />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/courses" element={<Training />} />
+        <Route path="/what_we_do" element={<WhatWeDo />} />
+        <Route path="/our_services" element={<OurServices />} />
       </Routes>
       <Footer />
     </div>

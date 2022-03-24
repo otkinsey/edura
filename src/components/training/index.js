@@ -12,7 +12,11 @@ const TrainingPage = () => {
 
   const clearFilters = () => setFilteredData(courseData);
 
-  const filterOptions = shared.createFilterOptions(filteredData);
+  const filterOptions = shared.createFilterOptions(filteredData, [
+    "course_name",
+    "certifying_body",
+    "role",
+  ]);
 
   const filterCourseData = (key, value) => {
     setFilteredData(
@@ -41,19 +45,38 @@ const TrainingPage = () => {
 
   const renderTrainingList = (category, idx) => {
     let trainings = category.map((training, idx) => {
+      const trainingWidth =
+        training.training_category === "corporate trainings" ? "auto" : "250px";
       return (
         <div class="training">
-          <img
-            src={training.cert_image}
-            alt={training.course_name}
-            className="training_image"
-          />
-          <Link
-            to={`course_details?course_name=${training.course_name}`}
-            className="button btn-primary"
-          >
-            {training.course_name}
-          </Link>
+          {training.training_category === "corporate trainings" ? (
+            <img
+              src="/images/Edura_logo.svg"
+              alt={training.course_name}
+              className="training_image"
+              style={{ width: "220px", height: "72px" }}
+            />
+          ) : (
+            <img
+              src={training.cert_image}
+              alt={training.course_name}
+              className="training_image"
+            />
+          )}
+
+          <div style={{ width: trainingWidth, padding: "0px 20px" }}>
+            <hr />
+            <Link
+              to={`/course_details?course_name=${training.course_name.replace(
+                /\s/g,
+                "_"
+              )}`}
+              className="course_link"
+            >
+              {training.course_name}
+            </Link>
+            <hr />
+          </div>
         </div>
       );
     });
@@ -73,6 +96,17 @@ const TrainingPage = () => {
           filteredData={filteredData}
           updateFilterOptions={shared.updateFilterOptions}
         />
+        <Link
+          to="/"
+          onClick={(event) => {
+            shared.updateFilterOptions(event, "");
+            event.preventDefault();
+            clearFilters();
+          }}
+          style={{ fontWeight: "bold" }}
+        >
+          Clear Filters
+        </Link>
       </div>
       <div>
         {Object.keys(trainingData)
@@ -81,9 +115,18 @@ const TrainingPage = () => {
             return (
               <div key={idx} className={`training_category`} id={`${category}`}>
                 <h3>{category.replace(/_/g, " ")}</h3>
-                <div className="trainings_list">
-                  {renderTrainingList(trainingData[category])}
-                </div>
+                {category === "corporate trainings" ? (
+                  <div
+                    className="trainings_list"
+                    style={{ display: "grid", grid: "1fr / 1fr 1fr" }}
+                  >
+                    {renderTrainingList(trainingData[category])}
+                  </div>
+                ) : (
+                  <div className="trainings_list">
+                    {renderTrainingList(trainingData[category])}
+                  </div>
+                )}
               </div>
             );
           })}
