@@ -372,7 +372,7 @@ const courseData = [
     header_background_image:
       "/images/course_details_images/EDA-75_attachments/Header.jpg",
     training_category: "scrum alliance",
-    role: "scrum master",
+    role: "Scrum Master",
   },
   {
     course_name: "Certified Agile Leadership (CAL1)",
@@ -436,7 +436,7 @@ const courseData = [
     review_images:
       "/images/course_details_images/EDA-76_attachments/Review_1.jpg,/images/course_details_images/EDA-76_attachments/Review_2.jpg,/images/course_details_images/EDA-76_attachments/Review_3.jpg,/images/course_details_images/EDA-76_attachments/Review_4.jpg",
     review_text:
-      "I got a lot from this class. Im now able to better manage my teams backlog, and our  outcomes have really improved.,I started with very little knowledge about how agile actually works, but the class  provided more than enough to start implementing the techniques at my company.,The class showed me how the product manager role guides a team to work toward a  common goal.,My instructor was great. He kept the energy level high and made it easy to learn the  material. Highly recommended.",
+      "I got a lot from this class. Im now able to better manage my teams backlog and our  outcomes have really improved.,I started with very little knowledge about how agile actually works but the class  provided more than enough to start implementing the techniques at my company.,The class showed me how the product manager role guides a team to work toward a  common goal.,My instructor was great. He kept the energy level high and made it easy to learn the  material. Highly recommended.",
     header_background_image:
       "/images/course_details_images/EDA-76_attachments/Header.jpg",
     training_category: "scrum alliance",
