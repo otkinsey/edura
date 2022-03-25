@@ -12,7 +12,7 @@ const TrainingPage = () => {
 
   const clearFilters = () => setFilteredData(courseData);
 
-  const filterOptions = shared.createFilterOptions(filteredData, [
+  const filterOptions = shared.createFilterOptions(courseData, [
     "course_name",
     "certifying_body",
     "role",
