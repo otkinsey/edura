@@ -84,52 +84,68 @@ const TrainingPage = () => {
   };
 
   return (
-    <div id="trainings">
-      <div className="filters">
-        <FilterButtons
-          data={filteredData.length > 0 ? filteredData : shared.courseData}
-          filterCourseData={filterCourseData}
-          clearFilters={clearFilters}
-          filterOptions={filterOptions}
-          filtered={filtered}
-          setFiltered={shared.setFiltered}
-          filteredData={filteredData}
-          updateFilterOptions={shared.updateFilterOptions}
-        />
-        <Link
-          to="/"
-          onClick={(event) => {
-            shared.updateFilterOptions(event, "");
-            event.preventDefault();
-            clearFilters();
-          }}
-          style={{ fontWeight: "bold" }}
-        >
-          Clear Filters
-        </Link>
+    <div>
+      <div
+        className="jumbotron"
+        style={{
+          background:
+            "center/cover no-repeat url(http://localhost:3000/images/courses_page_header.jpg)",
+        }}
+      >
+        <h1>Courses</h1>
       </div>
-      <div>
-        {Object.keys(trainingData)
-          .sort((a, b) => a - b)
-          .map((category, idx) => {
-            return (
-              <div key={idx} className={`training_category`} id={`${category}`}>
-                <h3>{category.replace(/_/g, " ")}</h3>
-                {category === "corporate trainings" ? (
-                  <div
-                    className="trainings_list"
-                    style={{ display: "grid", grid: "1fr / 1fr 1fr" }}
-                  >
-                    {renderTrainingList(trainingData[category])}
-                  </div>
-                ) : (
-                  <div className="trainings_list">
-                    {renderTrainingList(trainingData[category])}
-                  </div>
-                )}
-              </div>
-            );
-          })}
+
+      <div id="trainings">
+        <div className="filters">
+          <FilterButtons
+            data={filteredData.length > 0 ? filteredData : shared.courseData}
+            filterCourseData={filterCourseData}
+            clearFilters={clearFilters}
+            filterOptions={filterOptions}
+            filtered={filtered}
+            setFiltered={shared.setFiltered}
+            filteredData={filteredData}
+            updateFilterOptions={shared.updateFilterOptions}
+          />
+          <Link
+            to="/"
+            onClick={(event) => {
+              shared.updateFilterOptions(event, "");
+              event.preventDefault();
+              clearFilters();
+            }}
+            style={{ fontWeight: "bold" }}
+          >
+            Clear Filters
+          </Link>
+        </div>
+        <div>
+          {Object.keys(trainingData)
+            .sort((a, b) => a - b)
+            .map((category, idx) => {
+              return (
+                <div
+                  key={idx}
+                  className={`training_category`}
+                  id={`${category}`}
+                >
+                  <h3>{category.replace(/_/g, " ")}</h3>
+                  {category === "corporate trainings" ? (
+                    <div
+                      className="trainings_list"
+                      style={{ display: "grid", grid: "1fr / 1fr 1fr" }}
+                    >
+                      {renderTrainingList(trainingData[category])}
+                    </div>
+                  ) : (
+                    <div className="trainings_list">
+                      {renderTrainingList(trainingData[category])}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+        </div>
       </div>
     </div>
   );

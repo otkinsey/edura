@@ -56,8 +56,14 @@ const Courses = () => {
   };
 
   return (
-    <div className="component">
-      <div className="jumbotron">
+    <div className="component" id="">
+      <div
+        className="jumbotron"
+        style={{
+          background:
+            "center/cover no-repeat url(http://localhost:3000/images/slider-images/Scrolling-Assessment.jpeg)",
+        }}
+      >
         <h1>Upcoming Courses</h1>
       </div>
       <div id="upcoming_courses">
