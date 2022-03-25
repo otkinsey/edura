@@ -109,25 +109,27 @@ const TrainingPage = () => {
         </Link>
       </div>
       <div>
-        {Object.keys(trainingData).map((category, idx) => {
-          return (
-            <div key={idx} className={`training_category`} id={`${category}`}>
-              <h3>{category.replace(/_/g, " ")}</h3>
-              {category === "corporate trainings" ? (
-                <div
-                  className="trainings_list"
-                  style={{ display: "grid", grid: "1fr / 1fr 1fr" }}
-                >
-                  {renderTrainingList(trainingData[category])}
-                </div>
-              ) : (
-                <div className="trainings_list">
-                  {renderTrainingList(trainingData[category])}
-                </div>
-              )}
-            </div>
-          );
-        })}
+        {Object.keys(trainingData)
+          .sort((a, b) => a - b)
+          .map((category, idx) => {
+            return (
+              <div key={idx} className={`training_category`} id={`${category}`}>
+                <h3>{category.replace(/_/g, " ")}</h3>
+                {category === "corporate trainings" ? (
+                  <div
+                    className="trainings_list"
+                    style={{ display: "grid", grid: "1fr / 1fr 1fr" }}
+                  >
+                    {renderTrainingList(trainingData[category])}
+                  </div>
+                ) : (
+                  <div className="trainings_list">
+                    {renderTrainingList(trainingData[category])}
+                  </div>
+                )}
+              </div>
+            );
+          })}
       </div>
     </div>
   );
