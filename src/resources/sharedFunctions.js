@@ -5,9 +5,9 @@ const sharedFunctions = {
   createFilterOptions: (data, keys = Object.keys(data[0])) => {
     const dataKeys = Object.keys(data[0]);
     const filterOptions = {};
+    keys.map((key) => (filterOptions[key] = new Set()));
     data.forEach((obj, idx) => {
       keys.forEach((key, index) => {
-        filterOptions[key] = new Set();
         dataKeys.includes(key) ? filterOptions[key].add(obj[key]) : new Set();
       });
     });

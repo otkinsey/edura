@@ -29,7 +29,7 @@ const TrainingPage = () => {
     filteredData.map((d) => d.training_category)
   );
 
-  const createTrainingData = (filteredData) => {
+  const createTrainingDataObject = (filteredData) => {
     let trainings = {};
     trainingCategories.forEach((category) => (trainings[category] = []));
     filteredData.forEach((dataItem, idx) => {
@@ -41,7 +41,7 @@ const TrainingPage = () => {
     });
     return trainings;
   };
-  const trainingData = createTrainingData(filteredData);
+  const trainingData = createTrainingDataObject(filteredData);
 
   const renderTrainingList = (category, idx) => {
     let trainings = category.map((training, idx) => {
@@ -109,27 +109,25 @@ const TrainingPage = () => {
         </Link>
       </div>
       <div>
-        {Object.keys(trainingData)
-          .sort((a, b) => a - b)
-          .map((category, idx) => {
-            return (
-              <div key={idx} className={`training_category`} id={`${category}`}>
-                <h3>{category.replace(/_/g, " ")}</h3>
-                {category === "corporate trainings" ? (
-                  <div
-                    className="trainings_list"
-                    style={{ display: "grid", grid: "1fr / 1fr 1fr" }}
-                  >
-                    {renderTrainingList(trainingData[category])}
-                  </div>
-                ) : (
-                  <div className="trainings_list">
-                    {renderTrainingList(trainingData[category])}
-                  </div>
-                )}
-              </div>
-            );
-          })}
+        {Object.keys(trainingData).map((category, idx) => {
+          return (
+            <div key={idx} className={`training_category`} id={`${category}`}>
+              <h3>{category.replace(/_/g, " ")}</h3>
+              {category === "corporate trainings" ? (
+                <div
+                  className="trainings_list"
+                  style={{ display: "grid", grid: "1fr / 1fr 1fr" }}
+                >
+                  {renderTrainingList(trainingData[category])}
+                </div>
+              ) : (
+                <div className="trainings_list">
+                  {renderTrainingList(trainingData[category])}
+                </div>
+              )}
+            </div>
+          );
+        })}
       </div>
     </div>
   );

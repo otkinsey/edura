@@ -47,6 +47,7 @@ const FilterButtons = (props) => {
               position: "relative",
               textAlign: "left",
               color: "#9d9d9d",
+              width: "90%",
             }}
           >
             <label
