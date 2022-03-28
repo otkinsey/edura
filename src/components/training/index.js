@@ -120,9 +120,15 @@ const TrainingPage = () => {
           </Link>
         </div>
         <div>
-          {Object.keys(trainingData)
-            .reverse()
-            .map((category, idx) => {
+          {
+            /* {Object.keys(trainingData) */
+            [
+              "leadership",
+              "scaled agile 5.0",
+              "scrum alliance",
+              "scrum.org",
+              "corporate trainings",
+            ].map((category, idx) => {
               return (
                 <div
                   key={idx}
@@ -144,7 +150,8 @@ const TrainingPage = () => {
                   )}
                 </div>
               );
-            })}
+            })
+          }
         </div>
       </div>
     </div>

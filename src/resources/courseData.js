@@ -337,7 +337,7 @@ const courseData = [
       "Great course.  I learned everything I needed and more! I am excited to implement these skills into my role in my organization.,Fantastic experience! Highly recommended! I am looking forward to sharing what Ive learned with my enterprise.,Raj is an excellent instructor.  He is always willing to help and great at explaining concepts.,This course equipped me with the skills I needed to grow and advance in my career. Many thanks",
     header_background_image:
       "/images/course_details_images/EDA-79_attachments/Header.jpg",
-    training_category: "corporate trainings",
+    training_category: "scaled agile 5.0",
     role: "all",
   },
   {
