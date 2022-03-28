@@ -49,7 +49,7 @@ const TrainingPage = () => {
         training.training_category === "corporate trainings" ? "auto" : "250px";
       return (
         <div class="training">
-          {training.training_category === "corporate trainings" ? (
+          {training.course_name.includes("custom") ? (
             <img
               src="/images/Edura_logo.svg"
               alt={training.course_name}
@@ -121,7 +121,7 @@ const TrainingPage = () => {
         </div>
         <div>
           {Object.keys(trainingData)
-            .sort((a, b) => a - b)
+            .reverse()
             .map((category, idx) => {
               return (
                 <div
