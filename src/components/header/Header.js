@@ -28,9 +28,6 @@ const Header = () => {
               </li>
             </ul>
           </li>
-          <li id="resources_main_nav">
-            <Link to="/resources">resources</Link>
-          </li>
         </ul>
         <ul>
           <li>
@@ -61,7 +58,16 @@ const Header = () => {
         </ul>
         <ul>
           <li>
-            <Link to="view_courses">View Courses</Link>
+            <Link
+              to="/upcoming_courses"
+              style={{
+                border: "1px solid white",
+                padding: "9px 19px",
+                borderRadius: 9,
+              }}
+            >
+              View Courses
+            </Link>
           </li>
         </ul>
         <Outlet />

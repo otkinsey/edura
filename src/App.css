@@ -45,6 +45,9 @@ a:hover {
   height: 40vmin;
   pointer-events: none;
 }
+#assessments img {
+  width: 50%;
+}
 button.btn-primary,
 button.filter_button,
 button.btn,

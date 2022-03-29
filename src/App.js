@@ -4,7 +4,7 @@ import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 
 import AboutUs from "./components/about_us/about_us";
-import Assessments from "./components/maturity_assessment";
+import Assessments from "./components/assessment";
 import Coaching from "./components/coaching";
 import Contact from "./components/contact/contact";
 import Courses from "./components/upcoming_courses";
