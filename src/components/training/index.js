@@ -43,6 +43,17 @@ const TrainingPage = () => {
   };
   const trainingData = createTrainingDataObject(filteredData);
 
+  const trainingDataKeys =
+    Object.keys(trainingData).length < 5
+      ? Object.keys(trainingData)
+      : [
+          "leadership",
+          "scaled agile 5.0",
+          "scrum alliance",
+          "scrum.org",
+          "corporate trainings",
+        ];
+
   const renderTrainingList = (category, idx) => {
     let trainings = category.map((training, idx) => {
       const trainingWidth =
@@ -122,13 +133,7 @@ const TrainingPage = () => {
         <div>
           {
             /* {Object.keys(trainingData) */
-            [
-              "leadership",
-              "scaled agile 5.0",
-              "scrum alliance",
-              "scrum.org",
-              "corporate trainings",
-            ].map((category, idx) => {
+            trainingDataKeys.map((category, idx) => {
               return (
                 <div
                   key={idx}
