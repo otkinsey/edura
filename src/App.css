@@ -45,8 +45,26 @@ a:hover {
   height: 40vmin;
   pointer-events: none;
 }
+#assessments {
+  text-align: left;
+}
+#assessments .button.btn-primary {
+  margin: 38px auto;
+}
 #assessments img {
   width: 50%;
+}
+.assessment_row h1,
+.assessment_row > div > h1 {
+  font-size: 2.5rem;
+  padding: 0;
+}
+
+.assessment_row:nth-child(even) {
+  background: #ececec;
+}
+.assessment_row > div > * {
+  padding: 40px;
 }
 button.btn-primary,
 button.filter_button,

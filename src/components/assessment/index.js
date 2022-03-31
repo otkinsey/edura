@@ -1,9 +1,9 @@
-"<h3>Individual Role/Talent</h3><p>Edura in-house experts are not just experts in the Agile development methodology, but we have earned that expertise from decades of experience in multiple software industries. We know individuals like your key contributors because we have also been key contributors. Drawing from deep domain expertise, Edura can assess the capabilities of key individuals within your organization. The core Agile principles of delivering value, openness to change, and improving delivery represent transformative skills and behavior. Our assessments first measures where your key contributors are on an Agile spectrum. In addition, the assessment produces concrete recommendations for help them achieve excellence.</p>";
+import { Link } from "react-router-dom";
 
 const pageData = [
   {
     imageUrl: "",
-    html: "<h1>Why Assessment?</h1><p>Today, more and more companies are adopting iterative software design methodologies like Agile. Whether you are just starting on this journey or if you already have adopted many agile techniques, it’s vitally important to first understand where you are so you know what you need to do. As we have done for so many other companies, Apex can be your partner in assessing your current capability, to help remediate those areas needing correction, and to create a plan for upgrading skills on your Agile journey.</p><p>While you may find a number of skill surveys online, Edura offers six comprehensive Agile skill assessments to pinpoint your current capabilities. We drew upon our extensive background in software development to create, from scratch, assessments that reflect actual business environments. Following your assessment, Edura will work with you to provide both individualized and customized coaching; Edura complements our customized training with a number of certification-oriented training programs.</p><p>The Edura assessments contain both prescriptive and proscriptive components. We can recognize those patterns and behaviors in your organization that have you on the right track to improving your agility. As experts in agile software development with decades of industry experience in business like yours, we can identify those behaviors that you will want to build upon. Equally important, our experience as developers and leaders within the software industry will allow us to recognize other patterns and behaviors that are detracting from your business and development agility.</p><a href='/contact' class='btn-primary button'>Contact Us</a>",
+    html: "<h1>Why Assessment?</h1><p>Today, more and more companies are adopting iterative software design methodologies like Agile. Whether you are just starting on this journey or if you already have adopted many agile techniques, it’s vitally important to first understand where you are so you know what you need to do. As we have done for so many other companies, Apex can be your partner in assessing your current capability, to help remediate those areas needing correction, and to create a plan for upgrading skills on your Agile journey.</p><p>While you may find a number of skill surveys online, Edura offers six comprehensive Agile skill assessments to pinpoint your current capabilities. We drew upon our extensive background in software development to create, from scratch, assessments that reflect actual business environments. Following your assessment, Edura will work with you to provide both individualized and customized coaching; Edura complements our customized training with a number of certification-oriented training programs.</p><p>The Edura assessments contain both prescriptive and proscriptive components. We can recognize those patterns and behaviors in your organization that have you on the right track to improving your agility. As experts in agile software development with decades of industry experience in business like yours, we can identify those behaviors that you will want to build upon. Equally important, our experience as developers and leaders within the software industry will allow us to recognize other patterns and behaviors that are detracting from your business and development agility.</p><a href='/contact' class='btn-primary button'>Contact Us</a><h1>What Are the Different Types of Assessment?</h1>",
     imagePosition: "",
   },
   {
@@ -94,13 +94,12 @@ const renderContent = (dataObject) => {
     };
 
     return (
-      <div>
+      <div className="assessment_row">
         {contentSection.imageUrl === "" ? (
           <div>
             <div
               dangerouslySetInnerHTML={{ __html: contentSection.html }}
             ></div>
-            <h1>What Are the Different Types of Assessment?</h1>
           </div>
         ) : (
           imageOutput()
@@ -124,6 +123,9 @@ const AssessmentPage = () => {
         <h1>Assessments</h1>
       </div>
       <div>{renderContent(pageData)}</div>
+      <Link to="/contact" className="button btn-primary">
+        Contact Us
+      </Link>
     </div>
   );
 };
