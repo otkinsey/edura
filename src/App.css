@@ -45,6 +45,9 @@ a:hover {
   height: 40vmin;
   pointer-events: none;
 }
+.assessment_row h1:first-child {
+  margin-bottom: 20px;
+}
 #assessments {
   text-align: left;
 }
@@ -83,18 +86,13 @@ button.btn,
   display: flex;
   font-weight: bold;
 }
-.button.btn-primary {
-  margin: auto;
-}
 
 button:hover,
 button.btn:hover,
 .button.btn:hover {
   background-color: #f8d123;
 }
-/* .carousel-indicators button:hover {
-  border: transparent;
-} */
+
 .dark_background .carousel-indicators button:hover {
   border-color: transparent;
 }
@@ -211,6 +209,10 @@ form button {
   height: 80px;
   border-radius: 8px;
   width: 200px;
+}
+form button.btn.btn-primary {
+  margin: auto;
+  margin-top: 20px;
 }
 form input {
   height: 80px;
