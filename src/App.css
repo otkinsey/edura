@@ -69,6 +69,8 @@ a:hover {
 .assessment_row > div > * {
   padding: 40px;
 }
+
+.btn-secondary,
 button.btn-primary,
 button.filter_button,
 button.btn,
@@ -86,7 +88,13 @@ button.btn,
   display: flex;
   font-weight: bold;
 }
-
+.btn-secondary {
+  border: 1px solid #6c757d;
+  background: white;
+  color: #6c757d;
+  text-transform: capitalize;
+  font-weight: bold;
+}
 button:hover,
 button.btn:hover,
 .button.btn:hover {
@@ -214,18 +222,6 @@ form button.btn.btn-primary {
   margin: auto;
   margin-top: 20px;
 }
-form input {
-  height: 80px;
-  border-radius: 8px;
-}
-form label {
-  font-weight: bold;
-  font-size: 0.9rem;
-  display: block;
-  text-align: left;
-  text-transform: capitalize;
-}
-
 #get-inspired .slider-nav {
   font-size: 65px;
   fill: rgb(189, 189, 189);
@@ -264,6 +260,36 @@ form label {
 #get-inspired .testimonial:nth-child(2) .circle_frame img {
   right: -45px;
   left: auto;
+}
+
+form label {
+  font-weight: bold;
+  font-size: 0.9rem;
+  display: block;
+  text-align: left;
+  text-transform: capitalize;
+}
+form .form_row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+form input,
+form select,
+form button {
+  height: 57px;
+}
+form input,
+form select {
+  border-radius: 8px;
+}
+form input,
+form select {
+  border: solid 1px #dcdcdc;
+}
+form button {
+  margin: auto;
 }
 h1 {
   font-size: 4rem;
@@ -353,6 +379,24 @@ h3 {
   height: 193.6px;
   overflow: hidden;
 }
+#register_page {
+  padding: 40px;
+}
+#registration_form label {
+  flex-basis: 20%;
+  align-content: center;
+}
+#registration_form input,
+#registration_form select {
+  flex-basis: 80%;
+}
+#registration_form {
+  width: 50%;
+  margin: auto;
+  border: 1px solid #dcdcdc;
+  padding: 20px;
+}
+
 section {
   width: 100%;
   padding: 6rem 0;
