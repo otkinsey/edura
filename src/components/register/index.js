@@ -74,7 +74,7 @@ const ResourcesPage = () => {
         <h1>Register</h1>
       </div>
       <div id="register_page">
-        <h2>Coure Registration</h2>
+        <h2>Course Registration</h2>
         <form
           id="registration_form"
           onSubmit={(event) => {
