@@ -42,7 +42,13 @@ const CourseContent = (props) => {
             </div>
           </p>
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <Link to="/register" className="button btn-primary">
+            <Link
+              to={`/register?course_name=${props.data.course_name.replace(
+                /\s/g,
+                "_"
+              )}`}
+              className="button btn-primary"
+            >
               Register
             </Link>
           </div>

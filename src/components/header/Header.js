@@ -31,7 +31,7 @@ const Header = () => {
         </ul>
         <ul>
           <li>
-            <Link to="/">sign up</Link> | <Link to="/">sign in</Link>
+            <Link to="/sign_in">sign up | sign in</Link>
           </li>
         </ul>
         <ul className="social_media_links">

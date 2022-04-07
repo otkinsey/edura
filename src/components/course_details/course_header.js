@@ -50,7 +50,10 @@ const CourseHeader = (props) => {
 
             <div style={{ position: "relative" }}>
               <Link
-                to="/register"
+                to={`/register?course_name=${props.data.course_name.replace(
+                  /\s/g,
+                  "_"
+                )}`}
                 className="button btn-primary"
                 style={{ position: "absolute", bottom: "20px" }}
               >

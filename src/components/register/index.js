@@ -1,9 +1,17 @@
 import courseData from "../../resources/courseData";
+import { useSearchParams } from "react-router-dom";
 import { useState } from "react";
 
 const ResourcesPage = () => {
+  let [params] = useSearchParams();
+
   const [displayModal, setDisplayModal] = useState("none");
-  const [courseName, setCourseName] = useState("");
+  const courseNameParam =
+    params.get("course_name") === ""
+      ? "please make a selection"
+      : params.get("course_name").replace(/_/g, " ");
+
+  let [courseName, setCourseName] = useState(courseNameParam);
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
@@ -66,6 +74,7 @@ const ResourcesPage = () => {
         <h1>Register</h1>
       </div>
       <div id="register_page">
+        <h2>Coure Registration</h2>
         <form
           id="registration_form"
           onSubmit={(event) => {
@@ -74,7 +83,7 @@ const ResourcesPage = () => {
         >
           <div className="form_row">
             <label>Course Name</label>
-            <select>
+            <select defaultValue={courseName}>
               <option>please make a selection</option>
               {courseData.map((course) => (
                 <option value={course.course_name}>{course.course_name}</option>

@@ -12,11 +12,12 @@ import Home from "./components/home";
 import OurServices from "./components/our_services/our_services";
 import Resources from "./components/resources";
 import Register from "./components/register";
+import SignIn from "./components/sign_in";
 import Training from "./components/training";
 import WhatWeDo from "./components/what_we_do/what_we_do";
 
 import "./App.css";
-import courseData from "./resources/courseData";
+
 function App() {
   return (
     <div className="App">
@@ -30,6 +31,7 @@ function App() {
         <Route path="/assessment" element={<Assessments />} />
         <Route path="/resources" element={<Resources />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/sign_in" element={<SignIn />} />
         <Route path="/courses" element={<Training />} />
         <Route path="/what_we_do" element={<WhatWeDo />} />
         <Route path="/our_services" element={<OurServices />} />
