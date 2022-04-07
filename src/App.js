@@ -5,7 +5,6 @@ import Header from "./components/header/Header";
 
 import AboutUs from "./components/about_us/about_us";
 import Assessments from "./components/assessment";
-import Coaching from "./components/coaching";
 import Contact from "./components/contact/contact";
 import Courses from "./components/upcoming_courses";
 import CourseDetails from "./components/course_details";
@@ -25,7 +24,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about_us" element={<AboutUs />} />
-        <Route path="/coaching" element={<Coaching />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/upcoming_courses" element={<Courses />} />
         <Route path="/course_details" element={<CourseDetails />} />

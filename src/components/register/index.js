@@ -12,6 +12,12 @@ const ResourcesPage = () => {
     setDisplayModal("block");
     return courseName;
   };
+
+  const resetForm = (event) => {
+    event.preventDefault();
+    window.location.reload();
+  };
+
   return (
     <div style={{ position: "relative" }}>
       <div
@@ -44,9 +50,12 @@ const ResourcesPage = () => {
           <p>{courseName}</p>
           <button
             className="btn-primary"
-            onClick={() => setDisplayModal("none")}
+            onClick={(event) => {
+              resetForm(event);
+              setDisplayModal("none");
+            }}
           >
-            Return to Form
+            Done
           </button>
         </div>
       </div>
@@ -58,14 +67,15 @@ const ResourcesPage = () => {
       </div>
       <div id="register_page">
         <form
+          id="registration_form"
           onSubmit={(event) => {
             courseName = handleFormSubmit(event);
           }}
-          id="registration_form"
         >
           <div className="form_row">
             <label>Course Name</label>
             <select>
+              <option>please make a selection</option>
               {courseData.map((course) => (
                 <option value={course.course_name}>{course.course_name}</option>
               ))}
@@ -100,8 +110,10 @@ const ResourcesPage = () => {
             <input className="full_length"></input>
           </div>
           <div className="form_row">
-            <button className="btn-secondary">reset</button>
-            <button className="btn-primary">Submit</button>
+            <button className="btn-secondary" onClick={(event) => resetForm()}>
+              Reset
+            </button>
+            <button className="btn-primary">Register</button>
           </div>
         </form>
       </div>

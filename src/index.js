@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import PublicAssessment from "./components/public_assessment/publicAssessment";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { render } from "react-dom";
