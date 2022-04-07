@@ -2,8 +2,11 @@ const SignIn = () => {
   return (
     <div id="sign_in">
       <form>
-        <label></label>
+        <label>Email</label>
         <input></input>
+        <label>Password</label>
+        <input></input>
+        <button className="btn-primary">Sign In</button>
       </form>
     </div>
   );

@@ -99,6 +99,14 @@ const ResourcesPage = () => {
             <input className="full_length"></input>
           </div>
           <div className="form_row">
+            <label>First Name:</label>
+            <input className="full_length"></input>
+          </div>
+          <div className="form_row">
+            <label>Last Name:</label>
+            <input className="full_length"></input>
+          </div>
+          <div className="form_row">
             <label>State/Province:</label>
             <input className="full_length"></input>
           </div>
