@@ -7,7 +7,7 @@ const ResourcesPage = () => {
 
   const [displayModal, setDisplayModal] = useState("none");
   const courseNameParam =
-    params.get("course_name") === ""
+    params.get("course_name") === null || params.get("course_name") === ""
       ? "please make a selection"
       : params.get("course_name").replace(/_/g, " ");
 
