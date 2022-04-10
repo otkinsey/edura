@@ -222,6 +222,13 @@ form button.btn.btn-primary {
   margin: auto;
   margin-top: 20px;
 }
+form input {
+  padding: 0 20px;
+}
+form input.alert,
+form select.alert {
+  border: 1px solid red;
+}
 #get-inspired .slider-nav {
   font-size: 65px;
   fill: rgb(189, 189, 189);
@@ -433,6 +440,7 @@ h3 {
   font-weight: bold;
   display: inline-block;
   width: 100px;
+  cursor: pointer;
 }
 
 section {

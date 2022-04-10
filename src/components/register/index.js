@@ -1,6 +1,7 @@
 import courseData from "../../resources/courseData";
 import { useSearchParams } from "react-router-dom";
 import { useState } from "react";
+import shared from "../../resources/sharedFunctions";
 
 const ResourcesPage = () => {
   let [params] = useSearchParams();
@@ -15,9 +16,10 @@ const ResourcesPage = () => {
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
-    console.log(event.target[0].value);
     setCourseName(event.target[0].value);
-    setDisplayModal("block");
+    if (shared.validateForm()) {
+      setDisplayModal("block");
+    }
     return courseName;
   };
 

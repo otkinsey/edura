@@ -2,6 +2,25 @@ import courseData from "./courseData";
 
 const sharedFunctions = {
   courseData: courseData,
+  validateForm: () => {
+    const fields = Array.from(document.getElementsByTagName("input"));
+    fields.push(Array.from(document.getElementsByTagName("select")));
+    fields.flat();
+    const fieldValues = fields.map((f) => f.value);
+
+    fields.forEach((f) => {
+      f.className = "full_length";
+      if (f.value === "") {
+        f.className += " alert";
+      }
+    });
+
+    if (fieldValues.includes("")) {
+      return false;
+    } else {
+      return true;
+    }
+  },
   createFilterOptions: (data, keys = Object.keys(data[0])) => {
     const dataKeys = Object.keys(data[0]);
     const filterOptions = {};
