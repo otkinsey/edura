@@ -410,25 +410,30 @@ h3 {
   padding: 40px;
 }
 #registration_form label,
-#sign_in_page label {
+#sign_in_page label,
+.standard_form label {
   flex-basis: 20%;
   align-content: center;
 }
 #registration_form input,
 #registration_form select,
 #sign_in_page input,
-#sign_in_page select {
+#sign_in_page select,
+.standard_form input,
+.standard_form select {
   flex-basis: 80%;
 }
 #registration_form,
 #sign_in_form,
-#sign_up_form {
+#sign_up_form,
+.standard_form {
   width: 50%;
   margin: auto;
   border: 1px solid #dcdcdc;
   padding: 20px;
 }
-#sign_in_page {
+#sign_in_page,
+.content_wrapper {
   padding: 40px;
   min-height: 630px;
 }
@@ -745,10 +750,6 @@ section#header li:hover .submenu {
   flex-direction: column;
   align-items: center;
 }
-/* .filters button {
-  border: ;
-  margin: 10px 5px;
-} */
 #upcoming_courses ul,
 #upcoming_courses ul {
   list-style-type: none;

@@ -1,7 +1,9 @@
-const SignInForm = () => {
+import { Link } from "react-router-dom";
+import { useEffect } from "react";
+
+const SignInForm = (props) => {
   return (
     <div id="sign_in_form">
-      {/* <form onSubmit={(event) => signInFormSubmit(event)}> */}
       <div className="form_row">
         <label>Email:</label>
         <input name="email"></input>
@@ -11,7 +13,7 @@ const SignInForm = () => {
         <input name="password" type="password"></input>
       </div>
       <button className="btn-primary">Sign In</button>
-      {/* </form> */}
+      <Link to="/forgotPassword">forgot password?</Link>
     </div>
   );
 };

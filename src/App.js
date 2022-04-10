@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import { useState } from "react";
 
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
@@ -12,6 +13,7 @@ import Home from "./components/home";
 import OurServices from "./components/our_services/our_services";
 import Resources from "./components/resources";
 import Register from "./components/register";
+import ForgotPassword from "./resources/ForgotPassword";
 import SignIn from "./components/sign_in";
 import Training from "./components/training";
 import WhatWeDo from "./components/what_we_do/what_we_do";
@@ -19,14 +21,16 @@ import WhatWeDo from "./components/what_we_do/what_we_do";
 import "./App.css";
 
 function App() {
+  const [loggedIn, setLoggedIn] = useState(
+    localStorage.getItem("signedIn") === null
+      ? false
+      : JSON.parse(localStorage.getItem("signedIn"))
+  );
   return (
     <div className="App">
       <Header
-        loggedIn={
-          localStorage.getItem("signedIn") === null
-            ? false
-            : JSON.parse(localStorage.getItem("signedIn"))
-        }
+        loggedIn={loggedIn}
+        setLoggedIn={setLoggedIn}
         user={
           localStorage.getItem("user") === null
             ? ""
@@ -42,8 +46,11 @@ function App() {
         <Route path="/assessment" element={<Assessments />} />
         <Route path="/resources" element={<Resources />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/sign_in" element={<SignIn />} />
-        <Route path="/courses" element={<Training />} />
+        <Route
+          path="/sign_in"
+          element={<SignIn loggedIn={loggedIn} setLoggedIn={setLoggedIn} />}
+        />
+        <Route path="/forgotPassword" element={<ForgotPassword />} />
         <Route path="/what_we_do" element={<WhatWeDo />} />
         <Route path="/our_services" element={<OurServices />} />
       </Routes>

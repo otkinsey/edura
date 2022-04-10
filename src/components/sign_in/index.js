@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import shared from "../../resources/sharedFunctions";
 import SignUpForm from "../../resources/SignUpForm";
 import SignInForm from "../../resources/SignInForm";
-import { longStackSupport } from "q";
+import ForgotPassword from "../../resources/ForgotPassword";
 
 const users = [
   {
@@ -18,8 +18,16 @@ const users = [
     password: "alyssa",
   },
 ];
+/**
+ * @description multi-tabbed component; handles sign in, sign up, log out, and forgot password
+ * @returns SignInPage content
+ */
 
-const SignInPage = () => {
+const SignInPage = (props) => {
+  const [forgotPassword, setForgotPassword] = useState({
+    name: "forgotPassword",
+    form: <ForgotPassword />,
+  });
   const [selectedForm, setSelectedForm] = useState({
     name: "signIn",
     form: <SignInForm />,
@@ -35,10 +43,7 @@ const SignInPage = () => {
     const userGreeting = document.createElement("span");
 
     setSignedIn(true);
-    userGreeting.style = "color:white;font-size:.9rem;";
-    userGreeting.id = "user_greeting";
-    userGreeting.innerHTML = `Current User: ${user.firstName} ${user.lastName}`;
-    header.append(userGreeting);
+    props.setLoggedIn(true);
   };
 
   const handleSubmit = (event) => {
@@ -60,7 +65,10 @@ const SignInPage = () => {
     }
   };
 
-  const logOut = () => setSignedIn(false);
+  const logOut = () => {
+    props.setLoggedIn(false);
+    setSignedIn(false);
+  };
 
   useEffect(() => {
     localStorage.setItem("signedIn", JSON.stringify(signedIn));
@@ -72,12 +80,23 @@ const SignInPage = () => {
     );
   }, [signedIn]);
 
+  /**
+   * TROUBLE SHOOT
+   * use useEffect to send props to forgotPassword component
+   */
+  // useEffect(() => {
+  //   setSelectedForm();
+  // }, [setForgotPassword]);
+
   return (
     <div id="sign_in_page">
       <div className="form_tabs">
         <span
           onClick={() => {
-            setSelectedForm({ name: "signIn", form: <SignInForm /> });
+            setSelectedForm({
+              name: "signIn",
+              form: <SignInForm />,
+            });
             setSelectorPosition(0);
           }}
         >
@@ -85,7 +104,10 @@ const SignInPage = () => {
         </span>
         <span
           onClick={() => {
-            setSelectedForm({ name: "signUp", form: <SignUpForm /> });
+            setSelectedForm({
+              name: "signUp",
+              form: <SignUpForm />,
+            });
             setSelectorPosition(100);
           }}
         >
@@ -110,7 +132,6 @@ const SignInPage = () => {
           onClick={(event) => {
             event.preventDefault();
             logOut();
-            document.getElementById("user_greeting").remove();
           }}
         >
           log out
