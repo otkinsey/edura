@@ -6,7 +6,7 @@ import { ReactComponent as Youtube } from "../../images/social_media_logos/SVGs/
 import { ReactComponent as Linkedin } from "../../images/social_media_logos/SVGs/linkedin.svg";
 import { ReactComponent as Twitter } from "../../images/social_media_logos/SVGs/twitter.svg";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <>
       <section id="header">
@@ -70,6 +70,9 @@ const Header = () => {
             </Link>
           </li>
         </ul>
+        <span id="user_greeting" display={props.loggedIn ? "inline" : "none"}>
+          Current User: {props.user.firstName} {props.user.lastName}
+        </span>
         <Outlet />
       </section>
     </>

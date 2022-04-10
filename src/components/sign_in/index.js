@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
 import shared from "../../resources/sharedFunctions";
+import SignUpForm from "../../resources/SignUpForm";
+import SignInForm from "../../resources/SignInForm";
+import { longStackSupport } from "q";
 
 const users = [
   {
@@ -16,78 +19,50 @@ const users = [
   },
 ];
 
-const SignInForm = () => {
-  return (
-    <div id="sign_in_form">
-      {/* <form onSubmit={(event) => signInFormSubmit(event)}> */}
-      <div className="form_row">
-        <label>Email:</label>
-        <input name="email"></input>
-      </div>
-      <div className="form_row">
-        <label>Password:</label>
-        <input name="password"></input>
-      </div>
-      <button className="btn-primary">Sign Up</button>
-      {/* </form> */}
-    </div>
-  );
-};
-
-const SignUpForm = () => {
-  return (
-    <div id="sign_in">
-      {/* <form id="sign_up_form"> */}
-      <div className="form_row">
-        <label>First Name:</label>
-        <input></input>
-      </div>
-      <div className="form_row">
-        <label>Last Name:</label>
-        <input></input>
-      </div>
-      <div className="form_row">
-        <label>Email:</label>
-        <input></input>
-      </div>
-      <div className="form_row">
-        <label>Password:</label>
-        <input></input>
-      </div>
-      <div className="form_row">
-        <label>Verify Password:</label>
-        <input></input>
-      </div>
-      <button className="btn-primary">Sign In</button>
-      {/* </form> */}
-    </div>
-  );
-};
-
 const SignInPage = () => {
   const [selectedForm, setSelectedForm] = useState(SignInForm);
   const [selectorPosition, setSelectorPosition] = useState(0);
-  let [signedIn, setSignedIn] = useState("false");
+  let [signedIn, setSignedIn] = useState(
+    localStorage.getItem("signedIn") === "true" ? true : false
+  );
+
+  const appendGreeting = (emailArray, user) => {
+    const header = document.getElementById("header");
+    const userGreeting = document.createElement("span");
+
+    setSignedIn(true);
+    userGreeting.style = "color:white;font-size:.9rem;";
+    userGreeting.id = "user_greeting";
+    userGreeting.innerHTML = `Current User: ${user.firstName} ${user.lastName}`;
+    header.append(userGreeting);
+  };
 
   const handleSubmit = (event) => {
-    event.preventDefault();
-    shared.validateForm();
     const emailArray = users.map((u) => u.email);
     const userEmail = document.querySelector("input[name=email]").value;
-    if (emailArray.includes(userEmail)) {
-      const user = users.find((u) => u.email === userEmail);
-      const header = document.getElementById("header");
-      const userGreeting = document.createElement("span");
-      userGreeting.style = "color:white;font-size:.9rem;";
-      userGreeting.innerHTML = `Current User: ${user.firstName} ${user.lastName}`;
-      header.append(userGreeting);
-      setSignedIn("true");
+    const user = users.find((u) => u.email === userEmail);
+    event.preventDefault();
+    shared.validateForm();
+    if (
+      emailArray.includes(userEmail) &&
+      localStorage.getItem("signedIn") === "false"
+    ) {
+      appendGreeting(emailArray, user);
+      localStorage.setItem("user", JSON.stringify(user));
     }
   };
 
+  const logOut = () => setSignedIn(false);
+
   useEffect(() => {
     localStorage.setItem("signedIn", JSON.stringify(signedIn));
-  });
+    console.log(
+      "[useEffect() ] signedIn: ",
+      signedIn,
+      "localStorage: ",
+      localStorage.getItem("signedIn")
+    );
+  }, [signedIn]);
 
   return (
     <div id="sign_in_page">
@@ -111,7 +86,24 @@ const SignInPage = () => {
         <hr />
         <hr style={{ left: selectorPosition }} className="tab_selector" />
       </div>
-      <form onSubmit={(event) => handleSubmit(event)}>{selectedForm}</form>
+
+      {signedIn === false ? (
+        <form id="sign_in_sign_up" onSubmit={(event) => handleSubmit(event)}>
+          {selectedForm}
+        </form>
+      ) : (
+        <button
+          className="btn-secondary"
+          style={{ margin: "auto" }}
+          onClick={(event) => {
+            event.preventDefault();
+            logOut();
+            document.getElementById("user_greeting").remove();
+          }}
+        >
+          log out
+        </button>
+      )}
     </div>
   );
 };

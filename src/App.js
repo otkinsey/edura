@@ -21,7 +21,18 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Header
+        loggedIn={
+          localStorage.getItem("signedIn") === null
+            ? false
+            : JSON.parse(localStorage.getItem("signedIn"))
+        }
+        user={
+          localStorage.getItem("user") === null
+            ? ""
+            : JSON.parse(localStorage.getItem("user"))
+        }
+      />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about_us" element={<AboutUs />} />

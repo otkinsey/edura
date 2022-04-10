@@ -737,6 +737,9 @@ section#header li:hover .submenu {
 #upcoming_courses th#location {
   width: 20%;
 }
+#user_greeting {
+  color: white;
+}
 .filters {
   display: flex;
   flex-direction: column;
