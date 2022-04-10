@@ -10,7 +10,7 @@ const SignInForm = () => {
         <label>Password:</label>
         <input name="password" type="password"></input>
       </div>
-      <button className="btn-primary">Sign Up</button>
+      <button className="btn-primary">Sign In</button>
       {/* </form> */}
     </div>
   );

@@ -20,7 +20,11 @@ const users = [
 ];
 
 const SignInPage = () => {
-  const [selectedForm, setSelectedForm] = useState(SignInForm);
+  const [selectedForm, setSelectedForm] = useState({
+    name: "signIn",
+    form: <SignInForm />,
+  });
+
   const [selectorPosition, setSelectorPosition] = useState(0);
   let [signedIn, setSignedIn] = useState(
     localStorage.getItem("signedIn") === "true" ? true : false
@@ -38,17 +42,21 @@ const SignInPage = () => {
   };
 
   const handleSubmit = (event) => {
-    const emailArray = users.map((u) => u.email);
-    const userEmail = document.querySelector("input[name=email]").value;
-    const user = users.find((u) => u.email === userEmail);
     event.preventDefault();
+    const emailArray = users.map((u) => u.email);
+    const userEmail = document.querySelector("input[name=email]")
+      ? document.querySelector("input[name=email]").value
+      : "";
     shared.validateForm();
-    if (
-      emailArray.includes(userEmail) &&
-      localStorage.getItem("signedIn") === "false"
-    ) {
-      appendGreeting(emailArray, user);
-      localStorage.setItem("user", JSON.stringify(user));
+    if (event.target.name === "signIn") {
+      if (
+        emailArray.includes(userEmail) &&
+        localStorage.getItem("signedIn") === "false"
+      ) {
+        const user = users.find((u) => u.email === userEmail);
+        appendGreeting(emailArray, user);
+        localStorage.setItem("user", JSON.stringify(user));
+      }
     }
   };
 
@@ -69,7 +77,7 @@ const SignInPage = () => {
       <div className="form_tabs">
         <span
           onClick={() => {
-            setSelectedForm(SignInForm);
+            setSelectedForm({ name: "signIn", form: <SignInForm /> });
             setSelectorPosition(0);
           }}
         >
@@ -77,7 +85,7 @@ const SignInPage = () => {
         </span>
         <span
           onClick={() => {
-            setSelectedForm(SignUpForm);
+            setSelectedForm({ name: "signUp", form: <SignUpForm /> });
             setSelectorPosition(100);
           }}
         >
@@ -88,8 +96,12 @@ const SignInPage = () => {
       </div>
 
       {signedIn === false ? (
-        <form id="sign_in_sign_up" onSubmit={(event) => handleSubmit(event)}>
-          {selectedForm}
+        <form
+          id="sign_in_sign_up"
+          onSubmit={(event) => handleSubmit(event)}
+          name={selectedForm.name}
+        >
+          {selectedForm.form}
         </form>
       ) : (
         <button

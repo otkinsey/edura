@@ -1,7 +1,6 @@
 const SignUpForm = () => {
   return (
     <div id="sign_up_form">
-      {/* <form id="sign_up_form"> */}
       <div className="form_row">
         <label>First Name:</label>
         <input></input>
@@ -22,8 +21,7 @@ const SignUpForm = () => {
         <label>Verify Password:</label>
         <input name="verify_password" type="password"></input>
       </div>
-      <button className="btn-primary">Sign In</button>
-      {/* </form> */}
+      <button className="btn-primary">Sign Up</button>
     </div>
   );
 };

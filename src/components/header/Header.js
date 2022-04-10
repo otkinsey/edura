@@ -70,7 +70,10 @@ const Header = (props) => {
             </Link>
           </li>
         </ul>
-        <span id="user_greeting" display={props.loggedIn ? "inline" : "none"}>
+        <span
+          id="user_greeting"
+          style={{ display: props.loggedIn ? "inline" : "none" }}
+        >
           Current User: {props.user.firstName} {props.user.lastName}
         </span>
         <Outlet />
