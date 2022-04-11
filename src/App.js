@@ -7,7 +7,7 @@ import Header from "./components/header/Header";
 import AboutUs from "./components/about_us/about_us";
 import Assessments from "./components/assessment";
 import Contact from "./components/contact/contact";
-import Courses from "./components/upcoming_courses";
+import UpcomingCourses from "./components/upcoming_courses";
 import CourseDetails from "./components/course_details";
 import Home from "./components/home";
 import OurServices from "./components/our_services/our_services";
@@ -52,7 +52,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about_us" element={<AboutUs />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/courses" element={<Courses />} />
+        <Route path="/courses" element={<Training />} />
+        <Route path="/upcoming_courses" element={<UpcomingCourses />} />
         <Route path="/course_details" element={<CourseDetails />} />
         <Route path="/assessment" element={<Assessments />} />
         <Route path="/resources" element={<Resources />} />
