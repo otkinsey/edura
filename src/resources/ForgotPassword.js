@@ -1,9 +1,19 @@
+import shared from "./sharedFunctions";
+
 const ForgotPassword = () => {
   return (
     <div className="content_wrapper">
       <form
         name="forgot_password"
-        onSubmit={() => alert("an email has been sent to the address on file.")}
+        onSubmit={(event) => {
+          event.preventDefault();
+          const validated = shared.validateForm();
+          if (validated) {
+            alert("an email has been sent to the address on file.");
+          } else {
+            return true;
+          }
+        }}
       >
         <div className="form_tabs">
           <h4>Forgot Password</h4>
@@ -13,7 +23,27 @@ const ForgotPassword = () => {
             <label>Email:</label>
             <input name="email"></input>
           </div>
-          <button className="btn-primary">Send</button>
+          <div
+            style={{
+              width: "100%",
+              position: "relative",
+              margin: "auto",
+              display: "flex",
+              justifyContent: "space-around",
+              padding: "40px",
+            }}
+          >
+            <button
+              onClick={(event) => {
+                event.preventDefault();
+                window.history.go(-1);
+              }}
+              className="btn-secondary"
+            >
+              Go back
+            </button>
+            <button className="btn-primary">Send</button>
+          </div>
         </div>
       </form>
     </div>

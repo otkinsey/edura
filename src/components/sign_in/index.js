@@ -9,13 +9,13 @@ const users = [
     email: "otkinseyub@gmail.com",
     firstName: "Okoa",
     lastName: "Kinsey",
-    password: "okoa",
+    password: "password",
   },
   {
     email: "alyssagd@bu.edu",
     firstName: "Alyssa",
     lastName: "Gunter-Davis",
-    password: "alyssa",
+    password: "password",
   },
 ];
 /**
@@ -46,13 +46,18 @@ const SignInPage = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const emailArray = users.map((u) => u.email);
+    const passwordArray = users.map((p) => p.password);
     const userEmail = document.querySelector("input[name=email]")
       ? document.querySelector("input[name=email]").value
+      : "";
+    const userPassword = document.querySelector("input[name=pasword]")
+      ? document.querySelector("input[name=password").value
       : "";
     shared.validateForm();
     if (event.target.name === "signIn") {
       if (
         emailArray.includes(userEmail) &&
+        passwordArray.includes(userPassword) &&
         localStorage.getItem("signedIn") === "false"
       ) {
         const user = users.find((u) => u.email === userEmail);

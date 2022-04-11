@@ -7,7 +7,13 @@ const sharedFunctions = {
     fields.push(Array.from(document.getElementsByTagName("select")));
     fields.flat();
     const fieldValues = fields.map((f) => f.value);
-
+    const activeFields = Array.from(document.getElementsByClassName("active"));
+    if (activeFields.length > 0) {
+      activeFields.forEach((f) => {
+        const classArray = f.className.split(" ");
+        f.className = classArray[0];
+      });
+    }
     fields.forEach((f) => {
       f.className = "full_length";
       if (f.value === "") {
