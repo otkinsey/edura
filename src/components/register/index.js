@@ -2,11 +2,12 @@ import courseData from "../../resources/courseData";
 import { useSearchParams, Link } from "react-router-dom";
 import { useState } from "react";
 import shared from "../../resources/sharedFunctions";
+import ModalDialogueBox from "../../resources/ModalDialogueBox";
 
 const RegisterPage = (props) => {
   let [params] = useSearchParams();
+  props.setDisplayModal("none");
 
-  const [displayModal, setDisplayModal] = useState("none");
   const courseNameParam =
     params.get("course_name") === null || params.get("course_name") === ""
       ? "please make a selection"
@@ -18,7 +19,7 @@ const RegisterPage = (props) => {
     event.preventDefault();
     setCourseName(event.target[0].value);
     if (shared.validateForm()) {
-      setDisplayModal("block");
+      props.setDisplayModal("block");
     }
     return courseName;
   };
@@ -60,45 +61,13 @@ const RegisterPage = (props) => {
   } else {
     return (
       <div style={{ position: "relative" }}>
-        <div
-          className="modal"
-          style={{
-            display: displayModal,
-            position: "flex",
-            justifyItems: "center",
-            height: "100%",
-            width: "100%",
-            background: "rgba(0,0,0,.5)",
-          }}
-        >
-          <div
-            className="modal_dialogue_box"
-            style={{
-              padding: "40px",
-              background: "white",
-              color: "black",
-              position: "fixed",
-              textAlign: "left",
-              width: "50%",
-              top: "25%",
-              left: "25%",
-              marginRight: "25%",
-            }}
-          >
-            <h4>Success!</h4>
-            <p>You have been registered for the following courses:</p>
-            <p>{courseName}</p>
-            <button
-              className="btn-primary"
-              onClick={(event) => {
-                resetForm(event);
-                setDisplayModal("none");
-              }}
-            >
-              Done
-            </button>
-          </div>
-        </div>
+        <ModalDialogueBox
+          displayModal={props.displayModal}
+          courseName={courseName}
+          message="You have been registered for the following courses:"
+          resetForm={resetForm}
+          setDisplayModal={props.setDisplayModal}
+        />
         <div
           className="jumbotron"
           style={{

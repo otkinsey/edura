@@ -36,6 +36,12 @@ function App() {
   const [signedIn, setSignedIn] = useState(
     localStorage.getItem("signedIn") === "true" ? true : false
   );
+
+  const resetForm = (event) => {
+    event.preventDefault();
+    window.location.reload();
+  };
+  const [displayModal, setDisplayModal] = useState("none");
   return (
     <div className="App">
       <Header
@@ -57,7 +63,16 @@ function App() {
         <Route path="/course_details" element={<CourseDetails />} />
         <Route path="/assessment" element={<Assessments />} />
         <Route path="/resources" element={<Resources />} />
-        <Route path="/register" element={<Register signedIn={signedIn} />} />
+        <Route
+          path="/register"
+          element={
+            <Register
+              displayModal={displayModal}
+              setDisplayModal={setDisplayModal}
+              signedIn={signedIn}
+            />
+          }
+        />
         <Route
           path="/sign_in"
           element={
@@ -67,6 +82,9 @@ function App() {
               logOut={logOut}
               loggedIn={loggedIn}
               setLoggedIn={setLoggedIn}
+              setDisplayModal={setDisplayModal}
+              displayModal={displayModal}
+              resetForm={resetForm}
             />
           }
         />

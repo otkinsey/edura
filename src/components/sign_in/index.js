@@ -3,7 +3,7 @@ import shared from "../../resources/sharedFunctions";
 import SignUpForm from "../../resources/SignUpForm";
 import SignInForm from "../../resources/SignInForm";
 import ForgotPassword from "../../resources/ForgotPassword";
-
+import ModalDialogueBox from "../../resources/ModalDialogueBox";
 const users = [
   {
     email: "otkinseyub@gmail.com",
@@ -50,10 +50,10 @@ const SignInPage = (props) => {
     const userEmail = document.querySelector("input[name=email]")
       ? document.querySelector("input[name=email]").value
       : "";
-    const userPassword = document.querySelector("input[name=pasword]")
+    const userPassword = document.querySelector("input[name=password]")
       ? document.querySelector("input[name=password").value
       : "";
-    shared.validateForm();
+    const validated = shared.validateForm();
     if (event.target.name === "signIn") {
       if (
         emailArray.includes(userEmail) &&
@@ -66,6 +66,8 @@ const SignInPage = (props) => {
       } else {
         alert("the username or password entered was not recognized");
       }
+    } else if (event.target.name === "signUp" && validated) {
+      props.setDisplayModal("block");
     }
   };
 
@@ -89,6 +91,13 @@ const SignInPage = (props) => {
 
   return (
     <div id="sign_in_page">
+      <ModalDialogueBox
+        displayModal={props.displayModal}
+        courseName=""
+        message="Thank you for signing up. Please visit our courses page to register for a course."
+        resetForm={props.resetForm}
+        setDisplayModal={props.setDisplayModal}
+      />
       <div className="form_tabs">
         <span
           onClick={() => {
@@ -105,7 +114,12 @@ const SignInPage = (props) => {
           onClick={() => {
             setSelectedForm({
               name: "signUp",
-              form: <SignUpForm />,
+              form: (
+                <SignUpForm
+                  setDisplayModal={props.setDisplayModal}
+                  displayModal={props.displayModal}
+                />
+              ),
             });
             setSelectorPosition(100);
           }}

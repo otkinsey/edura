@@ -1,4 +1,7 @@
-const SignUpForm = () => {
+import ModalDialogueBox from "./ModalDialogueBox";
+import { useState } from "react";
+const SignUpForm = (props) => {
+  console.log("[DIAGNOSTIC - SignUpForm] displayModal: ", props.displayModal);
   return (
     <div id="sign_up_form">
       <div className="form_row">
