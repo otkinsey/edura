@@ -26,9 +26,20 @@ function App() {
       ? false
       : JSON.parse(localStorage.getItem("signedIn"))
   );
+
+  const logOut = () => {
+    setLoggedIn(false);
+    setSignedIn(false);
+    ["user", "signedIn"].forEach((arg) => localStorage.removeItem(arg));
+  };
+
+  const [signedIn, setSignedIn] = useState(
+    localStorage.getItem("signedIn") === "true" ? true : false
+  );
   return (
     <div className="App">
       <Header
+        logOut={logOut}
         loggedIn={loggedIn}
         setLoggedIn={setLoggedIn}
         user={
@@ -41,14 +52,22 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about_us" element={<AboutUs />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/upcoming_courses" element={<Courses />} />
+        <Route path="/courses" element={<Courses />} />
         <Route path="/course_details" element={<CourseDetails />} />
         <Route path="/assessment" element={<Assessments />} />
         <Route path="/resources" element={<Resources />} />
-        <Route path="/register" element={<Register />} />
+        <Route path="/register" element={<Register signedIn={signedIn} />} />
         <Route
           path="/sign_in"
-          element={<SignIn loggedIn={loggedIn} setLoggedIn={setLoggedIn} />}
+          element={
+            <SignIn
+              signedIn={signedIn}
+              setSignedIn={setSignedIn}
+              logOut={logOut}
+              loggedIn={loggedIn}
+              setLoggedIn={setLoggedIn}
+            />
+          }
         />
         <Route path="/forgotPassword" element={<ForgotPassword />} />
         <Route path="/what_we_do" element={<WhatWeDo />} />

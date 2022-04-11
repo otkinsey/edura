@@ -72,9 +72,22 @@ const Header = (props) => {
         </ul>
         <span
           id="user_greeting"
-          style={{ display: props.loggedIn ? "inline" : "none" }}
+          style={{
+            display: props.loggedIn ? "inline" : "none",
+          }}
         >
           Current User: {props.user.firstName} {props.user.lastName}
+          <span
+            style={{
+              fontSize: ".9rem",
+              fontWeight: "bold",
+              paddingLeft: "40px",
+              cursor: "pointer",
+            }}
+            onClick={() => props.logOut()}
+          >
+            Log out
+          </span>
         </span>
         <Outlet />
       </section>

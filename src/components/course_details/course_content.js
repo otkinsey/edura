@@ -16,19 +16,20 @@ const CourseContent = (props) => {
           id="left_course_panel"
           style={{ backgroundColor: "white", padding: "90px" }}
         >
-          <p id="about_this_course">
+          <div id="about_this_course">
             <h3>About This Course</h3>
             <div
               dangerouslySetInnerHTML={{ __html: props.data.about_this_course }}
             ></div>
-          </p>
-          <p>
+          </div>
+          <div>
+            <br />
             <h3>What You'll Learn</h3>
             <div
               dangerouslySetInnerHTML={{ __html: props.data.what_you_learn }}
             ></div>
-          </p>
-          <p id="meet_the_instructor">
+          </div>
+          <div id="meet_the_instructor">
             <h3>Meet The Instructor</h3>
             <div
               style={{ display: "grid", grid: "1fr / 2fr 14fr", gap: "20px" }}
@@ -38,9 +39,9 @@ const CourseContent = (props) => {
                 alt={props.data.instructorName}
                 style={{ height: "100px" }}
               />
-              <p>{props.data.instructor_bio}</p>
+              <div>{props.data.instructor_bio}</div>
             </div>
-          </p>
+          </div>
           <div style={{ display: "flex", justifyContent: "center" }}>
             <Link
               to={`/register?course_name=${props.data.course_name.replace(

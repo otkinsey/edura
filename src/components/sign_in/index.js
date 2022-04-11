@@ -34,15 +34,12 @@ const SignInPage = (props) => {
   });
 
   const [selectorPosition, setSelectorPosition] = useState(0);
-  let [signedIn, setSignedIn] = useState(
-    localStorage.getItem("signedIn") === "true" ? true : false
-  );
 
   const appendGreeting = (emailArray, user) => {
     const header = document.getElementById("header");
     const userGreeting = document.createElement("span");
 
-    setSignedIn(true);
+    props.setSignedIn(true);
     props.setLoggedIn(true);
   };
 
@@ -67,20 +64,15 @@ const SignInPage = (props) => {
     }
   };
 
-  const logOut = () => {
-    props.setLoggedIn(false);
-    setSignedIn(false);
-  };
-
   useEffect(() => {
-    localStorage.setItem("signedIn", JSON.stringify(signedIn));
+    localStorage.setItem("signedIn", JSON.stringify(props.signedIn));
     console.log(
       "[useEffect() ] signedIn: ",
-      signedIn,
+      props.signedIn,
       "localStorage: ",
       localStorage.getItem("signedIn")
     );
-  }, [signedIn]);
+  }, [props.signedIn]);
 
   /**
    * TROUBLE SHOOT
@@ -119,7 +111,7 @@ const SignInPage = (props) => {
         <hr style={{ left: selectorPosition }} className="tab_selector" />
       </div>
 
-      {signedIn === false ? (
+      {props.signedIn === false ? (
         <form
           id="sign_in_sign_up"
           onSubmit={(event) => handleSubmit(event)}
@@ -133,7 +125,7 @@ const SignInPage = (props) => {
           style={{ margin: "auto" }}
           onClick={(event) => {
             event.preventDefault();
-            logOut();
+            props.logOut();
           }}
         >
           log out

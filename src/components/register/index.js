@@ -1,9 +1,9 @@
 import courseData from "../../resources/courseData";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, Link } from "react-router-dom";
 import { useState } from "react";
 import shared from "../../resources/sharedFunctions";
 
-const ResourcesPage = () => {
+const RegisterPage = (props) => {
   let [params] = useSearchParams();
 
   const [displayModal, setDisplayModal] = useState("none");
@@ -28,122 +28,157 @@ const ResourcesPage = () => {
     window.location.reload();
   };
 
-  return (
-    <div style={{ position: "relative" }}>
-      <div
-        className="modal"
-        style={{
-          display: displayModal,
-          position: "flex",
-          justifyItems: "center",
-          height: "100%",
-          width: "100%",
-          background: "rgba(0,0,0,.5)",
-        }}
-      >
+  if (props.signedIn === false && localStorage.getItem("user") === null) {
+    return (
+      <div className="content_wrapper">
+        <h3>You must be sign in to access this page</h3>
         <div
-          className="modal_dialogue_box"
           style={{
-            padding: "40px",
-            background: "white",
-            color: "black",
-            position: "fixed",
-            textAlign: "left",
             width: "50%",
-            top: "25%",
-            left: "25%",
-            marginRight: "25%",
+            position: "relative",
+            margin: "auto",
+            display: "flex",
+            justifyContent: "space-around",
+            padding: "40px",
           }}
         >
-          <h4>Success!</h4>
-          <p>You have been registered for the following courses:</p>
-          <p>{courseName}</p>
           <button
-            className="btn-primary"
             onClick={(event) => {
-              resetForm(event);
-              setDisplayModal("none");
+              event.preventDefault();
+              window.history.go(-1);
             }}
+            className="btn-secondary"
           >
-            Done
+            Go back
           </button>
+          <Link to="/sign_in" className="button btn-primary">
+            Sign in
+          </Link>
         </div>
       </div>
-      <div
-        className="jumbotron"
-        style={{ background: "public/images/Scrolling-Coaching.jpeg" }}
-      >
-        <h1>Register</h1>
-      </div>
-      <div id="register_page">
-        <h2>Course Registration</h2>
-        <form
-          id="registration_form"
-          onSubmit={(event) => {
-            courseName = handleFormSubmit(event);
+    );
+  } else {
+    return (
+      <div style={{ position: "relative" }}>
+        <div
+          className="modal"
+          style={{
+            display: displayModal,
+            position: "flex",
+            justifyItems: "center",
+            height: "100%",
+            width: "100%",
+            background: "rgba(0,0,0,.5)",
           }}
         >
-          <div className="form_row">
-            <label>Course Name</label>
-            <select defaultValue={courseName}>
-              <option>please make a selection</option>
-              {courseData.map((course) => (
-                <option value={course.course_name}>{course.course_name}</option>
-              ))}
-            </select>
-          </div>
-          <div className="form_row">
-            <label>Country:</label>
-            <input className="full_length"></input>
-          </div>
-          <div className="form_row">
-            <label>Mailing Address:</label>
-            <input className="full_length"></input>
-          </div>
-          <div className="form_row">
-            <label>State/Province:</label>
-            <input className="full_length"></input>
-          </div>
-          <div className="form_row">
-            <label>Zip Code:</label>
-            <input className="full_length"></input>
-          </div>
-          <div className="form_row">
-            <label>First Name:</label>
-            <input className="full_length"></input>
-          </div>
-          <div className="form_row">
-            <label>Last Name:</label>
-            <input className="full_length"></input>
-          </div>
-          <div className="form_row">
-            <label>Credit Card Number:</label>
-            <input className="full_length"></input>
-          </div>
-          <div className="form_row">
-            <label>Expiration:</label>
-            <input className="full_length"></input>
-          </div>
-          <div className="form_row">
-            <label>CVV:</label>
-            <input className="full_length"></input>
-          </div>
-          <div className="form_row">
+          <div
+            className="modal_dialogue_box"
+            style={{
+              padding: "40px",
+              background: "white",
+              color: "black",
+              position: "fixed",
+              textAlign: "left",
+              width: "50%",
+              top: "25%",
+              left: "25%",
+              marginRight: "25%",
+            }}
+          >
+            <h4>Success!</h4>
+            <p>You have been registered for the following courses:</p>
+            <p>{courseName}</p>
             <button
-              className="btn-secondary"
+              className="btn-primary"
               onClick={(event) => {
-                event.preventDefault;
-                resetForm();
+                resetForm(event);
+                setDisplayModal("none");
               }}
             >
-              Reset
+              Done
             </button>
-            <button className="btn-primary">Register</button>
           </div>
-        </form>
+        </div>
+        <div
+          className="jumbotron"
+          style={{
+            background:
+              "center -680px/cover no-repeat url(/images/register_header.jpg)",
+          }}
+        >
+          <h1>Register</h1>
+        </div>
+        <div id="register_page">
+          <h2>Course Registration</h2>
+          <form
+            id="registration_form"
+            onSubmit={(event) => {
+              courseName = handleFormSubmit(event);
+            }}
+          >
+            <div className="form_row">
+              <label>Course Name</label>
+              <select defaultValue={courseName}>
+                <option>please make a selection</option>
+                {courseData.map((course) => (
+                  <option value={course.course_name}>
+                    {course.course_name}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <div className="form_row">
+              <label>Country:</label>
+              <input className="full_length"></input>
+            </div>
+            <div className="form_row">
+              <label>Mailing Address:</label>
+              <input className="full_length"></input>
+            </div>
+            <div className="form_row">
+              <label>State/Province:</label>
+              <input className="full_length"></input>
+            </div>
+            <div className="form_row">
+              <label>Zip Code:</label>
+              <input className="full_length"></input>
+            </div>
+            <div className="form_row">
+              <label>First Name:</label>
+              <input className="full_length"></input>
+            </div>
+            <div className="form_row">
+              <label>Last Name:</label>
+              <input className="full_length"></input>
+            </div>
+            <div className="form_row">
+              <label>Credit Card Number:</label>
+              <input className="full_length"></input>
+            </div>
+            <div className="form_row">
+              <label>Expiration:</label>
+              <input className="full_length"></input>
+            </div>
+            <div className="form_row">
+              <label>CVV:</label>
+              <input className="full_length"></input>
+            </div>
+            <div className="form_row">
+              <button
+                className="btn-secondary"
+                onClick={(event) => {
+                  resetForm(event);
+                }}
+              >
+                Reset
+              </button>
+              <button className="btn-primary">Register</button>
+            </div>
+          </form>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 };
 
-export default ResourcesPage;
+export default RegisterPage;
