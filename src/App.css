@@ -499,6 +499,9 @@ section#header {
 #slider ul {
   list-style-type: disc;
 }
+section#footer ul {
+  list-style-type: none;
+}
 section#footer {
   background: #071e4a;
   flex-wrap: nowrap;

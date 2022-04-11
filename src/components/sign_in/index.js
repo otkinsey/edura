@@ -38,9 +38,6 @@ const SignInPage = (props) => {
   const appendGreeting = (emailArray, user) => {
     const header = document.getElementById("header");
     const userGreeting = document.createElement("span");
-
-    props.setSignedIn(true);
-    props.setLoggedIn(true);
   };
 
   const handleSubmit = (event) => {
@@ -54,7 +51,7 @@ const SignInPage = (props) => {
       ? document.querySelector("input[name=password").value
       : "";
     const validated = shared.validateForm();
-    if (event.target.name === "signIn") {
+    if (event.target.name === "signIn" && validated) {
       if (
         emailArray.includes(userEmail) &&
         passwordArray.includes(userPassword) &&
@@ -63,6 +60,8 @@ const SignInPage = (props) => {
         const user = users.find((u) => u.email === userEmail);
         appendGreeting(emailArray, user);
         localStorage.setItem("user", JSON.stringify(user));
+        props.setSignedIn(true);
+        props.setLoggedIn(true);
       } else {
         alert("the username or password entered was not recognized");
       }
