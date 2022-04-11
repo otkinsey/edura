@@ -101,19 +101,19 @@ const ResourcesPage = () => {
             <input className="full_length"></input>
           </div>
           <div className="form_row">
-            <label>First Name:</label>
-            <input className="full_length"></input>
-          </div>
-          <div className="form_row">
-            <label>Last Name:</label>
-            <input className="full_length"></input>
-          </div>
-          <div className="form_row">
             <label>State/Province:</label>
             <input className="full_length"></input>
           </div>
           <div className="form_row">
             <label>Zip Code:</label>
+            <input className="full_length"></input>
+          </div>
+          <div className="form_row">
+            <label>First Name:</label>
+            <input className="full_length"></input>
+          </div>
+          <div className="form_row">
+            <label>Last Name:</label>
             <input className="full_length"></input>
           </div>
           <div className="form_row">
@@ -125,11 +125,17 @@ const ResourcesPage = () => {
             <input className="full_length"></input>
           </div>
           <div className="form_row">
-            <label>cvv:</label>
+            <label>CVV:</label>
             <input className="full_length"></input>
           </div>
           <div className="form_row">
-            <button className="btn-secondary" onClick={(event) => resetForm()}>
+            <button
+              className="btn-secondary"
+              onClick={(event) => {
+                event.preventDefault;
+                resetForm();
+              }}
+            >
               Reset
             </button>
             <button className="btn-primary">Register</button>

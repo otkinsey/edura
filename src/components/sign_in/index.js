@@ -61,6 +61,8 @@ const SignInPage = (props) => {
         const user = users.find((u) => u.email === userEmail);
         appendGreeting(emailArray, user);
         localStorage.setItem("user", JSON.stringify(user));
+      } else {
+        alert("the username or password entered was not recognized");
       }
     }
   };
