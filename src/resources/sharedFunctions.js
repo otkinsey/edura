@@ -3,9 +3,10 @@ import courseData from "./courseData";
 const sharedFunctions = {
   courseData: courseData,
   validateForm: () => {
-    const fields = Array.from(document.getElementsByTagName("input"));
+    let fields = Array.from(document.getElementsByTagName("input"));
     fields.push(Array.from(document.getElementsByTagName("select")));
-    fields.flat();
+    fields.push(Array.from(document.getElementsByTagName("textarea")));
+    fields = fields.flat().flat();
     const fieldValues = fields.map((f) => f.value);
     const activeFields = Array.from(document.getElementsByClassName("active"));
     if (activeFields.length > 0) {

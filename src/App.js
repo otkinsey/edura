@@ -3,7 +3,9 @@ import { useState } from "react";
 
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
+import shared from "./resources/sharedFunctions";
 
+import { useSearchParams, Link } from "react-router-dom";
 import AboutUs from "./components/about_us/about_us";
 import Assessments from "./components/assessment";
 import Contact from "./components/contact/contact";
@@ -21,6 +23,7 @@ import WhatWeDo from "./components/what_we_do/what_we_do";
 import "./App.css";
 
 function App() {
+  const [displayModal, setDisplayModal] = useState("none");
   const [loggedIn, setLoggedIn] = useState(
     localStorage.getItem("signedIn") === null
       ? false
@@ -33,6 +36,24 @@ function App() {
     ["user", "signedIn"].forEach((arg) => localStorage.removeItem(arg));
   };
 
+  const [params] = useSearchParams();
+
+  const courseNameParam =
+    params.get("course_name") === null || params.get("course_name") === ""
+      ? "please make a selection"
+      : params.get("course_name").replace(/_/g, " ");
+
+  const [courseName, setCourseName] = useState(courseNameParam);
+
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    setCourseName(event.target[0].value);
+    if (shared.validateForm()) {
+      setDisplayModal("block");
+    }
+    return courseName;
+  };
+
   const [signedIn, setSignedIn] = useState(
     localStorage.getItem("signedIn") === "true" ? true : false
   );
@@ -41,7 +62,7 @@ function App() {
     event.preventDefault();
     window.location.reload();
   };
-  const [displayModal, setDisplayModal] = useState("none");
+
   return (
     <div className="App">
       <Header
@@ -57,7 +78,22 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about_us" element={<AboutUs />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route
+          path="/contact"
+          element={
+            <Contact
+              signedIn={signedIn}
+              setSignedIn={setSignedIn}
+              logOut={logOut}
+              handleFormSubmit={handleFormSubmit}
+              loggedIn={loggedIn}
+              setLoggedIn={setLoggedIn}
+              setDisplayModal={setDisplayModal}
+              displayModal={displayModal}
+              resetForm={resetForm}
+            />
+          }
+        />
         <Route path="/courses" element={<Training />} />
         <Route path="/upcoming_courses" element={<UpcomingCourses />} />
         <Route path="/course_details" element={<CourseDetails />} />
@@ -70,6 +106,8 @@ function App() {
               displayModal={displayModal}
               setDisplayModal={setDisplayModal}
               signedIn={signedIn}
+              handleFormSubmit={handleFormSubmit}
+              resetForm={resetForm}
             />
           }
         />

@@ -1,33 +1,11 @@
 import courseData from "../../resources/courseData";
-import { useSearchParams, Link } from "react-router-dom";
+
 import { useState } from "react";
-import shared from "../../resources/sharedFunctions";
+import { Link } from "react-router-dom";
 import ModalDialogueBox from "../../resources/ModalDialogueBox";
 
 const RegisterPage = (props) => {
-  let [params] = useSearchParams();
   props.setDisplayModal("none");
-
-  const courseNameParam =
-    params.get("course_name") === null || params.get("course_name") === ""
-      ? "please make a selection"
-      : params.get("course_name").replace(/_/g, " ");
-
-  let [courseName, setCourseName] = useState(courseNameParam);
-
-  const handleFormSubmit = (event) => {
-    event.preventDefault();
-    setCourseName(event.target[0].value);
-    if (shared.validateForm()) {
-      props.setDisplayModal("block");
-    }
-    return courseName;
-  };
-
-  const resetForm = (event) => {
-    event.preventDefault();
-    window.location.reload();
-  };
 
   if (props.signedIn === false && localStorage.getItem("user") === null) {
     return (
@@ -63,9 +41,9 @@ const RegisterPage = (props) => {
       <div style={{ position: "relative" }}>
         <ModalDialogueBox
           displayModal={props.displayModal}
-          courseName={courseName}
+          courseName={props.courseName}
           message="You have been registered for the following courses:"
-          resetForm={resetForm}
+          resetForm={props.resetForm}
           setDisplayModal={props.setDisplayModal}
         />
         <div
@@ -82,12 +60,13 @@ const RegisterPage = (props) => {
           <form
             id="registration_form"
             onSubmit={(event) => {
-              courseName = handleFormSubmit(event);
+              event.preventDefault();
+              props.handleFormSubmit(event);
             }}
           >
             <div className="form_row">
               <label>Course Name</label>
-              <select defaultValue={courseName}>
+              <select defaultValue={props.courseName}>
                 <option>please make a selection</option>
                 {courseData.map((course) => (
                   <option value={course.course_name}>
@@ -136,7 +115,7 @@ const RegisterPage = (props) => {
               <button
                 className="btn-secondary"
                 onClick={(event) => {
-                  resetForm(event);
+                  props.resetForm(event);
                 }}
               >
                 Reset

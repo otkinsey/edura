@@ -138,20 +138,23 @@ button.btn:hover,
   color: black;
   padding: 0;
 }
-#course_details #course_header #partner_image {
+#contact_info .form_row {
+  margin-bottom: 20px;
+}
+#course_details .course_header #partner_image {
   width: 200px;
 }
-#course_details #course_header #cert_image {
+#course_details .course_header #cert_image {
   width: 120px;
   margin: auto;
 }
-#course_header {
+.course_header {
   display: grid;
   grid: 3fr 2fr / 1fr;
   text-align: left;
   padding: 28px 0px;
 }
-#course_header div div {
+.course_header div div {
   padding-left: 28px;
 }
 #course_header_details,
@@ -226,7 +229,8 @@ form input {
   padding: 0 20px;
 }
 form input.alert,
-form select.alert {
+form select.alert,
+form textarea.alert {
   border: 1px solid red;
 }
 #get-inspired .slider-nav {
@@ -288,12 +292,10 @@ form button {
   height: 57px;
 }
 form input,
-form select {
+form select,
+form textarea {
   border-radius: 8px;
   padding: 0 20px;
-}
-form input,
-form select {
   border: solid 1px #dcdcdc;
 }
 form button {
@@ -421,8 +423,12 @@ h3 {
 #sign_in_page input,
 #sign_in_page select,
 .standard_form input,
-.standard_form select {
+.standard_form select,
+form textarea {
   flex-basis: 80%;
+}
+.standard_form textarea {
+  min-height: 200px;
 }
 #registration_form,
 #sign_in_form,
@@ -432,6 +438,9 @@ h3 {
   margin: auto;
   border: 1px solid #dcdcdc;
   padding: 20px;
+}
+#contact_info > div > div:first-child {
+  font-weight: bold;
 }
 #sign_in_page,
 .content_wrapper {

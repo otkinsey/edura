@@ -15,7 +15,7 @@ const CourseHeader = (props) => {
       ></div>
       <div style={{ width: "55%", margin: "auto" }}>
         <div
-          id="course_header"
+          className="course_header"
           style={{
             display: "grid",
             grid: "165px 125px/ 1fr",
