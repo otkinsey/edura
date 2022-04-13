@@ -7,6 +7,7 @@ import shared from "./resources/sharedFunctions";
 
 import { useSearchParams, Link } from "react-router-dom";
 import AboutUs from "./components/about_us/about_us";
+import Terms from "./components/terms";
 import Assessments from "./components/assessment";
 import Contact from "./components/contact/contact";
 import UpcomingCourses from "./components/upcoming_courses";
@@ -129,6 +130,7 @@ function App() {
         <Route path="/forgotPassword" element={<ForgotPassword />} />
         <Route path="/what_we_do" element={<WhatWeDo />} />
         <Route path="/our_services" element={<OurServices />} />
+        <Route path="/terms" element={<Terms />} />
       </Routes>
       <Footer />
     </div>

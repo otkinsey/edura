@@ -17,16 +17,16 @@ const Header = () => {
           <h3 style={{ color: "white" }}>Related Links</h3>
           <ul>
             <li>
-              <Link to="contact_us">About Us</Link>
+              <Link to="about_us">About Us</Link>
             </li>
             <li>
-              <Link to="contact_us"> Contact Us</Link>
+              <Link to="contact"> Contact Us</Link>
             </li>
             <li>
-              <Link to="contact_us"> Become A Trainer</Link>
+              <Link to="contact"> Become A Trainer</Link>
             </li>
             <li>
-              <Link to="contact_us">Terms Conditions</Link>
+              <Link to="terms">Terms Conditions</Link>
             </li>
           </ul>
         </div>

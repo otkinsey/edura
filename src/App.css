@@ -45,11 +45,14 @@ a:hover {
   height: 40vmin;
   pointer-events: none;
 }
-.assessment_row h1:first-child {
-  margin-bottom: 20px;
-}
-#assessments {
+
+#assessments,
+.static_page {
   text-align: left;
+}
+.static_page p {
+  margin-bottom: 20px;
+  max-width: 70%;
 }
 #assessments .button.btn-primary {
   margin: 38px auto;
@@ -57,10 +60,23 @@ a:hover {
 #assessments img {
   width: 50%;
 }
+.static_page ul {
+  list-style-type: disc;
+}
 .assessment_row h1,
+.static_page h1,
 .assessment_row > div > h1 {
   font-size: 2.5rem;
   padding: 0;
+  margin-bottom: 20px;
+}
+.static_page .btn-primary {
+  display: block;
+  margin-top: 20px;
+  margin: 30px auto 0;
+}
+.static_page ol li {
+  margin-bottom: 20px;
 }
 
 .assessment_row:nth-child(even) {
