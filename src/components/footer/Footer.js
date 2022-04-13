@@ -35,22 +35,22 @@ const Header = () => {
           <h3 style={{ color: "white" }}>Follow Us</h3>
           <ul className="social_media_links">
             <li>
-              <Link to="/">
+              <Link to="http://www.twitter.com">
                 <Twitter />
               </Link>
             </li>
             <li>
-              <Link to="/">
+              <Link to="http://www.youtube.com">
                 <Youtube />
               </Link>
             </li>
             <li>
-              <Link to="/">
+              <Link to="http://www.linkedin.com">
                 <Linkedin />
               </Link>
             </li>
             <li>
-              <Link to="/">
+              <Link to="http://www.facebook.com">
                 <Facebook />
               </Link>
             </li>

@@ -14,7 +14,7 @@ const Terms = () => {
         style={{
           zIndex: 0,
           position: "fixed",
-          right: "240px",
+          right: "140px",
           bottom: "390px",
           height: "50px",
           borderRadius: "25px",

@@ -50,7 +50,8 @@ a:hover {
 .static_page {
   text-align: left;
 }
-.static_page p {
+.static_page p,
+.static_page li {
   margin-bottom: 20px;
   max-width: 70%;
 }
