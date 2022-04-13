@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import ModalDialogueBox from "../../resources/ModalDialogueBox";
 
 const RegisterPage = (props) => {
-  props.setDisplayModal("none");
+  props.setDisplayModal(props.displayModal);
 
   if (props.signedIn === false && localStorage.getItem("user") === null) {
     return (
