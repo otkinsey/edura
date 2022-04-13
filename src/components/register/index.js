@@ -1,11 +1,12 @@
 import courseData from "../../resources/courseData";
-
+import { useSearchParams } from "react-router-dom";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import ModalDialogueBox from "../../resources/ModalDialogueBox";
 
 const RegisterPage = (props) => {
   props.setDisplayModal(props.displayModal);
+  const [params] = useSearchParams();
 
   if (props.signedIn === false && localStorage.getItem("user") === null) {
     return (
@@ -30,7 +31,14 @@ const RegisterPage = (props) => {
           >
             Go back
           </button>
-          <Link to="/sign_in" className="button btn-primary">
+          <Link
+            to={`/sign_in${
+              params.get("course_name")
+                ? "?course_name=" + params.get("course_name")
+                : ""
+            }`}
+            className="button btn-primary"
+          >
             Sign in
           </Link>
         </div>
@@ -66,7 +74,13 @@ const RegisterPage = (props) => {
           >
             <div className="form_row">
               <label>Course Name</label>
-              <select defaultValue={props.courseName}>
+              <select
+                defaultValue={
+                  params.get("course_name")
+                    ? params.get("course_name").replace(/_/g, " ")
+                    : props.courseName
+                }
+              >
                 <option>please make a selection</option>
                 {courseData.map((course) => (
                   <option value={course.course_name}>

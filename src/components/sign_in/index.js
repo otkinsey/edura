@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useSearchParams, Navigate } from "react-router-dom";
 import shared from "../../resources/sharedFunctions";
 import SignUpForm from "../../resources/SignUpForm";
 import SignInForm from "../../resources/SignInForm";
@@ -18,19 +19,20 @@ const users = [
     password: "password",
   },
 ];
+
 /**
  * @description multi-tabbed component; handles sign in, sign up, log out, and forgot password
  * @returns SignInPage content
  */
-
 const SignInPage = (props) => {
+  const [params] = useSearchParams();
   const [forgotPassword, setForgotPassword] = useState({
     name: "forgotPassword",
     form: <ForgotPassword />,
   });
   const [selectedForm, setSelectedForm] = useState({
     name: "signIn",
-    form: <SignInForm />,
+    form: <SignInForm params={params} />,
   });
 
   const [selectorPosition, setSelectorPosition] = useState(0);
@@ -40,7 +42,7 @@ const SignInPage = (props) => {
     const userGreeting = document.createElement("span");
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event, queryParam = "") => {
     event.preventDefault();
     const emailArray = users.map((u) => u.email);
     const passwordArray = users.map((p) => p.password);
@@ -62,6 +64,14 @@ const SignInPage = (props) => {
         localStorage.setItem("user", JSON.stringify(user));
         props.setSignedIn(true);
         props.setLoggedIn(true);
+        if (params.get("course_name") && params.get("course_name") !== "") {
+          // <Navigate
+          //   replace
+          //   to={"/register?course_name=" + params.get("course_name")}
+          // />;
+          window.location =
+            "/register?course_name=" + params.get("course_name");
+        }
       } else {
         alert("the username or password entered was not recognized");
       }
@@ -102,7 +112,7 @@ const SignInPage = (props) => {
           onClick={() => {
             setSelectedForm({
               name: "signIn",
-              form: <SignInForm />,
+              form: <SignInForm params={params} />,
             });
             setSelectorPosition(0);
           }}
@@ -132,7 +142,12 @@ const SignInPage = (props) => {
       {props.signedIn === false ? (
         <form
           id="sign_in_sign_up"
-          onSubmit={(event) => handleSubmit(event)}
+          onSubmit={(event) =>
+            handleSubmit(
+              event,
+              params.get("course_name") ? params.get("course_name") : ""
+            )
+          }
           name={selectedForm.name}
         >
           {selectedForm.form}
