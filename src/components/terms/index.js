@@ -197,7 +197,7 @@ const Terms = () => {
           </li>
         </ul>
         <h1 id="what_data_do_we_collect">What data do we collect?</h1>
-        <h2>Apex collects the following data:</h2>
+        <h2>Edura collects the following data:</h2>
         <ul>
           <li>
             Personal identification information (Name, email address, phone
@@ -210,8 +210,8 @@ const Terms = () => {
         </ul>
         <h1 id="how_do_we_collect_your_data">How do we collect your data?</h1>
         <p>
-          You directly provide Apex with most of the data we collect. We collect
-          data and process data when you:
+          You directly provide Edura with most of the data we collect. We
+          collect data and process data when you:
         </p>
         <ul>
           <li>
@@ -223,7 +223,7 @@ const Terms = () => {
           <li>Use or view our website via your browser’s cookies.</li>
         </ul>
         <h1 id="how_will_we_use_your_data">How will we use your data?</h1>
-        <p>Apex collects your data so that we can:</p>
+        <p>Edura collects your data so that we can:</p>
         <ul>
           <li>Process your order and manage your account.</li>
           <li>
@@ -232,22 +232,22 @@ const Terms = () => {
           </li>
         </ul>
         <p>
-          If you agree, Apex will share your data with our partner companies so
+          If you agree, Edura will share your data with our partner companies so
           that they may offer you their products and services.<p></p>
         </p>
         <h1 id="how_do_we_store_your_data">How do we store your data?</h1>
         <p>
-          Apex securely stores your data in the Amazon Cloud, on secured and
+          Edura securely stores your data in the Amazon Cloud, on secured and
           encrypted servers..
         </p>
         <p>
-          Apex will keep your data for one year of inactivity. Once this time
+          Edura will keep your data for one year of inactivity. Once this time
           period has expired, we will remove your data from our servers.
         </p>
         <h1 id="marketing">Marketing</h1>
         <p>
-          Apex would like to send you information about products and services of
-          ours that we think you might like, as well as those of our partner
+          Edura would like to send you information about products and services
+          of ours that we think you might like, as well as those of our partner
           companies.
         </p>
         <p>
@@ -255,43 +255,43 @@ const Terms = () => {
           later date.
         </p>
         <p>
-          You have the right at any time to stop Apex from contacting you for
+          You have the right at any time to stop Edura from contacting you for
           marketing purposes or giving your data to other companies.
         </p>
         <h1 id="what_are_your_data_protection_rights">
           What are your data protection rights?
         </h1>
         <p>
-          Apex would like to make sure you are fully aware of all of your data
+          Edura would like to make sure you are fully aware of all of your data
           protection rights. Every user is entitled to the following:
         </p>
         <p>
-          The right to access – You have the right to request Apex for copies of
-          your personal data. We may charge you a small fee for this service.
+          The right to access – You have the right to request Edura for copies
+          of your personal data. We may charge you a small fee for this service.
         </p>
         <p>
-          The right to rectification – You have the right to request that Apex
+          The right to rectification – You have the right to request that Edura
           correct any information you believe is inaccurate. You also have the
-          right to request Apex to complete the information you believe is
+          right to request Edura to complete the information you believe is
           incomplete.
         </p>
         <p>
-          The right to erasure – You have the right to request that Apex erase
+          The right to erasure – You have the right to request that Edura erase
           your personal data, under certain conditions.
         </p>
         <p>
           The right to restrict processing – You have the right to request that
-          Apex restrict the processing of your personal data, under certain
+          Edura restrict the processing of your personal data, under certain
           conditions.
         </p>
         <p>
           The right to object to processing – You have the right to object to
-          Apex's processing of your personal data, under certain conditions.
+          Edura's processing of your personal data, under certain conditions.
         </p>
         <p>
           The right to data portability – You have the right to request that
-          Apex transfer the data that we have collected to another organization,
-          or directly to you, under certain conditions.
+          Edura transfer the data that we have collected to another
+          organization, or directly to you, under certain conditions.
         </p>
         <p>
           If you make a request, we have one month to respond to you. If you
@@ -309,8 +309,8 @@ const Terms = () => {
         <p>For further information, visit allaboutcookies.org.</p>
         <h1 id="how_do_we_use_cookies">How do we use cookies?</h1>
         <p>
-          Apex uses cookies in a range of ways to improve your experience on our
-          website, including:
+          Edura uses cookies in a range of ways to improve your experience on
+          our website, including:
         </p>
         <ul>
           <li>Keeping you signed in</li>
@@ -323,16 +323,16 @@ const Terms = () => {
         uses:
         <ul>
           <li>
-            Functionality – Apex uses these cookies so that we recognize you on
+            Functionality – Edura uses these cookies so that we recognize you on
             our website and remember your previously selected preferences. These
             could include what language you prefer and location you are in. A
             mix of first-party and third-party cookies are used.
           </li>
           <li>
-            Advertising – Apex uses these cookies to collect information about
+            Advertising – Edura uses these cookies to collect information about
             your visit to our website, the content you viewed, the links you
             followed and information about your browser, device, and your IP
-            address. Apex sometimes shares some limited aspects of this data
+            address. Edura sometimes shares some limited aspects of this data
             with third parties for advertising purposes. We may also share
             online data collected through cookies with our advertising partners.
             This means that when you visit another website, you may be shown
@@ -349,7 +349,7 @@ const Terms = () => {
           Privacy policies of other websites
         </h1>
         <p>
-          The Apex website contains links to other websites. Our privacy policy
+          The Edura website contains links to other websites. Our privacy policy
           applies only to our website, so if you click on a link to another
           website, you should read their privacy policy.
         </p>
@@ -357,7 +357,7 @@ const Terms = () => {
           Changes to our privacy policy
         </h1>
         <p>
-          Apex keeps its privacy policy under regular review and places any
+          Edura keeps its privacy policy under regular review and places any
           updates on this web page. This privacy policy was last updated on 9
           January 2019.
         </p>
