@@ -65,10 +65,6 @@ const SignInPage = (props) => {
         props.setSignedIn(true);
         props.setLoggedIn(true);
         if (params.get("course_name") && params.get("course_name") !== "") {
-          // <Navigate
-          //   replace
-          //   to={"/register?course_name=" + params.get("course_name")}
-          // />;
           window.location =
             "/register?course_name=" + params.get("course_name");
         }
@@ -77,6 +73,12 @@ const SignInPage = (props) => {
       }
     } else if (event.target.name === "signUp" && validated) {
       props.setDisplayModal("block");
+      setTimeout(
+        () =>
+          (window.location =
+            "/register?course_name=" + params.get("course_name")),
+        3000
+      );
     }
   };
 
