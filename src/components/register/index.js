@@ -8,7 +8,7 @@ const RegisterPage = (props) => {
   props.setDisplayModal(props.displayModal);
   const [params] = useSearchParams();
 
-  if (props.signedIn === false && localStorage.getItem("user") === null) {
+  if (props.signedIn === false || localStorage.getItem("user") === null) {
     return (
       <div className="content_wrapper">
         <h3>You must be sign in to access this page</h3>
