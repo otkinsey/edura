@@ -58,7 +58,7 @@ const RegisterPage = (props) => {
           className="jumbotron"
           style={{
             background:
-              "center -680px/cover no-repeat url(/images/register_header.jpg)",
+              "center center/cover no-repeat url(/images/register_header.jpg)",
           }}
         >
           <h1>Register</h1>

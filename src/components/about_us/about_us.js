@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 const AboutUs = () => {
   return (
     <div>
-      <div className="jumbotron">
+      <div
+        className="jumbotron"
+        style={{ background: "center/cover url(images/about_us.jpg)" }}
+      >
         <h1>About us</h1>
       </div>
       <div className="content_wrapper static_page">
@@ -51,14 +54,14 @@ const AboutUs = () => {
             exams from SAFe, Scrum.org, and Scrum Alliance. You can train with
             confidence due to our Edura guarantee: if you do not succeed in
             passing the certification, you may re-enroll in the training at no
-            additional cost. See our different course offerings here for more
-            details.
+            additional cost. See our different course offerings{" "}
+            <Link to="/upcoming_courses">here</Link> for more details.
           </li>
           <li>
             <b>Assessment:</b> Edura uniquely offers a suite of detailed
             assessments to determine your specific organization’s capabilities
-            and needs. See our different assessment offerings here for more
-            details.{" "}
+            and needs. See our different assessment offerings{" "}
+            <Link to="/assessment">here</Link> for more details.{" "}
           </li>
         </ol>
         <Link to="/contact" className="btn-primary button">

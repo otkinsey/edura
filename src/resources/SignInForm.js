@@ -13,7 +13,7 @@ const SignInForm = (props) => {
         <input name="password" type="password"></input>
       </div>
       <button className="btn-primary">Sign In</button>
-      <Link to="/forgotPassword">forgot password?</Link>
+      <Link to="/forgotPassword">Forgot password?</Link>
     </div>
   );
 };

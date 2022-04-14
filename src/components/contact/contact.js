@@ -13,7 +13,7 @@ const ContactForm = (props) => {
       <div
         className="jumbotron"
         style={{
-          background: "cover/cetner url(images/contact_us_header.jpg)",
+          background: "center/cover url(images/contact_us_header.jpg)",
         }}
       >
         <h1>Contact Us</h1>

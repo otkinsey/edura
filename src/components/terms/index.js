@@ -15,7 +15,7 @@ const Terms = () => {
           zIndex: 0,
           position: "fixed",
           right: "140px",
-          bottom: "390px",
+          bottom: "90px",
           height: "50px",
           borderRadius: "25px",
           backgroundColor: "orange",
@@ -29,7 +29,7 @@ const Terms = () => {
           cursor: "pointer",
         }}
       >
-        ↑scrol to top
+        ↑
       </div>
       <div
         className="jumbotron"
@@ -298,7 +298,7 @@ const Terms = () => {
           would like to exercise any of these rights, please contact us at our
           email:
         </p>
-        <p>Or write to us: info@apexagility.com</p>
+        <p>Or write to us: info@edura.com</p>
         <h1 id="what_are_cookies">Cookies</h1>
         <p>
           Cookies are text files placed on your computer to collect standard
@@ -363,11 +363,11 @@ const Terms = () => {
         </p>
         <h1 id="how_to_contact_us">How to contact us</h1>
         <p>
-          If you have any questions about Apex’s privacy policy, the data we
+          If you have any questions about Edura’s privacy policy, the data we
           hold on you, or you would like to exercise one of your data protection
-          rights, please do not hesitate to contact us.
+          rights, please do not hesitate to <Link to="contact">contact us</Link>
+          .
         </p>
-        <p>Email us at: info@apexagility.com</p>
       </div>
     </div>
   );
