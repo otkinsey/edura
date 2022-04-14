@@ -40,7 +40,7 @@ const ContactForm = (props) => {
             </div>
             <div className="form_row" style={{ display: "flex" }}>
               <div>Phone:</div>
-              <div>(617)352-7789</div>
+              <div>(617)-352-7789</div>
             </div>
             <div className="form_row" style={{ display: "flex" }}>
               <div>Hours:</div>
