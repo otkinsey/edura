@@ -11,6 +11,41 @@ a[href="/view_courses"] {
 a:hover {
   color: #f8d123;
 }
+.about_us{
+  display:flex;
+}
+.about_us button{
+  flex-basis:200px;
+}
+#about_us_text{
+  text-align:left;
+}
+.about_us .about_us_slide {
+  width: 500px;
+}
+.about_us .about_us_slider {
+  width: 500px;
+  position: relative;
+  display: flex;
+  height: 178px;
+  overflow:hidden;
+}
+.about_us .view-window {
+  position: relative;
+  overflow: hidden;
+  height: 178px;
+}
+
+#about_us .about_us_slide.active{
+  display:block;
+  right:0;
+  z-index:2;
+  opacity:1;
+}
+#about_us .about_us_slide.prev{
+  z-index:1;
+  display:block;
+  right:500px;}
 .about_us > div {
   flex-basis: 50%;
 }
@@ -23,10 +58,15 @@ a:hover {
   padding: 11px;
   text-transform: capitalize;
 }
-.about_us .btn-outline-secondary {
-  color: #6c757d;
-  border-color: #6c757d;
-  transform: border 0.3s, color 0.3s;
+
+#about_us .about_us_slide {
+	display: block;
+	position: absolute;
+	right: -500px;
+	transition: right 0.3s;
+	/* background: #efefef; */
+	min-height: 180px;
+	opacity: 0;
 }
 .about_us button:nth-child(2) {
   margin: 20px 0px;
@@ -211,12 +251,31 @@ button.btn:hover,
   display: block;
   width: 100%;
 }
+.dark_background,
+.dark_background h1,
+.dark_background h2 {
+  color: white;
+  position: relative;
+}
+.dark_background:not(.slide) > * {
+  position: relative;
+}
+.dark_background::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  left: 0;
+  top: 0;
+  opacity: 0.65;
+  z-index: 0;
+}
 .dark_background button.btn.btn-primary,
 .dark_background .button.btn.btn-primary {
   text-transform: capitalize;
   background-color: transparent;
   transition: background-color 0.3s, color 0.3s;
-
   background: rgba(0, 0, 0, 0.25);
   border: 1px solid;
   margin-top: 2rem;
@@ -271,10 +330,11 @@ form textarea.alert {
   width: 150px;
   border-radius: 100px;
   overflow: hidden;
-  border: 9px solid white;
+  border: 5px solid white;
   box-shadow: 0px 0px 4px black;
   display: flex;
   position: relative;
+  margin-bottom: 15px;
 }
 #get-inspired p.text {
   display: -webkit-box;
@@ -282,8 +342,8 @@ form textarea.alert {
   font-size: 0.85rem;
   overflow: hidden;
   text-align: left;
-  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  height: 145px;
 }
 #get-inspired .testimonial {
   width: 218px;
@@ -653,7 +713,7 @@ section#header li:hover .submenu {
 }
 #stay_connected input {
   width: 100%;
-  border: 1px solid #777;
+  margin-bottom: 1rem;
 }
 #stay_connected .row1 {
   display: flex;

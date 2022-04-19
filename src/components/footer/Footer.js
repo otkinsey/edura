@@ -26,7 +26,7 @@ const Header = () => {
               <Link to="contact"> Become A Trainer</Link>
             </li>
             <li>
-              <Link to="terms">Terms Conditions</Link>
+              <Link to="terms">Terms &#38; Conditions</Link>
             </li>
           </ul>
         </div>

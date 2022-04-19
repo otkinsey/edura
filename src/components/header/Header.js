@@ -66,7 +66,7 @@ const Header = (props) => {
                 borderRadius: 9,
               }}
             >
-              View Courses
+              Course Calendar
             </Link>
           </li>
         </ul>

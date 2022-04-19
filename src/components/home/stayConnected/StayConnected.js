@@ -1,11 +1,24 @@
-import Button from "react-bootstrap/Button";
-const StayConnected = () => {
+import "../../../resources/sharedFunctions";
+import ModalDialogueBox from "../../../resources/ModalDialogueBox";
+const StayConnected = (props) => {
   return (
     <>
+      <ModalDialogueBox
+        displayModal={props.displayModal}
+        courseName=""
+        message="Thank you for contacting us. One of our team members will reach out to you soon"
+        resetForm={props.resetForm}
+        setDisplayModal={props.setDisplayModal}
+      />
       <h1>Stay Connected</h1>
       <div className="main">
         <p>Receive information on upcoming workshops and insights.</p>
-        <form className="">
+        <form
+          onSubmit={(event) => {
+            event.preventDefault();
+            props.handleFormSubmit(event);
+          }}
+        >
           <div className="flex row1">
             <div style={{ flexBasis: "50%" }}>
               <label>first name:</label>
@@ -21,7 +34,7 @@ const StayConnected = () => {
             <input type="text" spaceholder="test"></input>
           </div>
           <div
-            class="flex"
+            className="flex"
             style={{
               flexBasis: "100%",
               justifyContent: "center",
@@ -35,7 +48,7 @@ const StayConnected = () => {
             ></input>
             <label>I am permitting you to contact me.</label>
           </div>
-          <Button>sign up</Button>
+          <button className="btn-primary">Sign Up</button>
         </form>
       </div>
     </>

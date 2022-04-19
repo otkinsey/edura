@@ -59,7 +59,7 @@ const TrainingPage = () => {
       const trainingWidth =
         training.training_category === "corporate trainings" ? "auto" : "250px";
       return (
-        <div class="training">
+        <div className="training">
           {training.course_name.includes("custom") ? (
             <img
               src="/images/Edura_logo.svg"

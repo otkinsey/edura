@@ -9,7 +9,7 @@ const Terms = () => {
   return (
     <div>
       <div
-        class="btn-hot"
+        className="btn-hot"
         onClick={() => scrollTo("header")}
         style={{
           zIndex: 0,

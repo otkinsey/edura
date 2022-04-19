@@ -77,7 +77,10 @@ function App() {
         }
       />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route
+          path="/"
+          element={<Home displayModal={displayModal}  resetForm={resetForm} setDisplayModal={setDisplayModal} handleFormSubmit={handleFormSubmit} />}
+        />
         <Route path="/about_us" element={<AboutUs />} />
         <Route
           path="/contact"

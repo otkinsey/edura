@@ -11,7 +11,7 @@ const servicesData = [
   // },
   {
     name: "Courses",
-    image: "/images/Scrolling-Courses.jpeg",
+    image: "/images/Scrolling-Coaching.jpeg",
     text: "Edura coursework will thoroughly prepare you for Agile certification. Having worked side-byside with the three elite certification agencies, we know just what you will need to gain certification from the three important certification  SAFe, Scrum.org, and Scrum Alliance.",
   },
 ];

@@ -22,7 +22,7 @@ const about_us_slides = text_array.map((about_us_slide, index) => {
       className={about_us_slide.class}
       style={{ width: "500px" }}
     >
-      <h2 style={{ "text-transform": "capitalize" }}>{about_us_slide.title}</h2>
+      <h2 style={{ textTransform: "capitalize" }}>{about_us_slide.title}</h2>
       {about_us_slide.text}
     </div>
   );
@@ -118,14 +118,7 @@ const AboutUsStyles = () => {
       overflow: hidden;
       height: 178px;
     }
-    #about_us .about_us_slide {
-      display: block;
-      position: absolute;
-      right: -500px;
-      transition: right .3s;
-      background: #efefef;
-      min-height: 180px;
-    }
+
     #about_us .about_us_slide.active{
       display:block;
       right:0;
