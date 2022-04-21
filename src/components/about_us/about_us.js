@@ -55,7 +55,7 @@ const AboutUs = () => {
             confidence due to our Edura guarantee: if you do not succeed in
             passing the certification, you may re-enroll in the training at no
             additional cost. See our different course offerings{" "}
-            <Link to="/upcoming_courses">here</Link> for more details.
+            <Link to="/courses">here</Link> for more details.
           </li>
           <li>
             <b>Assessment:</b> Edura uniquely offers a suite of detailed
