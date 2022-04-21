@@ -7,7 +7,7 @@ const Terms = () => {
     elem.scrollIntoView(true);
   };
   return (
-    <div>
+    <div >
       <div
         className="btn-hot"
         onClick={() => scrollTo("header")}
@@ -33,7 +33,7 @@ const Terms = () => {
       </div>
       <div
         className="jumbotron"
-        style={{ background: "cover/center url(images/tc_header.jpg)" }}
+        style={{ background: "center/cover url(images/tc_header.jpg)" }}
       >
         <h1 id="">Terms &#38; Conditions</h1>
       </div>
@@ -218,8 +218,8 @@ const Terms = () => {
             Register online or place an order for any of our products or
             services.
           </li>
-          <li></li>Voluntarily complete a customer survey or provide feedback on
-          any of our message boards or via email.
+          <li>Voluntarily complete a customer survey or provide feedback on
+          any of our message boards or via email.</li>
           <li>Use or view our website via your browser’s cookies.</li>
         </ul>
         <h1 id="how_will_we_use_your_data">How will we use your data?</h1>
@@ -365,7 +365,7 @@ const Terms = () => {
         <p>
           If you have any questions about Edura’s privacy policy, the data we
           hold on you, or you would like to exercise one of your data protection
-          rights, please do not hesitate to <Link to="contact">contact us</Link>
+          rights, please do not hesitate to <Link to="/contact">contact us</Link>
           .
         </p>
       </div>

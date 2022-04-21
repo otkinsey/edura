@@ -112,6 +112,7 @@ function App() {
               signedIn={signedIn}
               handleFormSubmit={handleFormSubmit}
               resetForm={resetForm}
+              courseName={courseName}
             />
           }
         />

@@ -94,40 +94,7 @@ const AboutUs = () => {
 
 const AboutUsStyles = () => {
   let css = `      
-    .about_us{
-      display:flex;
-    }
-    .about_us button{
-      flex-basis:200px;
-    }
-    #about_us_text{
-      text-align:left;
-    }
-    .about_us .about_us_slide {
-      width: 500px;
-    }
-    .about_us .about_us_slider {
-      width: 500px;
-      position: relative;
-      display: flex;
-      height: 178px;
-      overflow:hidden;
-    }
-    .about_us .view-window {
-      position: relative;
-      overflow: hidden;
-      height: 178px;
-    }
 
-    #about_us .about_us_slide.active{
-      display:block;
-      right:0;
-      z-index:2
-    }
-    #about_us .about_us_slide.prev{
-      z-index:1;
-      display:block;
-      right:500px;
   `;
   return <style>{css}</style>;
 };

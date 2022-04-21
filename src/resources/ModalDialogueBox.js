@@ -29,9 +29,9 @@ const ModalDialogueBox = (props) => {
           marginRight: "25%",
         }}
       >
-        <h4>Success!</h4>
+        <h3>Success!</h3>
         <p>{props.message}</p>
-        <p>{props.courseName}</p>
+        <p><b>{props.courseName}</b></p>
         <button
           className="btn-primary"
           onClick={(event) => {
